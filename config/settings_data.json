@@ -133,11 +133,11 @@
         "settings": {
           "background": "#fdf9f7",
           "background_gradient": "",
-          "text": "#423f3e",
+          "text": "#312f2e",
           "button": "#f47722",
           "button_label": "#fdf9f7",
-          "secondary_button_label": "#423f3e",
-          "shadow": "#423f3e"
+          "secondary_button_label": "#312f2e",
+          "shadow": "#211f1e"
         }
       },
       "scheme-2": {
