@@ -164,13 +164,13 @@
       },
       "scheme-4": {
         "settings": {
-          "background": "#121212",
+          "background": "#fff",
           "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#121212",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "text": "#5b240f",
+          "button": "#f47722",
+          "button_label": "#fff",
+          "secondary_button_label": "#f47722",
+          "shadow": "#5b240f"
         }
       },
       "scheme-5": {
