@@ -42,7 +42,7 @@
         "custom_liquid_iQmRdK": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<hr>\n<br>\n<h3>A commitment to changing fashion and shifting away from outdated philosophies.<\/h3>\n<p>Unique styling and a more personal attitude of wear are a huge focus for the brand ethos. A simplified way of dressing that is modern and new.<\/p>\n<br>"
+            "custom_liquid": "<hr>\n<br>\n<h3 style=\"line-height:28px;\">A commitment to changing fashion and shifting away from outdated philosophies.<\/h3>\n<p style=\"font-size:14px;line-height:22px;\"><i>Unique styling and a more personal attitude of wear are a huge focus for the brand ethos. A simplified way of dressing that is modern and new.<\/i><\/p>\n<br>"
           }
         },
         "variant_picker": {
