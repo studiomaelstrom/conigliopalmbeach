@@ -136,43 +136,6 @@
         "padding_bottom": 64
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Behind the Design...",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Christina Coniglio is on a mission to authentically reference and storytell the original island energy from a local designer’s perspective.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "large",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -216,6 +179,43 @@
         "padding_bottom": 36
       }
     },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "image-with-text-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Behind the Design...",
+            "heading_size": "h1"
+          }
+        },
+        "image-with-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Christina Coniglio is on a mission to authentically reference and storytell the original island energy from a local designer’s perspective.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "image-with-text-0",
+        "image-with-text-1"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -238,8 +238,8 @@
   "order": [
     "main",
     "collapsible_content_GYXi7g",
-    "image-with-text",
     "multicolumn",
+    "image-with-text",
     "related-products"
   ]
 }
