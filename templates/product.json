@@ -29,7 +29,7 @@
         "inventory_6HXkYD": {
           "type": "inventory",
           "settings": {
-            "text_style": "body",
+            "text_style": "uppercase",
             "inventory_threshold": 5,
             "show_inventory_quantity": false
           }
