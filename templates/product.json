@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "sku_pr7QPU": {
+          "type": "sku",
+          "settings": {
+            "text_style": "uppercase"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -52,6 +58,7 @@
         }
       },
       "block_order": [
+        "sku_pr7QPU",
         "title",
         "caption",
         "price",
