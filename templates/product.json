@@ -26,9 +26,23 @@
           "settings": {
           }
         },
+        "inventory_6HXkYD": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 5,
+            "show_inventory_quantity": false
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
+          }
+        },
+        "custom_liquid_iQmRdK": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>\n<br>\n<h3>A commitment to changing fashion and shifting away from outdated philosophies.<\/h3>\n<p>Unique styling and a more personal attitude of wear are a huge focus for the brand ethos. A simplified way of dressing that is modern and new.<\/p>\n<br>"
           }
         },
         "variant_picker": {
@@ -62,7 +76,9 @@
         "title",
         "caption",
         "price",
+        "inventory_6HXkYD",
         "description",
+        "custom_liquid_iQmRdK",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
