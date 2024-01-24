@@ -2,7 +2,7 @@
   "current": {
     "logo_width": 90,
     "type_header_font": "prata_n4",
-    "heading_scale": 100,
+    "heading_scale": 110,
     "type_body_font": "sans-serif",
     "body_scale": 100,
     "page_width": 1200,
@@ -164,11 +164,11 @@
       },
       "scheme-4": {
         "settings": {
-          "background": "#fff",
+          "background": "#ffffff",
           "background_gradient": "",
           "text": "#5b240f",
           "button": "#f47722",
-          "button_label": "#fff",
+          "button_label": "#ffffff",
           "secondary_button_label": "#f47722",
           "shadow": "#5b240f"
         }

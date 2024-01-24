@@ -93,7 +93,7 @@
           "settings": {
             "heading": "Fabric Content",
             "icon": "leather",
-            "row_content": "",
+            "row_content": "<p>{{ product.metafields.product.fabric_content | metafield_tag }}<\/p>",
             "page": ""
           }
         },
@@ -102,7 +102,7 @@
           "settings": {
             "heading": "Measurements",
             "icon": "ruler",
-            "row_content": "",
+            "row_content": "<p>{{ product.metafields.product.measurements | metafield_tag }}<\/p>",
             "page": ""
           }
         },
@@ -111,7 +111,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
-            "row_content": "",
+            "row_content": "<p>{{ product.metafields.product.care | metafield_tag }}<\/p>",
             "page": ""
           }
         }
@@ -129,7 +129,7 @@
         "layout": "section",
         "color_scheme": "",
         "container_color_scheme": "scheme-5",
-        "open_first_collapsible_row": false,
+        "open_first_collapsible_row": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
