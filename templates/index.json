@@ -27,17 +27,27 @@
             "top": 42,
             "left": 14
           }
+        },
+        "tooltip_NMHMBG": {
+          "type": "Tooltip",
+          "settings": {
+            "title": "Silk Dupioni Ruffle Power Pareo",
+            "content": "A0002 - Silk Dupioni - White",
+            "top": 50,
+            "left": 19
+          }
         }
       },
       "block_order": [
-        "tooltip_Wj6qHR"
+        "tooltip_Wj6qHR",
+        "tooltip_NMHMBG"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/RACK-1-compressed.jpg",
         "tooltip_color": "#ffffff",
         "tooltip_background_color": "#f47722",
         "tooltip_focus_color": "#f47722",
-        "breakpoint": "768"
+        "breakpoint": "798"
       }
     }
   },
