@@ -49,10 +49,17 @@
         "tooltip_focus_color": "#f47722",
         "breakpoint": "798"
       }
+    },
+    "hotspot_image_EtdX99": {
+      "type": "hotspot-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/RACK-1-compressed.jpg"
+      }
     }
   },
   "order": [
     "image_banner_m3pnX4",
-    "tooltips_W49e7t"
+    "tooltips_W49e7t",
+    "hotspot_image_EtdX99"
   ]
 }
