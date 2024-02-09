@@ -42,6 +42,7 @@
         "tooltip_Wj6qHR",
         "tooltip_NMHMBG"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/RACK-1-compressed.jpg",
         "tooltip_color": "#ffffff",
