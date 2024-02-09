@@ -33,7 +33,7 @@
 <div>
   <img
     class="hotspot-img"
-    src="{{ section.settings.image }}"
+    src="{{ section.settings.image | img_url: '2000x'}}"
     width="2000"
     height="2841"
     alt="{{ section.settings.image.alt }}"
