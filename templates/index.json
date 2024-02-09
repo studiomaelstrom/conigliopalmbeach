@@ -15,9 +15,34 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "tooltips_W49e7t": {
+      "type": "tooltips",
+      "blocks": {
+        "tooltip_Wj6qHR": {
+          "type": "Tooltip",
+          "settings": {
+            "title": "UP0001",
+            "content": "Shibori Neutral",
+            "top": 42,
+            "left": 14
+          }
+        }
+      },
+      "block_order": [
+        "tooltip_Wj6qHR"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/RACK-1-compressed.jpg",
+        "tooltip_color": "#ffffff",
+        "tooltip_background_color": "#64cbdf",
+        "tooltip_focus_color": "#ff0000",
+        "breakpoint": "768"
+      }
     }
   },
   "order": [
-    "image_banner_m3pnX4"
+    "image_banner_m3pnX4",
+    "tooltips_W49e7t"
   ]
 }
