@@ -3,9 +3,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "sku_pr7QPU": {
-          "type": "sku",
+        "vendor": {
+          "type": "text",
+          "disabled": true,
           "settings": {
+            "text": "{{ product.vendor }}",
             "text_style": "uppercase"
           }
         },
@@ -26,23 +28,9 @@
           "settings": {
           }
         },
-        "inventory_6HXkYD": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "uppercase",
-            "inventory_threshold": 5,
-            "show_inventory_quantity": false
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
-          }
-        },
-        "custom_liquid_iQmRdK": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<hr>\n<br>\n<h3 style=\"line-height:28px;\">A commitment to changing fashion and shifting away from outdated philosophies.<\/h3>\n<p style=\"font-size:14px;line-height:22px;\"><i>Unique styling and a more personal attitude of wear are a huge focus for the brand ethos. A simplified way of dressing that is modern and new.<\/i><\/p>\n<br>"
           }
         },
         "variant_picker": {
@@ -72,13 +60,11 @@
         }
       },
       "block_order": [
-        "sku_pr7QPU",
+        "vendor",
         "title",
         "caption",
         "price",
-        "inventory_6HXkYD",
         "description",
-        "custom_liquid_iQmRdK",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -89,8 +75,8 @@
         "color_scheme": "scheme-1",
         "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "cover",
-        "gallery_layout": "stacked",
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
@@ -108,7 +94,7 @@
           "settings": {
             "heading": "Fabric Content",
             "icon": "leather",
-            "row_content": "<p>{{ product.metafields.product.fabric_content | metafield_tag }}<\/p>",
+            "row_content": "",
             "page": ""
           }
         },
@@ -117,7 +103,7 @@
           "settings": {
             "heading": "Measurements",
             "icon": "ruler",
-            "row_content": "<p>{{ product.metafields.product.measurements | metafield_tag }}<\/p>",
+            "row_content": "",
             "page": ""
           }
         },
@@ -126,7 +112,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
-            "row_content": "<p>{{ product.metafields.product.care | metafield_tag }}<\/p>",
+            "row_content": "",
             "page": ""
           }
         }
@@ -147,8 +133,45 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "image-with-text-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Behind the Design...",
+            "heading_size": "h1"
+          }
+        },
+        "image-with-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Christina Coniglio is on a mission to authentically reference and storytell the original island energy from a local designer’s perspective.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "image-with-text-0",
+        "image-with-text-1"
+      ],
+      "settings": {
+        "height": "small",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -194,46 +217,8 @@
         "padding_bottom": 36
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Behind the Design...",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Christina Coniglio is on a mission to authentically reference and storytell the original island energy from a local designer’s perspective.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "large",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-2",
-        "image_behavior": "ambient",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
         "heading": "You may also like...",
         "heading_size": "h1",
@@ -254,8 +239,8 @@
   "order": [
     "main",
     "collapsible_content_GYXi7g",
-    "multicolumn",
     "image-with-text",
+    "multicolumn",
     "related-products"
   ]
 }
