@@ -35,8 +35,8 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/RACK-1-compressed.jpg",
         "tooltip_color": "#ffffff",
-        "tooltip_background_color": "#64cbdf",
-        "tooltip_focus_color": "#ff0000",
+        "tooltip_background_color": "#f47722",
+        "tooltip_focus_color": "#f47722",
         "breakpoint": "768"
       }
     }
