@@ -30,73 +30,15 @@
     }
   }
 {%- endstyle -%}
-
-<div class="section-{{ section.id }}-padding">
-  <figure class="hotspot-figure">
-    {%- if section.settings.image == blank -%}
-      {{ 'image' | placeholder_svg_tag: 'hotspot-picture' }}
-    {%- else -%}
-      <picture class="hotspot-picture">
-        <source
-          srcset="
-            {{ section.settings.image | img_url: '320x' }} 1x,
-            {{ section.settings.image | img_url: '320x', scale: 2 }} 2x
-          "
-          media="(max-width: 320px)"
-        >
-        <source
-          srcset="
-            {{ section.settings.image | img_url: '420x' }} 1x,
-            {{ section.settings.image | img_url: '420x', scale: 2 }} 2x
-          "
-          media="(max-width: 420px)"
-        >
-        <source
-          srcset="
-            {{ section.settings.image | img_url: '768x' }} 1x,
-            {{ section.settings.image | img_url: '768x', scale: 2 }} 2x
-          "
-          media="(max-width: 768px)"
-        >
-        <source
-          srcset="
-            {{ section.settings.image | img_url: '1240x' }} 1x,
-            {{ section.settings.image | img_url: '1240x', scale: 2 }} 2x
-          "
-          media="(max-width: 1240px)"
-        >
-        <source
-          srcset="
-            {{ section.settings.image | img_url: '1440x' }} 1x,
-            {{ section.settings.image | img_url: '1440x', scale: 2 }} 2x
-          "
-          media="(max-width: 1440px)"
-        >
-        <source
-          srcset="
-            {{ section.settings.image | img_url: '1660x' }} 1x,
-            {{ section.settings.image | img_url: '1660x', scale: 2 }} 2x
-          "
-          media="(max-width: 1660px)"
-        >
-        <source
-          srcset="
-            {{ section.settings.image | img_url: '2048x' }} 1x,
-            {{ section.settings.image | img_url: '2048x', scale: 2 }} 2x
-          "
-          media="(min-width: 1661px)"
-        >
-        <img
+<div>
+    <img
           class="hotspot-img"
-          src="{{ section.settings.image | img_url: '2048x' }}"
+          src="{{ section.settings.image }}" width="2000" height="2841"
           alt="{{ section.settings.image.alt }}"
       usemap="#image-map"
         >
-      </picture>
-    {%- endif -%}
-  </figure>
 
-  <map name="image-map">
+          <map name="image-map">
     <area
       target="_blank"
       alt="Classic Button Down"
@@ -107,4 +49,19 @@
     >
   </map>
 </div>
-<script>imageMapResize();</script>
+      
+
+
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
