@@ -31,12 +31,28 @@
   }
 {%- endstyle -%}
 <div>
-  <img
-    class="hotspot-img"
-    src="{{ section.settings.image | image_url: width:2000}}"
-    alt="{{ section.settings.image.alt }}"
-    usemap="#image-map"
-  >
+
+   <figure class="hotspot-figure">
+    {%- if section.settings.image == blank -%}
+      {{ 'image' | placeholder_svg_tag: 'hotspot-picture' }}
+    {%- else -%}
+    <picture class="hotspots-picture">
+      <source srcset="{{ section.settings.image | img_url: '320x' }} 1x,
+                      {{ section.settings.image | img_url: '320x', scale: 2 }} 2x" media="(max-width: 320px)">
+      <source srcset="{{ section.settings.image | img_url: '420x' }} 1x,
+                      {{ section.settings.image | img_url: '420x', scale: 2 }} 2x" media="(max-width: 420px)">
+      <source srcset="{{ section.settings.image | img_url: '768x' }} 1x,
+                      {{ section.settings.image | img_url: '768x', scale: 2 }} 2x" media="(max-width: 768px)">
+      <source srcset="{{ section.settings.image | img_url: '1240x' }} 1x,
+                      {{ section.settings.image | img_url: '1240x', scale: 2 }} 2x" media="(max-width: 1240px)">
+      <source srcset="{{ section.settings.image | img_url: '1440x' }} 1x,
+                      {{ section.settings.image | img_url: '1440x', scale: 2 }} 2x" media="(max-width: 1440px)">
+      <source srcset="{{ section.settings.image | img_url: '1660x' }} 1x,
+                      {{ section.settings.image | img_url: '1660x', scale: 2 }} 2x" media="(min-width: 1441px)">
+      <img class="hotspot-img" src="{{ section.settings.image | img_url: '1660x' }}" alt="{{ section.settings.image.alt }}" usemap="#image-map">
+    </picture>
+    {%- endif -%}
+  </figure>
 
   <map name="image-map">
     <area
