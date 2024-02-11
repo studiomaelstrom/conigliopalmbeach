@@ -170,12 +170,16 @@
       {%- endfor -%}
 
   .hotspot-background {
-    width: 90%;
-    align-self: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    background-size: cover;
-    justify-content: center;
+  flex: 0 0 auto;
+  width: 90%;
+  height: var(--dl-size-size-maxwidth);
+  display: flex;
+  align-self: center;
+  margin-top: 100px;
+  align-items: flex-start;
+  margin-bottom: 100px;
+  background-size: cover;
+  justify-content: center;
     background-image: url('{{ section.settings.bg }}');
   }
 {%- endstyle -%}
