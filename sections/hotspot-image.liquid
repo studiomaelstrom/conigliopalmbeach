@@ -73,117 +73,129 @@
 {% endschema %}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-  }
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+      padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
     }
-  }
 
-  .hotspots--wrapper {
-    position: relative;
-    margin: auto;
-  }
-
-  .hotspots--figure {
-    width: 100%;
-  }
-
-  .hotspot {
-    position: absolute;
-    display: block;
-  }
-
-  .hotspot--cta {
-    position: relative;
-    float: right;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: {{section.settings.hotspot_color}};
-    transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
-  }
-
-  .hotspot--cta::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: {{section.settings.hotspot_inner}};
-    z-index: 2;
-    transition: opacity 0.6s;
-    animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
-  }
-
-  .hotspot:hover .hotspot--cta {
-    transform: scale(0.6);
-  }
-
-  .hotspot:hover .hotspot--cta:after {
-    opacity: 0;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: scale(0.4);
-    }
-    33% {
-      transform: scale(1);
-    }
-    66% {
-      transform: scale(0.4);
-    }
-    100% {
-      transform: scale(0.4);
-    }
-  }
-
-  @media screen and (max-width: 420px) {
-    .hotspot--cta {
-      width: 20px;
-      height: 20px;
-    }
-    .hotspot--cta::after {
-      width: 5px;
-      height: 5px;
-    }
-  }
-
-    {%- for block in section.blocks -%}
-      {%- assign hotspot_selector = '#hotspot-' | append: block.id -%}
-      {{ hotspot_selector }}{
-        top: {{ block.settings.top }}%;
-        left: {{ block.settings.left }}%;
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
       }
-    {%- endfor -%}
-{%- endstyle -%}
+    }
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="page-width">
-    <section class="hotspots--wrapper">
-      <img
-        src="{{ section.settings.image }}"
-        alt="Shop Coniglio Palm Beach"
-        class="hotspots--figure"
-      >
+    .hotspots--wrapper {
+      position: relative;
+      margin: auto;
+    }
+
+    .hotspots--figure {
+      width: 100%;
+    }
+
+    .hotspot {
+      position: absolute;
+      display: block;
+    }
+
+    .hotspot--cta {
+      position: relative;
+      float: right;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: {{section.settings.hotspot_color}};
+      transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
+    }
+
+    .hotspot--cta::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: {{section.settings.hotspot_inner}};
+      z-index: 2;
+      transition: opacity 0.6s;
+      animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
+    }
+
+    .hotspot:hover .hotspot--cta {
+      transform: scale(0.6);
+    }
+
+    .hotspot:hover .hotspot--cta:after {
+      opacity: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.4);
+      }
+      33% {
+        transform: scale(1);
+      }
+      66% {
+        transform: scale(0.4);
+      }
+      100% {
+        transform: scale(0.4);
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      .hotspot--cta {
+        width: 20px;
+        height: 20px;
+      }
+      .hotspot--cta::after {
+        width: 5px;
+        height: 5px;
+      }
+    }
 
       {%- for block in section.blocks -%}
-        <a class="hotspot" id="hotspot-{{ block.id }}" href="{{ block.settings.hotspot_url }}">
-          <span class="hotspot--cta"></span>
-        </a>
+        {%- assign hotspot_selector = '#hotspot-' | append: block.id -%}
+        {{ hotspot_selector }}{
+          top: {{ block.settings.top }}%;
+          left: {{ block.settings.left }}%;
+        }
       {%- endfor -%}
-    </section>
+
+  .home-background {
+    width: 90%;
+    align-self: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-size: cover;
+    justify-content: center;
+    background-image: url('{{ section.settings.bg }}');
+  }
+{%- endstyle -%}
+
+<div class="hotspot-background">
+  <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+    <div class="page-width">
+      <section class="hotspots--wrapper">
+        <img
+          src="{{ section.settings.image }}"
+          alt="Shop Coniglio Palm Beach"
+          class="hotspots--figure"
+        >
+
+        {%- for block in section.blocks -%}
+          <a class="hotspot" id="hotspot-{{ block.id }}" href="{{ block.settings.hotspot_url }}">
+            <span class="hotspot--cta"></span>
+          </a>
+        {%- endfor -%}
+      </section>
+    </div>
   </div>
 </div>
