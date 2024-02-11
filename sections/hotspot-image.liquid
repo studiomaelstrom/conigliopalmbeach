@@ -18,16 +18,21 @@
     "id": "hotspot_inner",
     "label": "Hotspot Inner Color",
     "default": "#FFF"
-  }
-    ,
-    {
-    "type": "header",
-    "content": "Background (Optional)"
   },
     {
     "type": "text",
     "id": "bg",
-    "label": "Background Image URL"
+    "label": "Background Image URL (Optional)"
+  }   ,
+    {
+    "type": "range",
+          "id": "margins",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "unit": "px",
+          "label": "Margins",
+          "default": 50
   }
   ],
   "blocks": [
@@ -175,8 +180,9 @@
     display: flex;
     align-self: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin:auto;
+    margin-top: {{ section.settings.margins }};
+    margin-bottom: {{ section.settings.margins }};
     flex-direction: column;
     background-size: cover;
     justify-content: center;
