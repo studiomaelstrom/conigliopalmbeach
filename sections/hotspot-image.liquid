@@ -30,62 +30,139 @@
     }
   }
 {%- endstyle -%}
-<div>
 
-   <figure class="hotspot-figure">
-    {%- if section.settings.image == blank -%}
-      {{ 'image' | placeholder_svg_tag: 'hotspot-picture' }}
-    {%- else -%}
-    <picture class="hotspots-picture">
-      <source srcset="{{ section.settings.image | img_url: '320x' }} 1x,
-                      {{ section.settings.image | img_url: '320x', scale: 2 }} 2x" media="(max-width: 320px)">
-      <source srcset="{{ section.settings.image | img_url: '420x' }} 1x,
-                      {{ section.settings.image | img_url: '420x', scale: 2 }} 2x" media="(max-width: 420px)">
-      <source srcset="{{ section.settings.image | img_url: '768x' }} 1x,
-                      {{ section.settings.image | img_url: '768x', scale: 2 }} 2x" media="(max-width: 768px)">
-      <source srcset="{{ section.settings.image | img_url: '1240x' }} 1x,
-                      {{ section.settings.image | img_url: '1240x', scale: 2 }} 2x" media="(max-width: 1240px)">
-      <source srcset="{{ section.settings.image | img_url: '1440x' }} 1x,
-                      {{ section.settings.image | img_url: '1440x', scale: 2 }} 2x" media="(max-width: 1440px)">
-      <source srcset="{{ section.settings.image | img_url: '1660x' }} 1x,
-                      {{ section.settings.image | img_url: '1660x', scale: 2 }} 2x" media="(min-width: 1441px)">
-      <img class="hotspot-img" src="{{ section.settings.image | img_url: '1660x' }}" alt="{{ section.settings.image.alt }}" usemap="#image-map">
-    </picture>
-    {%- endif -%}
-  </figure>
+<section class="hotspots--wrapper">
+  <img
+    src="https://images.unsplash.com/photo-1494698853255-d0fa521abc6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80"
+    alt="black Macbook near black iPhone 7 Plus and black Apple Watch"
+    class="hotspots--figure"
+  />
+  <a class="hotspot hotspot--iphone" href="#">
+    <span class="hotspot--cta"></span>
+  </a>
+  <a class="hotspot hotspot--macbook" href="#">
+    <span class="hotspot--cta"></span>
+  </a>
+  <a class="hotspot hotspot--watch" href="#">
+    <span class="hotspot--cta"></span>
+  </a>
+</section>
 
-  <map name="image-map">
-    <area
-      target="_blank"
-      alt="Classic Button Down"
-      title="Classic Button Down"
-      href="https://conigliopalmbeach.myshopify.com/products/b0001"
-      coords="301,959,222,1037,183,1371,167,1392,186,1450,192,1689,165,1731,234,1797,250,1851,231,1956,257,1994,315,1993,347,1936,330,1839,303,1398,344,1011"
-      shape="poly"
-    >
-  </map>
-</div>
+<style>
+  .hotspots--wrapper {
+    position: relative;
+    margin: auto;
+  }
 
-<script>
-  /*
-  * rwdImageMaps jQuery plugin v1.5
-  *
-  * Allows image maps to be used in a responsive design by recalculating the area coordinates to match the actual image size on load and window.resize
-  *
-  * Copyright (c) 2013 Matt Stow
-  * https://github.com/stowball/jQuery-rwdImageMaps
-  * http://mattstow.com
-  * Licensed under the MIT license
-  */
-  ;(function(a){a.fn.rwdImageMaps=function(){var c=this;var b=function(){c.each(function(){if(typeof(a(this).attr("usemap"))=="undefined"){return}var e=this,d=a(e);a("<img />").load(function(){var g="width",m="height",n=d.attr(g),j=d.attr(m);if(!n||!j){var o=new Image();o.src=d.attr("src");if(!n){n=o.width}if(!j){j=o.height}}var f=d.width()/100,k=d.height()/100,i=d.attr("usemap").replace("#",""),l="coords";a('map[name="'+i+'"]').find("area").each(function(){var r=a(this);if(!r.data(l)){r.data(l,r.attr(l))}var q=r.data(l).split(","),p=new Array(q.length);for(var h=0;h<p.length;++h){if(h%2===0){p[h]=parseInt(((q[h]/n)*100)*f)}else{p[h]=parseInt(((q[h]/j)*100)*k)}}r.attr(l,p.toString())})}).attr("src",d.attr("src"))})};a(window).resize(b).trigger("resize");return this}})(jQuery);
-</script>
+  .hotspots--figure {
+    width: 100%;
+  }
 
-<script>
-  $(document).ready(function(e) {
-  	$('img[usemap]').rwdImageMaps();
+  .hotspot {
+    position: absolute;
+    display: block;
+  }
 
-  	$('area').on('click', function() {
-  		alert($(this).attr('alt') + ' clicked');
-  	});
-  });
-</script>
+  .hotspot--cta {
+    position: relative;
+    float: right;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ff0000;
+    transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
+  }
+
+  .hotspot--cta::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 2;
+    transition: opacity 0.6s;
+    animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
+  }
+
+  .hotspot:hover .hotspot--cta {
+    transform: scale(0.6);
+  }
+
+  .hotspot:hover .hotspot--cta:after {
+    opacity: 0;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.4);
+    }
+    33% {
+      transform: scale(1);
+    }
+    66% {
+      transform: scale(0.4);
+    }
+    100% {
+      transform: scale(0.4);
+    }
+  }
+
+  .hotspot--iphone {
+    top: 62%;
+    right: 68%;
+  }
+
+  .hotspot--macbook {
+    top: 22%;
+    right: 48%;
+  }
+
+  .hotspot--watch {
+    top: 72%;
+    left: 45%;
+  }
+
+  @media screen and (max-width: 640px) {
+    .hotspot--title {
+      line-height: 40px;
+      font-size: 10px;
+    }
+    .hotspot--cta {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .hotspot--title {
+      line-height: 30px;
+      font-size: 9px;
+    }
+    .hotspot--cta {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .hotspot--title {
+      display: none;
+    }
+
+    .hotspot--cta {
+      width: 20px;
+      height: 20px;
+    }
+    .hotspot--cta::after {
+      width: 5px;
+      height: 5px;
+    }
+  }
+</style>
