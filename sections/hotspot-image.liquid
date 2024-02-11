@@ -186,16 +186,21 @@
     margin-bottom: {{ section.settings.margins }}px;
     flex-direction: column;
     justify-content: center;
+
+  }
+{%- endstyle -%}
+
+<div
+  class="hotspot-background"
+  style="
     {% if section.settings.bg != blank %}
      background-size: cover;
     background-image: url('{{ section.settings.bg }}');
     {% else %}
       background-image: none;
       {% endif %}
-  }
-{%- endstyle -%}
-
-<div class="hotspot-background">
+  "
+>
   <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
     <div class="page-width">
       <section class="hotspots--wrapper">
