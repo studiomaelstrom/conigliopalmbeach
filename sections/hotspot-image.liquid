@@ -198,7 +198,18 @@
 
   }
    .hotspot-background::before {
-    background-size: cover;
+    flex: 0 0 auto;
+    width: 95%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: {{ section.settings.margins }}px;
+    margin-bottom: {{ section.settings.margins }}px;
+    flex-direction: column;
+    justify-content: center;
+     background-size: cover;
     background-image: url('{{ section.settings.bg }}');
     opacity:{{ section.settings.bg_opacity }};
   }
