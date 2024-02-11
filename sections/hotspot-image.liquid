@@ -35,29 +35,7 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-{%- endstyle -%}
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="page-width">
-    <section class="hotspots--wrapper">
-      <img
-        src="{{ section.settings.image }}"
-        alt="Shop Coniglio Palm Beach"
-        class="hotspots--figure"
-      >
-      <a class="hotspot hotspot--iphone" href="#">
-        <span class="hotspot--cta"></span>
-      </a>
-      <a class="hotspot hotspot--macbook" href="#">
-        <span class="hotspot--cta"></span>
-      </a>
-      <a class="hotspot hotspot--watch" href="#">
-        <span class="hotspot--cta"></span>
-      </a>
-    </section>
-  </div>
-</div>
 
-<style>
   .hotspots--wrapper {
     position: relative;
     margin: auto;
@@ -79,7 +57,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #F47722;
+    background: {{section.settings.hotspot_color}};
     transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
   }
 
@@ -148,4 +126,25 @@
       height: 5px;
     }
   }
-</style>
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <section class="hotspots--wrapper">
+      <img
+        src="{{ section.settings.image }}"
+        alt="Shop Coniglio Palm Beach"
+        class="hotspots--figure"
+      >
+      <a class="hotspot hotspot--iphone" href="#">
+        <span class="hotspot--cta"></span>
+      </a>
+      <a class="hotspot hotspot--macbook" href="#">
+        <span class="hotspot--cta"></span>
+      </a>
+      <a class="hotspot hotspot--watch" href="#">
+        <span class="hotspot--cta"></span>
+      </a>
+    </section>
+  </div>
+</div>
