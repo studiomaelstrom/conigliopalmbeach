@@ -12,6 +12,12 @@
     "id": "hotspot_color",
     "label": "Hotspot Color",
     "default": "#F47722"
+  },
+    {
+    "type": "color",
+    "id": "hotspot_inner",
+    "label": "Hotspot Inner Color",
+    "default": "#FFF"
   }
   ],
   "presets": [
@@ -72,7 +78,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #31210E;
+    background: {{section.settings.hotspot_inner}};
     z-index: 2;
     transition: opacity 0.6s;
     animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
