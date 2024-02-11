@@ -90,7 +90,6 @@
     .section-{{ section.id }}-padding {
       padding-top: calc({{ section.settings.padding_top }}px * 0.75);
       padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-      opacity:1;
     }
 
     @media screen and (min-width: 750px) {
@@ -103,7 +102,6 @@
     .hotspots--wrapper {
       position: relative;
       margin: auto;
-      opacity:1;
     }
 
     .hotspots--figure {
@@ -196,8 +194,11 @@
     margin-top: {{ section.settings.margins }}px;
     margin-bottom: {{ section.settings.margins }}px;
     flex-direction: column;
-    background-size: cover;
     justify-content: center;
+
+  }
+   .hotspot-background::before {
+    background-size: cover;
     background-image: url('{{ section.settings.bg }}');
     opacity:{{ section.settings.bg_opacity }};
   }
