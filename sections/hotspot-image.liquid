@@ -20,10 +20,43 @@
     "default": "#FFF"
   }
   ],
+  "blocks": [
+    {
+      "type": "hotspot",
+      "name": "Hotspot",
+      "settings": [
+        {
+          "type": "url",
+          "id": "hotspot_url",
+          "label": "Hotspot Link"
+        },
+        {
+          "type": "range",
+          "id": "top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Top position",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "left",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Left position",
+          "default": 50
+        }
+      ]
+    }
+  ],
   "presets": [
   {
     "name": "Hotspot Image",
-    "category": "Image with hotspot"
+    "category": "Image with hotspots"
   }
 ]
 }
