@@ -140,21 +140,6 @@
     }
   }
 
-  .hotspot--iphone {
-    top: 62%;
-    right: 68%;
-  }
-
-  .hotspot--macbook {
-    top: 22%;
-    right: 48%;
-  }
-
-  .hotspot--watch {
-    top: 72%;
-    left: 45%;
-  }
-
   @media screen and (max-width: 420px) {
     .hotspot--cta {
       width: 20px;
@@ -165,6 +150,14 @@
       height: 5px;
     }
   }
+
+    {%- for block in section.blocks -%}
+      {%- assign hotspot_selector = '#hotspot-' | append: block.id -%}
+      {{ hotspot_selector }}{
+        top: {{ block.settings.top }}%;
+        left: {{ block.settings.left }}%;
+      }
+    {%- endfor -%}
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
@@ -175,15 +168,12 @@
         alt="Shop Coniglio Palm Beach"
         class="hotspots--figure"
       >
-      <a class="hotspot hotspot--iphone" href="#">
-        <span class="hotspot--cta"></span>
-      </a>
-      <a class="hotspot hotspot--macbook" href="#">
-        <span class="hotspot--cta"></span>
-      </a>
-      <a class="hotspot hotspot--watch" href="#">
-        <span class="hotspot--cta"></span>
-      </a>
+
+      {%- for block in section.blocks -%}
+        <a class="hotspot" id="hotspot-{{ block.id }}" href="{{ block.settings.hotspot_url }}">
+          <span class="hotspot--cta"></span>
+        </a>
+      {%- endfor -%}
     </section>
   </div>
 </div>
