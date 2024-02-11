@@ -28,7 +28,8 @@
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-1-compressed.jpg?v=1707520403",
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
-        "bg": ""
+        "bg": "",
+        "margins": 100
       }
     }
   },
