@@ -34,12 +34,25 @@
     },
     "hotspot_image_DqrJgp": {
       "type": "hotspot-image",
+      "blocks": {
+        "hotspot_injitw": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_url": "",
+            "top": 50,
+            "left": 50
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_injitw"
+      ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-3-compressed.jpg?v=1707620800",
         "hotspot_color": "#F47722",
         "hotspot_inner": "#FFF",
         "bg": "",
-        "margins": 50
+        "margins": 10
       }
     }
   },
