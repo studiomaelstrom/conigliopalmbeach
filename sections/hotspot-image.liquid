@@ -3,9 +3,9 @@
   "name": "Hotspot Image",
   "settings": [
     {
-    "type": "image_picker",
+    "type": "text",
     "id": "image",
-    "label": "t:sections.image-with-text.settings.image.label"
+    "label": "Image File URL"
   }
   ],
   "presets": [
@@ -34,7 +34,7 @@
   <div class="page-width">
     <section class="hotspots--wrapper">
       <img
-        src="https://cdn.shopify.com/s/files/1/0626/8924/7387/files/RACK-1-compressed.jpg"
+        src="{{ section.settings.image }}"
         alt="Shop Coniglio Palm Beach"
         class="hotspots--figure"
       >
