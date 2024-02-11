@@ -64,6 +64,7 @@
     "hotspot_image_3whemp": {
       "type": "hotspot-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/RACK-1-compressed.jpg"
       }
     }
   },
