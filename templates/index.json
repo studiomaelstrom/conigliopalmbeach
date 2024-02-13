@@ -32,15 +32,26 @@
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-1-compressed.jpg?v=1707520403",
-        "hotspot_color": "#f47722",
-        "hotspot_inner": "#ffffff",
-        "bg": "https:\/\/images.unsplash.com\/photo-1613268561321-8b344006bb1a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "hotspot_color": "#fdf9f7",
+        "hotspot_inner": "#f47722",
+        "bg": "",
         "margins": 0
       }
     },
     "hotspot_image_DqrJgp": {
       "type": "hotspot-image",
       "blocks": {
+        "hotspot_pBqfJ4": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_url": "",
+            "top": 50,
+            "left": 50,
+            "itop": 50,
+            "ileft": 50,
+            "content": "Product Info Here"
+          }
+        },
         "hotspot_injitw": {
           "type": "hotspot",
           "settings": {
@@ -54,14 +65,15 @@
         }
       },
       "block_order": [
+        "hotspot_pBqfJ4",
         "hotspot_injitw"
       ],
       "disabled": true,
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-3-compressed.jpg?v=1707620800",
-        "hotspot_color": "#f47722",
-        "hotspot_inner": "#ffffff",
-        "bg": "https:\/\/images.unsplash.com\/photo-1545077562-37e4e1fb641e?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "hotspot_color": "#fdf9f7",
+        "hotspot_inner": "#f47722",
+        "bg": "",
         "margins": 30
       }
     }
