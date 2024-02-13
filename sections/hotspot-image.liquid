@@ -290,17 +290,14 @@
 </div>
 
 <script>
-      // Get the modal
-    var modal = document.getElementById("popup-block");
-
     $('.hotspot').click(function() {
-      modal.style.display = "flex";
+      document.getElementById("popup-block").style.display = "flex";
   });
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+      if (event.target == document.getElementById("popup-block")) {
+        document.getElementById("popup-block").style.display = "none";
       }
     }
 </script>
