@@ -293,12 +293,12 @@
   var modal = document.getElementById("popup-block");
 
   // Get the button that opens the modal
-  var btn = document.getElementsByClassName("hotspot--cta");
+  var btns = document.querySelectorAll("[id='hotspot-button']");
 
-  // When the user clicks on the button, open the modal
-  btn.onclick = function() {
-    modal.style.display = "flex";
-  }
+  var btn = document.getElementById("hotspot-button");
+  for(var i = 0; i < btns.length; i++)
+    modal[i].style.display = "flex"; //
+
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
