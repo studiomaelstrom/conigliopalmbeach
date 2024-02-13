@@ -45,6 +45,11 @@
           "id": "hotspot_url",
           "label": "Link"
         },
+
+    {
+    "type": "header",
+    "content": "Hotspot Position"
+  },
         {
           "type": "range",
           "id": "top",
@@ -52,7 +57,7 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "Top position",
+          "label": "Top",
           "default": 50
         },
         {
@@ -62,7 +67,27 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "label": "Left position",
+          "label": "Left",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "itop",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Top",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "ileft",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Left",
           "default": 50
         }
       ]
@@ -167,10 +192,16 @@
     }
 
       {%- for block in section.blocks -%}
-        {%- assign hotspot_selector = '#hotspot-' | append: block.id -%}
-        {{ hotspot_selector }}{
+        {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+        {{ hotspot_position }}{
           top: {{ block.settings.top }}%;
           left: {{ block.settings.left }}%;
+        }
+
+  {%- assign info_position = '#info-' | append: block.id -%}
+        {{ info_position }}{
+          top: {{ block.settings.itop }}%;
+          left: {{ block.settings.ileft }}%;
         }
       {%- endfor -%}
 
@@ -214,6 +245,7 @@
           <a class="hotspot" id="hotspot-{{ block.id }}" href="{{ block.settings.hotspot_url }}">
             <span class="hotspot--cta"></span>
           </a>
+          <div></div>
         {%- endfor -%}
       </section>
     </div>
