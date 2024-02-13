@@ -107,156 +107,120 @@
 {% endschema %}
 
 {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+      padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+    }
+
+    @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
-        padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-        padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
       }
-
-      @media screen and (min-width: 750px) {
-        .section-{{ section.id }}-padding {
-          padding-top: {{ section.settings.padding_top }}px;
-          padding-bottom: {{ section.settings.padding_bottom }}px;
-        }
-      }
-
-      .hotspots--wrapper {
-        position: relative;
-        margin: auto;
-      }
-
-      .hotspots--figure {
-        width: 100%;
-      }
-
-      .hotspot {
-        position: absolute;
-        display: block;
-        &:checked {
-        ~ .BornHS__Modal__Content {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-      }
-
-      .hotspot--cta {
-        position: relative;
-        float: right;
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background: {{section.settings.hotspot_color}};
-        transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
-      }
-
-      .hotspot--cta::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        margin: auto;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: {{section.settings.hotspot_inner}};
-        z-index: 2;
-        transition: opacity 0.6s;
-        animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
-      }
-
-      .hotspot:hover .hotspot--cta {
-        transform: scale(0.6);
-      }
-
-      .hotspot:hover .hotspot--cta:after {
-        opacity: 0;
-      }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(0.4);
-        }
-        33% {
-          transform: scale(1);
-        }
-        66% {
-          transform: scale(0.4);
-        }
-        100% {
-          transform: scale(0.4);
-        }
-      }
-
-      @media screen and (max-width: 420px) {
-        .hotspot--cta {
-          width: 20px;
-          height: 20px;
-        }
-        .hotspot--cta::after {
-          width: 5px;
-          height: 5px;
-        }
-      }
-
-        {%- for block in section.blocks -%}
-          {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
-          {{ hotspot_position }}{
-            top: {{ block.settings.top }}%;
-            left: {{ block.settings.left }}%;
-          }
-
-    {%- assign info_position = '#info-' | append: block.id -%}
-          {{ info_position }}{
-            top: {{ block.settings.itop }}%;
-            left: {{ block.settings.ileft }}%;
-          }
-        {%- endfor -%}
-
-    .hotspot-background {
-      flex: 0 0 auto;
-      width: 95%;
-      display: flex;
-      align-self: center;
-      align-items: center;
-      margin-left:auto;
-      margin-right:auto;
-      flex-direction: column;
-      justify-content: center;
     }
 
-    .Content__Wrapper {
+    .hotspots--wrapper {
       position: relative;
+      margin: auto;
     }
-  .BornHS__Close {
-      display: none;
+
+    .hotspots--figure {
+      width: 100%;
     }
-    .BornHS__Modal__Content {
-      background: #131313;
-      border-radius: 5px;
-      box-shadow: 0 0 24px rgba(0, 0, 0, 0.22);
-      color: #fff;
-      opacity: 0;
+
+    .hotspot {
       position: absolute;
-      transition: all 0.3s ease-in-out;
-      visibility: hidden;
-      width: 360px;
-      z-index: 4;
-      .Content__Wrapper {
-        padding: 20px;
-        .BornHS__Title {
-          font-size: 16px;
-          text-transform: uppercase;
-        }
-        p {
-          font-size: 13px;
-          margin: 0;
-          padding: 0;
-        }
+      display: block;
+    }
+
+    .hotspot--cta {
+      position: relative;
+      float: right;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: {{section.settings.hotspot_color}};
+      transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
+    }
+
+    .hotspot--cta::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: {{section.settings.hotspot_inner}};
+      z-index: 2;
+      transition: opacity 0.6s;
+      animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
+    }
+
+    .hotspot:hover .hotspot--cta {
+      transform: scale(0.6);
+    }
+
+    .hotspot:hover .hotspot--cta:after {
+      opacity: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.4);
+      }
+      33% {
+        transform: scale(1);
+      }
+      66% {
+        transform: scale(0.4);
+      }
+      100% {
+        transform: scale(0.4);
       }
     }
+
+    @media screen and (max-width: 420px) {
+      .hotspot--cta {
+        width: 20px;
+        height: 20px;
+      }
+      .hotspot--cta::after {
+        width: 5px;
+        height: 5px;
+      }
+    }
+
+      {%- for block in section.blocks -%}
+        {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+        {{ hotspot_position }}{
+          top: {{ block.settings.top }}%;
+          left: {{ block.settings.left }}%;
+        }
+
+  {%- assign info_position = '#info-' | append: block.id -%}
+        {{ info_position }}{
+          top: {{ block.settings.itop }}%;
+          left: {{ block.settings.ileft }}%;
+        }
+      {%- endfor -%}
+
+  .hotspot-background {
+    flex: 0 0 auto;
+    width: 95%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+    flex-direction: column;
+    justify-content: center;
+
+  }
 {%- endstyle -%}
 
 <div
@@ -282,19 +246,10 @@
         >
 
         {%- for block in section.blocks -%}
-          <div class="hotspot" id="hotspot-{{ block.id }}">
+          <a class="hotspot" id="hotspot-{{ block.id }}" href="{{ block.settings.hotspot_url }}">
             <span class="hotspot--cta"></span>
-          </div>
-          <div class="BornHS__Modal__Content" id="info-{{ block.id }}">
-            <div class="Content__Wrapper">
-              <label for="H1" class="BornHS__Close"></label>
-              <h3 class="BornHS__Title">Popup Title</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia pariatur laudantium deserunt minima
-                delectus illum dolor!
-              </p>
-            </div>
-          </div>
+          </a>
+          <div></div>
         {%- endfor -%}
       </section>
     </div>
