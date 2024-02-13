@@ -113,129 +113,157 @@
 {% endschema %}
 
 {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-      padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-    }
-
-    @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
+        padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+        padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
       }
-    }
 
-    .hotspots--wrapper {
-      position: relative;
-      margin: auto;
-    }
-
-    .hotspots--figure {
-      width: 100%;
-    }
-
-    .hotspot {
-      position: absolute;
-      display: block;
-    }
-
-    .hotspot--cta {
-      position: relative;
-      float: right;
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: {{section.settings.hotspot_color}};
-      transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
-    }
-
-    .hotspot--cta::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: {{section.settings.hotspot_inner}};
-      z-index: 2;
-      transition: opacity 0.6s;
-      animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
-    }
-
-    .hotspot:hover .hotspot--cta {
-      transform: scale(0.6);
-    }
-
-    .hotspot:hover .hotspot--cta:after {
-      opacity: 0;
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(0.4);
+      @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
       }
-      33% {
-        transform: scale(1);
-      }
-      66% {
-        transform: scale(0.4);
-      }
-      100% {
-        transform: scale(0.4);
-      }
-    }
 
-    @media screen and (max-width: 420px) {
+      .hotspots--wrapper {
+        position: relative;
+        margin: auto;
+      }
+
+      .hotspots--figure {
+        width: 100%;
+      }
+
+      .hotspot {
+        position: absolute;
+        display: block;
+      }
+
       .hotspot--cta {
-        width: 20px;
-        height: 20px;
+        position: relative;
+        float: right;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: {{section.settings.hotspot_color}};
+        transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
       }
+
       .hotspot--cta::after {
-        width: 5px;
-        height: 5px;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: {{section.settings.hotspot_inner}};
+        z-index: 2;
+        transition: opacity 0.6s;
+        animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
       }
+
+      .hotspot:hover .hotspot--cta {
+        transform: scale(0.6);
+      }
+
+      .hotspot:hover .hotspot--cta:after {
+        opacity: 0;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(0.4);
+        }
+        33% {
+          transform: scale(1);
+        }
+        66% {
+          transform: scale(0.4);
+        }
+        100% {
+          transform: scale(0.4);
+        }
+      }
+
+      @media screen and (max-width: 420px) {
+        .hotspot--cta {
+          width: 20px;
+          height: 20px;
+        }
+        .hotspot--cta::after {
+          width: 5px;
+          height: 5px;
+        }
+      }
+
+        {%- for block in section.blocks -%}
+          {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+          {{ hotspot_position }}{
+            top: {{ block.settings.top }}%;
+            left: {{ block.settings.left }}%;
+          }
+
+    {%- assign info_position = '#info-' | append: block.id -%}
+          {{ info_position }}{
+            top: {{ block.settings.itop }}%;
+            left: {{ block.settings.ileft }}%;
+          }
+        {%- endfor -%}
+
+    .hotspot-background {
+      flex: 0 0 auto;
+      width: 95%;
+      display: flex;
+      align-self: center;
+      align-items: center;
+      margin-left:auto;
+      margin-right:auto;
+      flex-direction: column;
+      justify-content: center;
     }
 
-      {%- for block in section.blocks -%}
-        {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
-        {{ hotspot_position }}{
-          top: {{ block.settings.top }}%;
-          left: {{ block.settings.left }}%;
-        }
-
-  {%- assign info_position = '#info-' | append: block.id -%}
-        {{ info_position }}{
-          top: {{ block.settings.itop }}%;
-          left: {{ block.settings.ileft }}%;
-        }
-      {%- endfor -%}
-
-  .hotspot-background {
-    flex: 0 0 auto;
-    width: 95%;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    margin-left:auto;
-    margin-right:auto;
-    flex-direction: column;
-    justify-content: center;
+    /* The Modal (background) */
+  .popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
 
-  .popup {
-    visibility:hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;  }
+  /* Modal Content/Box */
+  .popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 {%- endstyle -%}
 
 <div
@@ -261,11 +289,15 @@
         >
 
         {%- for block in section.blocks -%}
-          <div class="hotspot" id="hotspot-{{ block.id }}" onclick="infoToggle()">
-            <span class="hotspot--cta"></span>
-            <span class="popup" id="myPopup">popup</span>
+          <div class="hotspot" id="hotspot-{{ block.id }}">
+            <span class="hotspot--cta" id="hotspot-button"></span>
           </div>
-          <div></div>
+          <div class="popup" id="popup-block">
+            <div class="popup-content">
+              <span class="close">&times;</span>
+              <p>Some text in the popup</p>
+            </div>
+          </div>
         {%- endfor -%}
       </section>
     </div>
@@ -273,9 +305,29 @@
 </div>
 
 <script>
-  // When the user clicks on <div>, open the popup
-  function infoToggle() {
-    var popup = document.getElementById("myPopup");
-    popup.style.visibility = "show";
+    // Get the modal
+  var modal = document.getElementById("popup-block");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("hotspot-button");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
 </script>
