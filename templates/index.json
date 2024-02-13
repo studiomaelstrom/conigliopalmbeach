@@ -6,17 +6,23 @@
         "hotspot_3DPVjH": {
           "type": "hotspot",
           "settings": {
-            "hotspot_url": "shopify:\/\/products\/le-orange-hand-embroidered-shirt",
+            "hotspot_url": "shopify:\/\/collections\/web-launch",
             "top": 38,
-            "left": 13
+            "left": 13,
+            "itop": 50,
+            "ileft": 50,
+            "content": "Product Info Here"
           }
         },
         "hotspot_e99ktw": {
           "type": "hotspot",
           "settings": {
-            "hotspot_url": "shopify:\/\/products\/botanical-illustrations-lounge-pants",
+            "hotspot_url": "",
             "top": 46,
-            "left": 18
+            "left": 18,
+            "itop": 50,
+            "ileft": 50,
+            "content": "Product Info Here"
           }
         }
       },
@@ -40,7 +46,10 @@
           "settings": {
             "hotspot_url": "",
             "top": 50,
-            "left": 50
+            "left": 50,
+            "itop": 50,
+            "ileft": 50,
+            "content": "Product Info Here"
           }
         }
       },
