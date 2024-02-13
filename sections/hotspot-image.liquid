@@ -252,9 +252,9 @@
         >
 
         {%- for block in section.blocks -%}
-          <a class="hotspot" id="hotspot-{{ block.id }}" href="{{ block.settings.hotspot_url }}">
+          <div class="hotspot" id="hotspot-{{ block.id }}" href="{{ block.settings.hotspot_url }}">
             <span class="hotspot--cta"></span>
-          </a>
+          </div>
           <div></div>
         {%- endfor -%}
       </section>
