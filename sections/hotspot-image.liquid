@@ -203,7 +203,7 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     z-index: 10;
     width:400px;
-    padding-bottom:100px;
+    margin-bottom:100px!important;
     /* Adjust width, max-width, etc., as needed */
   }
 {%- endstyle -%}
@@ -249,18 +249,38 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const hotspots = document.querySelectorAll('.hotspot');
+    const popups = document.querySelectorAll('.hotspot--popup');
+
+    function closeAllPopups() {
+      popups.forEach(function(popup) {
+        popup.style.display = 'none';
+      });
+    }
 
     hotspots.forEach(hotspot => {
-      hotspot.addEventListener('click', function() {
+      hotspot.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent click from immediately propagating to document
         const popup = this.querySelector('.hotspot--popup');
-        // Toggle visibility
-        if (popup.style.display === 'block') {
-          popup.style.display = 'none';
-        } else {
-          // Hide all other popups first
-          document.querySelectorAll('.hotspot--popup').forEach(p => p.style.display = 'none');
-          popup.style.display = 'block';
-        }
+
+        // Close all popups first
+        closeAllPopups();
+
+        // Then open the clicked hotspot's popup
+        popup.style.display = 'block';
+      });
+    });
+
+    document.addEventListener('click', function(event) {
+      const isClickInsideHotspot = event.target.closest('.hotspot');
+      if (!isClickInsideHotspot) {
+        closeAllPopups();
+      }
+    });
+
+    // Prevent popup from closing when clicking inside it
+    popups.forEach(popup => {
+      popup.addEventListener('click', function(event) {
+        event.stopPropagation();
       });
     });
   });
