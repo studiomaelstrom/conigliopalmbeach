@@ -1,5 +1,31 @@
 {
   "sections": {
+    "hotspot_section_B9zdbF": {
+      "type": "hotspot-section",
+      "blocks": {
+        "hotspot_ED3HRR": {
+          "type": "hotspot",
+          "settings": {
+            "hotspot_url": "",
+            "top": 50,
+            "left": 50,
+            "itop": 50,
+            "ileft": 50,
+            "content": "Product Info Here"
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_ED3HRR"
+      ],
+      "settings": {
+        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-1-compressed.jpg?v=1707520403",
+        "hotspot_color": "#fdf9f7",
+        "hotspot_inner": "#f47722",
+        "bg": "",
+        "margins": 50
+      }
+    },
     "hotspot_image_caGTGE": {
       "type": "hotspot-image",
       "blocks": {
@@ -35,6 +61,7 @@
     }
   },
   "order": [
+    "hotspot_section_B9zdbF",
     "hotspot_image_caGTGE"
   ]
 }
