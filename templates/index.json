@@ -1,39 +1,40 @@
 {
   "sections": {
-    "hotspot_section_B9zdbF": {
-      "type": "hotspot-section",
+    "hotspot_image_dc8tJ7": {
+      "type": "hotspot-image",
       "blocks": {
-        "hotspot_MAwVwq": {
+        "hotspot_8KEBT6": {
           "type": "hotspot",
           "settings": {
-            "product": "silk-dupioni-convertible-beach-pant",
-            "top": 38,
-            "left": 31
+            "top": 50,
+            "left": 50
           }
         },
-        "hotspot_PRPbre": {
-          "type": "hotspot",
+        "hotspot_tooltip_6UnYqr": {
+          "type": "hotspot_tooltip",
           "settings": {
-            "product": "silk-dupioni-ruffle-power-pareo",
+            "tooltip_text": "More Info",
+            "button_link": "",
+            "button_text": "Learn More",
             "top": 50,
-            "left": 59
+            "left": 50
           }
         }
       },
       "block_order": [
-        "hotspot_MAwVwq",
-        "hotspot_PRPbre"
+        "hotspot_8KEBT6",
+        "hotspot_tooltip_6UnYqr"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-1-compressed.jpg?v=1707520403",
-        "hotspot_color": "#F47722",
-        "hotspot_inner": "#FFF",
+        "hotspot_color": "#fdf9f7",
+        "hotspot_inner": "#f47722",
         "bg": "",
         "margins": 0
       }
     }
   },
   "order": [
-    "hotspot_section_B9zdbF"
+    "hotspot_image_dc8tJ7"
   ]
 }
