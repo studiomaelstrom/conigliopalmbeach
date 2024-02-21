@@ -3,18 +3,19 @@
     "hotspot_image_dc8tJ7": {
       "type": "hotspot-image",
       "blocks": {
-        "hotspot_8KEBT6": {
+        "hotspot_ixbeYn": {
           "type": "hotspot",
           "settings": {
-            "top": 50,
-            "left": 50
+            "product": "silk-dupioni-convertible-beach-pant",
+            "top": 27,
+            "left": 28
           }
         },
-        "hotspot_tooltip_6UnYqr": {
+        "hotspot_tooltip_Xp384e": {
           "type": "hotspot_tooltip",
           "settings": {
             "tooltip_text": "More Info",
-            "button_link": "",
+            "button_link": "shopify:\/\/products\/cardigan",
             "button_text": "Learn More",
             "top": 50,
             "left": 50
@@ -22,8 +23,8 @@
         }
       },
       "block_order": [
-        "hotspot_8KEBT6",
-        "hotspot_tooltip_6UnYqr"
+        "hotspot_ixbeYn",
+        "hotspot_tooltip_Xp384e"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-1-compressed.jpg?v=1707520403",
