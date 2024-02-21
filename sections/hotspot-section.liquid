@@ -285,7 +285,6 @@
         <div id="myModal" class="modal">
           <!-- Modal content -->
           <div class="modal-content">
-            <span class="close">&times;</span>
             <!-- Dynamic content will be loaded here -->
           </div>
         </div>
@@ -310,29 +309,23 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const hotspots = document.querySelectorAll('.hotspot');
-  // Assuming you have a modal with the ID 'myModal' and a span to close it with the class 'close'
   const modal = document.querySelector('.modal');
-  const span = document.getElementsByClassName("close")[0];
+  const modalContent = document.querySelector('.modal-content');
 
   hotspots.forEach(hotspot => {
     hotspot.addEventListener('click', function(event) {
       event.stopPropagation();
       const popupContent = this.querySelector('.hotspot--popup').innerHTML;
-      modal.querySelector('.modal-content').innerHTML = `<span class="close">&times;</span>${popupContent}`;
+      modalContent.innerHTML = `${popupContent}`; // Insert content directly
       modal.style.display = "block";
-
-      // When the user clicks on <span> (x), close the modal
-      modal.querySelector('.close').onclick = function() {
-        modal.style.display = "none";
-      }
     });
   });
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
+  // Close the modal if the user clicks outside of it
+  window.addEventListener('click', function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  }
+  });
 });
 </script>
