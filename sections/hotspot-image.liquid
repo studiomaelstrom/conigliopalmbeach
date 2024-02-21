@@ -239,7 +239,7 @@
     padding: 10px 15px 10px 15px;
   }
 
-  .hotspot:hover .hotspot-text {
+  .hotspot--cta:hover .hotspot-text {
     visibility: visible;
   }
 
@@ -288,8 +288,9 @@
 
         {%- for block in section.blocks -%}
           <div class="hotspot" id="hotspot-{{ block.id }}">
-            <span class="hotspot--cta" id="hotspot-button"></span>
-            <span class="hotspot-text" id="top">Popup text information here.</span>
+            <span class="hotspot--cta" id="hotspot-button"
+              ><span class="hotspot-text" id="top">Popup text information here.</span></span
+            >
           </div>
         {%- endfor -%}
       </section>
