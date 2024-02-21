@@ -41,11 +41,11 @@
       "name": "Hotspot",
       "settings": [
         {
-          "type": "text",
-          "id": "hotspot_content",
-          "label": "Hotspot Content",
-          "default": "Product Info Here"
-        },
+      "type": "product",
+      "id": "product",
+      "label": "Select a product",
+      "info": "Choose a product to display in this section."
+    },
         {
           "type": "range",
           "id": "top",
@@ -79,184 +79,192 @@
 {% endschema %}
 
 {%- style -%}
-              .section-{{ section.id }}-padding {
-                padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-                padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-              }
-
-              @media screen and (min-width: 750px) {
                 .section-{{ section.id }}-padding {
-                  padding-top: {{ section.settings.padding_top }}px;
-                  padding-bottom: {{ section.settings.padding_bottom }}px;
+                  padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+                  padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
                 }
-              }
 
-              .hotspots--wrapper {
-                position: relative;
-                margin: auto;
-              }
-
-              .hotspots--figure {
-                width: 100%;
-              }
-
-              .hotspot {
-                position: absolute;
-                display: block;
-              }
-
-              .hotspot--cta {
-                position: relative;
-                float: right;
-                display: inline-block;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background: {{section.settings.hotspot_color}};
-                transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
-              }
-
-              .hotspot--cta::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                margin: auto;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background: {{section.settings.hotspot_inner}};
-                z-index: 2;
-                transition: opacity 0.6s;
-                animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
-              }
-
-              .hotspot:hover .hotspot--cta {
-                transform: scale(0.6);
-              }
-
-              .hotspot:hover .hotspot--cta:after {
-                opacity: 0;
-              }
-
-              @keyframes pulse {
-                0% {
-                  transform: scale(0.4);
+                @media screen and (min-width: 750px) {
+                  .section-{{ section.id }}-padding {
+                    padding-top: {{ section.settings.padding_top }}px;
+                    padding-bottom: {{ section.settings.padding_bottom }}px;
+                  }
                 }
-                33% {
-                  transform: scale(1);
-                }
-                66% {
-                  transform: scale(0.4);
-                }
-                100% {
-                  transform: scale(0.4);
-                }
-              }
 
-              @media screen and (max-width: 420px) {
+                .hotspots--wrapper {
+                  position: relative;
+                  margin: auto;
+                }
+
+                .hotspots--figure {
+                  width: 100%;
+                }
+
+                .hotspot {
+                  position: absolute;
+                  display: block;
+                }
+
                 .hotspot--cta {
-                  width: 20px;
-                  height: 20px;
+                  position: relative;
+                  float: right;
+                  display: inline-block;
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 50%;
+                  background: {{section.settings.hotspot_color}};
+                  transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
                 }
+
                 .hotspot--cta::after {
-                  width: 5px;
-                  height: 5px;
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  bottom: 0;
+                  right: 0;
+                  margin: auto;
+                  width: 10px;
+                  height: 10px;
+                  border-radius: 50%;
+                  background: {{section.settings.hotspot_inner}};
+                  z-index: 2;
+                  transition: opacity 0.6s;
+                  animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
                 }
+
+                .hotspot:hover .hotspot--cta {
+                  transform: scale(0.6);
+                }
+
+                .hotspot:hover .hotspot--cta:after {
+                  opacity: 0;
+                }
+
+                @keyframes pulse {
+                  0% {
+                    transform: scale(0.4);
+                  }
+                  33% {
+                    transform: scale(1);
+                  }
+                  66% {
+                    transform: scale(0.4);
+                  }
+                  100% {
+                    transform: scale(0.4);
+                  }
+                }
+
+                @media screen and (max-width: 420px) {
+                  .hotspot--cta {
+                    width: 20px;
+                    height: 20px;
+                  }
+                  .hotspot--cta::after {
+                    width: 5px;
+                    height: 5px;
+                  }
+                }
+
+                  {%- for block in section.blocks -%}
+                    {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+                    {{ hotspot_position }}{
+                      top: {{ block.settings.top }}%;
+                      left: {{ block.settings.left }}%;
+                    }
+
+              {%- assign info_position = '#info-' | append: block.id -%}
+                    {{ info_position }}{
+                      top: {{ block.settings.itop }}%;
+                      left: {{ block.settings.ileft }}%;
+                    }
+                  {%- endfor -%}
+
+              .hotspot-background {
+                flex: 0 0 auto;
+                width: 95%;
+                display: flex;
+                align-self: center;
+                align-items: center;
+                margin-left:auto;
+                margin-right:auto;
+                flex-direction: column;
+                justify-content: center;
               }
 
-                {%- for block in section.blocks -%}
-                  {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
-                  {{ hotspot_position }}{
-                    top: {{ block.settings.top }}%;
-                    left: {{ block.settings.left }}%;
-                  }
 
-            {%- assign info_position = '#info-' | append: block.id -%}
-                  {{ info_position }}{
-                    top: {{ block.settings.itop }}%;
-                    left: {{ block.settings.ileft }}%;
-                  }
-                {%- endfor -%}
+          .hotspot--popup {
+          display: none;
+          position: absolute;
+          background-color: white;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          z-index: 10;
+          width:400px;
+          margin-bottom:100px!important;
+          /* Adjust width, max-width, etc., as needed */
+        }
 
-            .hotspot-background {
-              flex: 0 0 auto;
-              width: 95%;
-              display: flex;
-              align-self: center;
-              align-items: center;
-              margin-left:auto;
-              margin-right:auto;
-              flex-direction: column;
-              justify-content: center;
-            }
-
-
-        .hotspot--popup {
-        display: none;
-        position: absolute;
-        background-color: white;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        z-index: 10;
-        width:400px;
-        margin-bottom:100px!important;
-        /* Adjust width, max-width, etc., as needed */
+        @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
 
-      @keyframes fadeIn {
-      from {
-        opacity: 0;
+      .fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
       }
-      to {
-        opacity: 1;
-      }
+
+      /* Centered Popup Modal */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 100; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     }
 
-    .fade-in {
-      animation: fadeIn 0.5s ease-out forwards;
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+      max-width: 600px; /* Maximum width */
     }
 
-    /* Centered Popup Modal */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 100; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 600px; /* Maximum width */
-  }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    .product-display {
+    text-align: center;
   }
-
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  .product-display img {
+    max-width: 100%;
+    height: auto;
   }
 {%- endstyle -%}
 <div
@@ -316,7 +324,12 @@ document.addEventListener('DOMContentLoaded', function() {
     hotspot.addEventListener('click', function(event) {
       event.stopPropagation();
       const popupContent = this.querySelector('.hotspot--popup').innerHTML;
-      modalContent.innerHTML = `${popupContent}`; // Insert content directly
+      modalContent.innerHTML = `<div class="product-display">
+    <a href="{{ product.url }}" title="{{ product.title }}">
+      <img src="{{ product.featured_image | img_url: '480x480' }}" alt="{{ product.title }}">
+      <h2>{{ product.title }}</h2>
+    </a>
+  </div>`; // Insert content directly
       modal.style.display = "block";
     });
   });
