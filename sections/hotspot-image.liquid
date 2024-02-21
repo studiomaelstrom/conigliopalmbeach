@@ -3,37 +3,37 @@
   "name": "Hotspot Image",
   "settings": [
     {
-    "type": "text",
-    "id": "image",
-    "label": "Image URL"
-  },
+      "type": "text",
+      "id": "image",
+      "label": "Image URL"
+    },
     {
-    "type": "color",
-    "id": "hotspot_color",
-    "label": "Hotspot Color",
-    "default": "#F47722"
-  },
+      "type": "color",
+      "id": "hotspot_color",
+      "label": "Hotspot Color",
+      "default": "#F47722"
+    },
     {
-    "type": "color",
-    "id": "hotspot_inner",
-    "label": "Hotspot Inner Color",
-    "default": "#FFF"
-  },
+      "type": "color",
+      "id": "hotspot_inner",
+      "label": "Hotspot Inner Color",
+      "default": "#FFF"
+    },
     {
-    "type": "text",
-    "id": "bg",
-    "label": "Background Image URL (Optional)"
-  }   ,
+      "type": "text",
+      "id": "bg",
+      "label": "Background Image URL (Optional)"
+    },
     {
-    "type": "range",
-          "id": "margins",
-          "min": 0,
-          "max": 200,
-          "step": 10,
-          "unit": "px",
-          "label": "Margins",
-          "default": 50
-  }
+      "type": "range",
+      "id": "margins",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Margins",
+      "default": 50
+    }
   ],
   "blocks": [
     {
@@ -41,15 +41,11 @@
       "name": "Hotspot",
       "settings": [
         {
-          "type": "url",
-          "id": "hotspot_url",
-          "label": "Link"
+          "type": "text",
+          "id": "hotspot_content",
+          "label": "Hotspot Content",
+          "default": "Product Info Here"
         },
-
-    {
-    "type": "header",
-    "content": "Hotspot"
-  },
         {
           "type": "range",
           "id": "top",
@@ -69,170 +65,146 @@
           "unit": "%",
           "label": "Left",
           "default": 50
-        },
-        {
-        "type": "header",
-        "content": "Info Box"
-        },
-        {
-          "type": "range",
-          "id": "itop",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "label": "Top",
-          "default": 50
-        },
-        {
-          "type": "range",
-          "id": "ileft",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "label": "Left",
-          "default": 50
-        },
-        {
-          "type": "text",
-          "id": "content",
-          "label": "Content",
-          "default": "Product Info Here"
         }
       ]
     }
   ],
   "presets": [
-  {
-    "name": "Image with Hotspots",
-    "category": "Image with hotspots"
-  }
-]
+    {
+      "name": "Image with Hotspots",
+      "category": "Image with hotspots"
+    }
+  ]
 }
 {% endschema %}
 
 {%- style -%}
-        .section-{{ section.id }}-padding {
-          padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-          padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-        }
-
-        @media screen and (min-width: 750px) {
           .section-{{ section.id }}-padding {
-            padding-top: {{ section.settings.padding_top }}px;
-            padding-bottom: {{ section.settings.padding_bottom }}px;
+            padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+            padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
           }
-        }
 
-        .hotspots--wrapper {
-          position: relative;
-          margin: auto;
-        }
-
-        .hotspots--figure {
-          width: 100%;
-        }
-
-        .hotspot {
-          position: absolute;
-          display: block;
-        }
-
-        .hotspot--cta {
-          position: relative;
-          float: right;
-          display: inline-block;
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          background: {{section.settings.hotspot_color}};
-          transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
-        }
-
-        .hotspot--cta::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          margin: auto;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: {{section.settings.hotspot_inner}};
-          z-index: 2;
-          transition: opacity 0.6s;
-          animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
-        }
-
-        .hotspot:hover .hotspot--cta {
-          transform: scale(0.6);
-        }
-
-        .hotspot:hover .hotspot--cta:after {
-          opacity: 0;
-        }
-
-        @keyframes pulse {
-          0% {
-            transform: scale(0.4);
+          @media screen and (min-width: 750px) {
+            .section-{{ section.id }}-padding {
+              padding-top: {{ section.settings.padding_top }}px;
+              padding-bottom: {{ section.settings.padding_bottom }}px;
+            }
           }
-          33% {
-            transform: scale(1);
-          }
-          66% {
-            transform: scale(0.4);
-          }
-          100% {
-            transform: scale(0.4);
-          }
-        }
 
-        @media screen and (max-width: 420px) {
+          .hotspots--wrapper {
+            position: relative;
+            margin: auto;
+          }
+
+          .hotspots--figure {
+            width: 100%;
+          }
+
+          .hotspot {
+            position: absolute;
+            display: block;
+          }
+
           .hotspot--cta {
-            width: 20px;
-            height: 20px;
+            position: relative;
+            float: right;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: {{section.settings.hotspot_color}};
+            transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
           }
+
           .hotspot--cta::after {
-            width: 5px;
-            height: 5px;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: {{section.settings.hotspot_inner}};
+            z-index: 2;
+            transition: opacity 0.6s;
+            animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
           }
+
+          .hotspot:hover .hotspot--cta {
+            transform: scale(0.6);
+          }
+
+          .hotspot:hover .hotspot--cta:after {
+            opacity: 0;
+          }
+
+          @keyframes pulse {
+            0% {
+              transform: scale(0.4);
+            }
+            33% {
+              transform: scale(1);
+            }
+            66% {
+              transform: scale(0.4);
+            }
+            100% {
+              transform: scale(0.4);
+            }
+          }
+
+          @media screen and (max-width: 420px) {
+            .hotspot--cta {
+              width: 20px;
+              height: 20px;
+            }
+            .hotspot--cta::after {
+              width: 5px;
+              height: 5px;
+            }
+          }
+
+            {%- for block in section.blocks -%}
+              {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+              {{ hotspot_position }}{
+                top: {{ block.settings.top }}%;
+                left: {{ block.settings.left }}%;
+              }
+
+        {%- assign info_position = '#info-' | append: block.id -%}
+              {{ info_position }}{
+                top: {{ block.settings.itop }}%;
+                left: {{ block.settings.ileft }}%;
+              }
+            {%- endfor -%}
+
+        .hotspot-background {
+          flex: 0 0 auto;
+          width: 95%;
+          display: flex;
+          align-self: center;
+          align-items: center;
+          margin-left:auto;
+          margin-right:auto;
+          flex-direction: column;
+          justify-content: center;
         }
 
-          {%- for block in section.blocks -%}
-            {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
-            {{ hotspot_position }}{
-              top: {{ block.settings.top }}%;
-              left: {{ block.settings.left }}%;
-            }
 
-      {%- assign info_position = '#info-' | append: block.id -%}
-            {{ info_position }}{
-              top: {{ block.settings.itop }}%;
-              left: {{ block.settings.ileft }}%;
-            }
-          {%- endfor -%}
-
-      .hotspot-background {
-        flex: 0 0 auto;
-        width: 95%;
-        display: flex;
-        align-self: center;
-        align-items: center;
-        margin-left:auto;
-        margin-right:auto;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-
-  .hotspot:hover .hotspot-text {
-    visibility: visible;
+    .hotspot--popup {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 10;
+    /* Adjust width, max-width, etc., as needed */
   }
 {%- endstyle -%}
-
 <div
   class="hotspot-background"
   style="
@@ -243,7 +215,7 @@
     background-image: url('{{ section.settings.bg }}');
     {% else %}
       background-image: none;
-      {% endif %}
+    {% endif %}
   "
 >
   <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
@@ -251,16 +223,43 @@
       <section class="hotspots--wrapper">
         <img
           src="{{ section.settings.image }}"
-          alt="Shop Coniglio Palm Beach"
+          alt=""
           class="hotspots--figure"
         >
 
         {%- for block in section.blocks -%}
-          <div class="hotspot" id="hotspot-{{ block.id }}">
-            <span class="hotspot--cta" id="hotspot-button"></span>
+          <div
+            class="hotspot"
+            id="hotspot-{{ block.id }}"
+            style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
+          >
+            <span class="hotspot--cta"></span>
+            <div class="hotspot--popup" id="popup-{{ block.id }}">
+              {{ block.settings.hotspot_content }}
+            </div>
           </div>
         {%- endfor -%}
       </section>
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hotspots = document.querySelectorAll('.hotspot');
+
+    hotspots.forEach(hotspot => {
+      hotspot.addEventListener('click', function() {
+        const popup = this.querySelector('.hotspot--popup');
+        // Toggle visibility
+        if (popup.style.display === 'block') {
+          popup.style.display = 'none';
+        } else {
+          // Hide all other popups first
+          document.querySelectorAll('.hotspot--popup').forEach(p => p.style.display = 'none');
+          popup.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
