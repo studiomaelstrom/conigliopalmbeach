@@ -330,11 +330,9 @@
             <!-- Hidden Product Info Container -->
             <div class="hotspot--product-info" style="display: none;">
               {% assign product = all_products[block.settings.product] %}
-              <div class="modal-content">
-                <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
-                <h3>{{ product.title }}</h3>
-                <a href="{{ product.url }}" class="outline-button">View Product</a>
-              </div>
+              <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
+              <h3>{{ product.title }}</h3>
+              <a href="{{ product.url }}" class="outline-button">View Product</a>
             </div>
           </div>
         {%- endfor -%}
