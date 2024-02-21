@@ -79,148 +79,153 @@
 {% endschema %}
 
 {%- style -%}
-          .section-{{ section.id }}-padding {
-            padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-            padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-          }
-
-          @media screen and (min-width: 750px) {
             .section-{{ section.id }}-padding {
-              padding-top: {{ section.settings.padding_top }}px;
-              padding-bottom: {{ section.settings.padding_bottom }}px;
+              padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+              padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
             }
-          }
 
-          .hotspots--wrapper {
-            position: relative;
-            margin: auto;
-          }
-
-          .hotspots--figure {
-            width: 100%;
-          }
-
-          .hotspot {
-            position: absolute;
-            display: block;
-          }
-
-
-          .hotspot--cta {
-            position: relative;
-            float: right;
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: {{section.settings.hotspot_color}};
-            transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
-          }
-
-          .hotspot--cta::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: {{section.settings.hotspot_inner}};
-            z-index: 2;
-            transition: opacity 0.6s;
-            animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
-          }
-
-          .hotspot:hover .hotspot--cta {
-            transform: scale(0.6);
-          }
-
-          .hotspot:hover .hotspot--cta:after {
-            opacity: 0;
-          }
-
-          @keyframes pulse {
-            0% {
-              transform: scale(0.4);
+            @media screen and (min-width: 750px) {
+              .section-{{ section.id }}-padding {
+                padding-top: {{ section.settings.padding_top }}px;
+                padding-bottom: {{ section.settings.padding_bottom }}px;
+              }
             }
-            33% {
-              transform: scale(1);
+
+            .hotspots--wrapper {
+              position: relative;
+              margin: auto;
             }
-            66% {
-              transform: scale(0.4);
+
+            .hotspots--figure {
+              width: 100%;
             }
-            100% {
-              transform: scale(0.4);
+
+            .hotspot {
+              position: absolute;
+              display: block;
             }
-          }
-
-          @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        .fade-in {
-          animation: fadeIn 0.5s ease-out forwards;
-        }
 
 
-          @media screen and (max-width: 420px) {
             .hotspot--cta {
-              width: 20px;
-              height: 20px;
+              position: relative;
+              float: right;
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              background: {{section.settings.hotspot_color}};
+              transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
             }
+
             .hotspot--cta::after {
-              width: 5px;
-              height: 5px;
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              margin: auto;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background: {{section.settings.hotspot_inner}};
+              z-index: 2;
+              transition: opacity 0.6s;
+              animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
+            }
+
+            .hotspot:hover .hotspot--cta {
+              transform: scale(0.6);
+            }
+
+            .hotspot:hover .hotspot--cta:after {
+              opacity: 0;
+            }
+
+            @keyframes pulse {
+              0% {
+                transform: scale(0.4);
+              }
+              33% {
+                transform: scale(1);
+              }
+              66% {
+                transform: scale(0.4);
+              }
+              100% {
+                transform: scale(0.4);
+              }
+            }
+
+            @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
             }
           }
 
-            {%- for block in section.blocks -%}
-              {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
-              {{ hotspot_position }}{
-                top: {{ block.settings.top }}%;
-                left: {{ block.settings.left }}%;
+          .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+          }
+
+
+            @media screen and (max-width: 420px) {
+              .hotspot--cta {
+                width: 20px;
+                height: 20px;
               }
-
-        {%- assign info_position = '#info-' | append: block.id -%}
-              {{ info_position }}{
-                top: {{ block.settings.itop }}%;
-                left: {{ block.settings.ileft }}%;
+              .hotspot--cta::after {
+                width: 5px;
+                height: 5px;
               }
-            {%- endfor -%}
+            }
 
-        .hotspot-background {
-          flex: 0 0 auto;
-          width: 95%;
-          display: flex;
-          align-self: center;
-          align-items: center;
-          margin-left:auto;
-          margin-right:auto;
-          flex-direction: column;
-          justify-content: center;
-        }
+              {%- for block in section.blocks -%}
+                {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+                {{ hotspot_position }}{
+                  top: {{ block.settings.top }}%;
+                  left: {{ block.settings.left }}%;
+                }
+
+          {%- assign info_position = '#info-' | append: block.id -%}
+                {{ info_position }}{
+                  top: {{ block.settings.itop }}%;
+                  left: {{ block.settings.ileft }}%;
+                }
+              {%- endfor -%}
+
+          .hotspot-background {
+            flex: 0 0 auto;
+            width: 95%;
+            display: flex;
+            align-self: center;
+            align-items: center;
+            margin-left:auto;
+            margin-right:auto;
+            flex-direction: column;
+            justify-content: center;
+          }
 
 
-    .hotspot--popup {
-    display: none;
-    position: absolute;
-    background-color: white;
-    padding: 10px;
-    border-radius: 0px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index: 10;
-    width:400px;
-    margin-bottom:100px!important;
-    /* Adjust width, max-width, etc., as needed */
+      .hotspot--popup {
+      display: none;
+      position: absolute;
+      background-color: white;
+      padding: 10px;
+      border-radius: 0px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      z-index: 10;
+      width:400px;
+      margin-bottom:100px!important;
+      /* Adjust width, max-width, etc., as needed */
+
+        .hotspot {
+    transition: visibility 0.3s, opacity 0.3s ease;
   }
+
+    }
 {%- endstyle -%}
 <div
   class="hotspot-background"
@@ -272,7 +277,9 @@
         popup.classList.remove('fade-in'); // Ensure to remove the class when hiding
       });
       hotspots.forEach(function(hotspot) {
-        hotspot.style.visibility = 'visible'; // Show the hotspot again
+        // Show the hotspot again with opacity transition
+        hotspot.style.opacity = '1';
+        hotspot.style.visibility = 'visible';
       });
     }
 
@@ -288,8 +295,9 @@
         popup.style.display = 'block';
         popup.classList.add('fade-in');
 
-        // Hide the current hotspot
-        this.style.visibility = 'hidden';
+        // Hide the current hotspot with opacity transition
+        this.style.opacity = '0';
+        setTimeout(() => { this.style.visibility = 'hidden'; }, 300); // Delay hiding for the opacity transition to complete
       });
     });
 
