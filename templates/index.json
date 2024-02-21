@@ -1,37 +1,5 @@
 {
   "sections": {
-    "hotspot_section_B9zdbF": {
-      "type": "hotspot-section",
-      "blocks": {
-        "hotspot_MAwVwq": {
-          "type": "hotspot",
-          "settings": {
-            "product": "silk-dupioni-convertible-beach-pant",
-            "top": 38,
-            "left": 31
-          }
-        },
-        "hotspot_PRPbre": {
-          "type": "hotspot",
-          "settings": {
-            "product": "silk-dupioni-ruffle-power-pareo",
-            "top": 50,
-            "left": 59
-          }
-        }
-      },
-      "block_order": [
-        "hotspot_MAwVwq",
-        "hotspot_PRPbre"
-      ],
-      "settings": {
-        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-1-compressed.jpg?v=1707520403",
-        "hotspot_color": "#F47722",
-        "hotspot_inner": "#FFF",
-        "bg": "",
-        "margins": 50
-      }
-    },
     "hotspot_image_caGTGE": {
       "type": "hotspot-image",
       "blocks": {
@@ -56,7 +24,6 @@
         "hotspot_3DPVjH",
         "hotspot_e99ktw"
       ],
-      "disabled": true,
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-1-compressed.jpg?v=1707520403",
         "hotspot_color": "#fdf9f7",
@@ -64,10 +31,43 @@
         "bg": "",
         "margins": 0
       }
+    },
+    "hotspot_section_B9zdbF": {
+      "type": "hotspot-section",
+      "blocks": {
+        "hotspot_MAwVwq": {
+          "type": "hotspot",
+          "settings": {
+            "product": "silk-dupioni-convertible-beach-pant",
+            "top": 38,
+            "left": 31
+          }
+        },
+        "hotspot_PRPbre": {
+          "type": "hotspot",
+          "settings": {
+            "product": "silk-dupioni-ruffle-power-pareo",
+            "top": 50,
+            "left": 59
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_MAwVwq",
+        "hotspot_PRPbre"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0626\/8924\/7387\/files\/RACK-1-compressed.jpg?v=1707520403",
+        "hotspot_color": "#F47722",
+        "hotspot_inner": "#FFF",
+        "bg": "",
+        "margins": 50
+      }
     }
   },
   "order": [
-    "hotspot_section_B9zdbF",
-    "hotspot_image_caGTGE"
+    "hotspot_image_caGTGE",
+    "hotspot_section_B9zdbF"
   ]
 }
