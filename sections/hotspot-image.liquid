@@ -169,6 +169,19 @@
           animation: fadeIn 0.5s ease-out forwards;
         }
 
+          @keyframes fadeOut {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0;
+          }
+        }
+
+        .fade-out {
+          animation: fadeOut 0.5s ease-out forwards;
+        }
+
 
           @media screen and (max-width: 420px) {
             .hotspot--cta {
@@ -259,7 +272,6 @@
     </div>
   </div>
 </div>
-
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const hotspots = document.querySelectorAll('.hotspot');
@@ -267,8 +279,14 @@
 
     function closeAllPopups() {
       popups.forEach(function(popup) {
-        popup.style.display = 'none';
-        popup.classList.remove('fade-in'); // Ensure to remove the class when hiding
+        // Use fade-out animation before hiding the popup
+        if (popup.style.display !== 'none') {
+          popup.classList.add('fade-out');
+          setTimeout(() => {
+            popup.style.display = 'none';
+            popup.classList.remove('fade-in', 'fade-out');
+          }, 500); // Match the timeout to the duration of the fade-out animation
+        }
       });
     }
 
@@ -280,16 +298,26 @@
         // Close all popups first
         closeAllPopups();
 
+        // Hide the hotspot's CTA (or the whole hotspot if desired)
+        this.style.visibility = 'hidden';
+
         // Then open the clicked hotspot's popup and add the fade-in class
-        popup.style.display = 'block';
-        popup.classList.add('fade-in');
+        setTimeout(() => { // Delay showing the popup to allow for the fade-out of others
+          popup.style.display = 'block';
+          popup.classList.add('fade-in');
+        }, 10);
       });
     });
 
     document.addEventListener('click', function(event) {
       const isClickInsideHotspot = event.target.closest('.hotspot');
-      if (!isClickInsideHotspot) {
+      const isClickInsidePopup = event.target.closest('.hotspot--popup');
+      if (!isClickInsideHotspot && !isClickInsidePopup) {
         closeAllPopups();
+        // Make all hotspots visible again
+        hotspots.forEach(hotspot => {
+          hotspot.style.visibility = 'visible';
+        });
       }
     });
 
