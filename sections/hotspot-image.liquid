@@ -105,6 +105,7 @@
             display: block;
           }
 
+
           .hotspot--cta {
             position: relative;
             float: right;
@@ -265,10 +266,13 @@
     const hotspots = document.querySelectorAll('.hotspot');
     const popups = document.querySelectorAll('.hotspot--popup');
 
-    function closeAllPopups() {
+    function closeAllPopupsAndShowHotspots() {
       popups.forEach(function(popup) {
         popup.style.display = 'none';
         popup.classList.remove('fade-in'); // Ensure to remove the class when hiding
+      });
+      hotspots.forEach(function(hotspot) {
+        hotspot.style.visibility = 'visible'; // Show the hotspot again
       });
     }
 
@@ -277,19 +281,22 @@
         event.stopPropagation(); // Prevent click from immediately propagating to document
         const popup = this.querySelector('.hotspot--popup');
 
-        // Close all popups first
-        closeAllPopups();
+        // Close all popups first and show all hotspots
+        closeAllPopupsAndShowHotspots();
 
         // Then open the clicked hotspot's popup and add the fade-in class
         popup.style.display = 'block';
         popup.classList.add('fade-in');
+
+        // Hide the current hotspot
+        this.style.visibility = 'hidden';
       });
     });
 
     document.addEventListener('click', function(event) {
       const isClickInsideHotspot = event.target.closest('.hotspot');
       if (!isClickInsideHotspot) {
-        closeAllPopups();
+        closeAllPopupsAndShowHotspots();
       }
     });
 
