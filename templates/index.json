@@ -6,12 +6,9 @@
         "hotspot_ED3HRR": {
           "type": "hotspot",
           "settings": {
-            "hotspot_url": "",
+            "product": "silk-dupioni-convertible-beach-pant",
             "top": 50,
-            "left": 50,
-            "itop": 50,
-            "ileft": 50,
-            "content": "Product Info Here"
+            "left": 50
           }
         }
       },
