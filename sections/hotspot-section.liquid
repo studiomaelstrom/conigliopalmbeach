@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "Module Hotspot Image",
+  "name": "Hotspot Image",
   "settings": [
     {
       "type": "text",
@@ -9,13 +9,13 @@
     },
     {
       "type": "color",
-      "id": "mod-hotspot_color",
+      "id": "hotspot_color",
       "label": "Hotspot Color",
       "default": "#F47722"
     },
     {
       "type": "color",
-      "id": "mod-hotspot_inner",
+      "id": "hotspot_inner",
       "label": "Hotspot Inner Color",
       "default": "#FFF"
     },
@@ -37,7 +37,7 @@
   ],
   "blocks": [
     {
-      "type": "mod-hotspot",
+      "type": "hotspot",
       "name": "Hotspot",
       "settings": [
         {
@@ -71,8 +71,8 @@
   ],
   "presets": [
     {
-      "name": "Image with module hotspots",
-      "category": "Image with module hotspots"
+      "name": "Image with Hotspots",
+      "category": "Image with hotspots"
     }
   ]
 }
@@ -91,32 +91,32 @@
                     }
                   }
 
-                  .mod-hotspots--wrapper {
+                  .hotspots--wrapper {
                     position: relative;
                     margin: auto;
                   }
 
-                  .mod-hotspots--figure {
+                  .hotspots--figure {
                     width: 100%;
                   }
 
-                  .mod-hotspot {
+                  .hotspot {
                     position: absolute;
                     display: block;
                   }
 
-                  .mod-hotspot--cta {
+                  .hotspot--cta {
                     position: relative;
                     float: right;
                     display: inline-block;
                     width: 30px;
                     height: 30px;
                     border-radius: 50%;
-                    background: {{section.settings.mod-hotspot_color}};
+                    background: {{section.settings.hotspot_color}};
                     transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
                   }
 
-                  .mod-hotspot--cta::after {
+                  .hotspot--cta::after {
                     content: "";
                     position: absolute;
                     left: 0;
@@ -127,17 +127,17 @@
                     width: 10px;
                     height: 10px;
                     border-radius: 50%;
-                    background: {{section.settings.mod-hotspot_inner}};
+                    background: {{section.settings.hotspot_inner}};
                     z-index: 2;
                     transition: opacity 0.6s;
                     animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
                   }
 
-                  .mod-hotspot:hover .mod-hotspot--cta {
+                  .hotspot:hover .hotspot--cta {
                     transform: scale(0.6);
                   }
 
-                  .mod-hotspot:hover .mod-hotspot--cta:after {
+                  .hotspot:hover .hotspot--cta:after {
                     opacity: 0;
                   }
 
@@ -157,19 +157,19 @@
                   }
 
                   @media screen and (max-width: 420px) {
-                    .mod-hotspot--cta {
+                    .hotspot--cta {
                       width: 20px;
                       height: 20px;
                     }
-                    .mod-hotspot--cta::after {
+                    .hotspot--cta::after {
                       width: 5px;
                       height: 5px;
                     }
                   }
 
                     {%- for block in section.blocks -%}
-                      {%- assign mod-hotspot_position = '#mod-hotspot-' | append: block.id -%}
-                      {{ mod-hotspot_position }}{
+                      {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+                      {{ hotspot_position }}{
                         top: {{ block.settings.top }}%;
                         left: {{ block.settings.left }}%;
                       }
@@ -181,7 +181,7 @@
                       }
                     {%- endfor -%}
 
-                .mod-hotspot-background {
+                .hotspot-background {
                   flex: 0 0 auto;
                   width: 95%;
                   display: flex;
@@ -194,7 +194,7 @@
                 }
 
 
-            .mod-hotspot--popup {
+            .hotspot--popup {
             display: none;
             position: absolute;
             background-color: white;
@@ -297,7 +297,7 @@
     }
 {%- endstyle -%}
 <div
-  class="mod-hotspot-background"
+  class="hotspot-background"
   style="
     margin-top: {{ section.settings.margins }}px;
     margin-bottom: {{ section.settings.margins }}px;
@@ -311,11 +311,11 @@
 >
   <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
     <div class="page-width">
-      <section class="mod-hotspots--wrapper">
+      <section class="hotspots--wrapper">
         <img
           src="{{ section.settings.image }}"
           alt=""
-          class="mod-hotspots--figure"
+          class="hotspots--figure"
         >
 
         <!-- The Modal -->
@@ -326,16 +326,16 @@
           </div>
         </div>
 
-        <!-- mod-hotspot Trigger -->
+        <!-- Hotspot Trigger -->
         {%- for block in section.blocks -%}
           <div
-            class="mod-hotspot"
-            id="mod-hotspot-{{ block.id }}"
+            class="hotspot"
+            id="hotspot-{{ block.id }}"
             style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
           >
-            <span class="mod-hotspot--cta"></span>
+            <span class="hotspot--cta"></span>
             <!-- Hidden Product Info Container -->
-            <div class="mod-hotspot--product-info" style="display: none;">
+            <div class="hotspot--product-info" style="display: none;">
               {% assign product = all_products[block.settings.product] %}
               <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
               <h3>{{ product.title }}</h3>
@@ -350,12 +350,12 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-    const mod-hotspots = document.querySelectorAll('.mod-hotspot');
+    const hotspots = document.querySelectorAll('.hotspot');
     const modal = document.querySelector('.modal');
 
-    mod-hotspots.forEach(mod-hotspot => {
-      mod-hotspot.addEventListener('click', function() {
-        const productInfo = this.querySelector('.mod-hotspot--product-info').innerHTML;
+    hotspots.forEach(hotspot => {
+      hotspot.addEventListener('click', function() {
+        const productInfo = this.querySelector('.hotspot--product-info').innerHTML;
         modal.querySelector('.modal-content').innerHTML = productInfo; // Insert product info into modal
         modal.style.display = "block"; // Show the modal
         setTimeout(() => modal.classList.add('fade-in'), 10); // Add class to start fade-in animation
