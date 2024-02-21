@@ -67,7 +67,50 @@
           "default": 50
         }
       ]
+    },{
+  "type": "hotspot_tooltip",
+  "name": "Tooltip Hotspot",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tooltip_text",
+      "label": "Tooltip Text",
+      "default": "More Info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "range",
+      "id": "top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left",
+      "default": 50
     }
+  ]
+}
+
   ],
   "presets": [
     {
@@ -79,145 +122,171 @@
 {% endschema %}
 
 {%- style -%}
-            .section-{{ section.id }}-padding {
-              padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-              padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-            }
-
-            @media screen and (min-width: 750px) {
               .section-{{ section.id }}-padding {
-                padding-top: {{ section.settings.padding_top }}px;
-                padding-bottom: {{ section.settings.padding_bottom }}px;
+                padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+                padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
               }
-            }
 
-            .hotspots--wrapper {
-              position: relative;
-              margin: auto;
-            }
-
-            .hotspots--figure {
-              width: 100%;
-            }
-
-            .hotspot {
-              position: absolute;
-              display: block;
-            }
-
-            .hotspot--cta {
-              position: relative;
-              float: right;
-              display: inline-block;
-              width: 30px;
-              height: 30px;
-              border-radius: 50%;
-              background: {{section.settings.hotspot_color}};
-              transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
-            }
-
-            .hotspot--cta::after {
-              content: "";
-              position: absolute;
-              left: 0;
-              top: 0;
-              bottom: 0;
-              right: 0;
-              margin: auto;
-              width: 10px;
-              height: 10px;
-              border-radius: 50%;
-              background: {{section.settings.hotspot_inner}};
-              z-index: 2;
-              transition: opacity 0.6s;
-              animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
-            }
-
-            .hotspot:hover .hotspot--cta {
-              transform: scale(0.6);
-            }
-
-            .hotspot:hover .hotspot--cta:after {
-              opacity: 0;
-            }
-
-            @keyframes pulse {
-              0% {
-                transform: scale(0.4);
+              @media screen and (min-width: 750px) {
+                .section-{{ section.id }}-padding {
+                  padding-top: {{ section.settings.padding_top }}px;
+                  padding-bottom: {{ section.settings.padding_bottom }}px;
+                }
               }
-              33% {
-                transform: scale(1);
-              }
-              66% {
-                transform: scale(0.4);
-              }
-              100% {
-                transform: scale(0.4);
-              }
-            }
 
-            @media screen and (max-width: 420px) {
+              .hotspots--wrapper {
+                position: relative;
+                margin: auto;
+              }
+
+              .hotspots--figure {
+                width: 100%;
+              }
+
+              .hotspot {
+                position: absolute;
+                display: block;
+              }
+
               .hotspot--cta {
-                width: 20px;
-                height: 20px;
+                position: relative;
+                float: right;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: {{section.settings.hotspot_color}};
+                transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
               }
+
               .hotspot--cta::after {
-                width: 5px;
-                height: 5px;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: {{section.settings.hotspot_inner}};
+                z-index: 2;
+                transition: opacity 0.6s;
+                animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
               }
+
+              .hotspot:hover .hotspot--cta {
+                transform: scale(0.6);
+              }
+
+              .hotspot:hover .hotspot--cta:after {
+                opacity: 0;
+              }
+
+              @keyframes pulse {
+                0% {
+                  transform: scale(0.4);
+                }
+                33% {
+                  transform: scale(1);
+                }
+                66% {
+                  transform: scale(0.4);
+                }
+                100% {
+                  transform: scale(0.4);
+                }
+              }
+
+              @media screen and (max-width: 420px) {
+                .hotspot--cta {
+                  width: 20px;
+                  height: 20px;
+                }
+                .hotspot--cta::after {
+                  width: 5px;
+                  height: 5px;
+                }
+              }
+
+                {%- for block in section.blocks -%}
+                  {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+                  {{ hotspot_position }}{
+                    top: {{ block.settings.top }}%;
+                    left: {{ block.settings.left }}%;
+                  }
+
+            {%- assign info_position = '#info-' | append: block.id -%}
+                  {{ info_position }}{
+                    top: {{ block.settings.itop }}%;
+                    left: {{ block.settings.ileft }}%;
+                  }
+                {%- endfor -%}
+
+            .hotspot-background {
+              flex: 0 0 auto;
+              width: 95%;
+              display: flex;
+              align-self: center;
+              align-items: center;
+              margin-left:auto;
+              margin-right:auto;
+              flex-direction: column;
+              justify-content: center;
             }
 
-              {%- for block in section.blocks -%}
-                {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
-                {{ hotspot_position }}{
-                  top: {{ block.settings.top }}%;
-                  left: {{ block.settings.left }}%;
-                }
 
-          {%- assign info_position = '#info-' | append: block.id -%}
-                {{ info_position }}{
-                  top: {{ block.settings.itop }}%;
-                  left: {{ block.settings.ileft }}%;
-                }
-              {%- endfor -%}
+        .hotspot--popup {
+        display: none;
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        z-index: 10;
+        width:400px;
+        margin-bottom:100px!important;
+        /* Adjust width, max-width, etc., as needed */
+      }
 
-          .hotspot-background {
-            flex: 0 0 auto;
-            width: 95%;
-            display: flex;
-            align-self: center;
-            align-items: center;
-            margin-left:auto;
-            margin-right:auto;
-            flex-direction: column;
-            justify-content: center;
-          }
-
-
-      .hotspot--popup {
-      display: none;
-      position: absolute;
-      background-color: white;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      z-index: 10;
-      width:400px;
-      margin-bottom:100px!important;
-      /* Adjust width, max-width, etc., as needed */
+      @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
-    @keyframes fadeIn {
-    from {
-      opacity: 0;
+    .fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
     }
-    to {
-      opacity: 1;
-    }
+
+    .tooltip-hotspot .tooltip-content {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 2;
   }
 
-  .fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
+  .tooltip-hotspot:hover .tooltip-content {
+    display: block;
+  }
+
+  .tooltip-button {
+    display: inline-block;
+    background-color: #f47722;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
   }
 {%- endstyle -%}
 <div
@@ -243,16 +312,23 @@
         >
 
         {%- for block in section.blocks -%}
-          <div
-            class="hotspot"
-            id="hotspot-{{ block.id }}"
-            style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
-          >
-            <span class="hotspot--cta"></span>
-            <div class="hotspot--popup" id="popup-{{ block.id }}">
-              {{ block.settings.hotspot_content }}
+          {% if block.type == 'hotspot' %}
+            <!-- Existing Hotspot for Product Info -->
+            <div class="hotspot" style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;">
+              <!-- Your existing hotspot HTML for product info -->
             </div>
-          </div>
+          {% elsif block.type == 'hotspot_tooltip' %}
+            <!-- New Tooltip Hotspot -->
+            <div
+              class="hotspot tooltip-hotspot"
+              style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
+            >
+              <div class="tooltip-content">
+                <p>{{ block.settings.tooltip_text }}</p>
+                <a href="{{ block.settings.button_link }}" class="tooltip-button">{{ block.settings.button_text }}</a>
+              </div>
+            </div>
+          {% endif %}
         {%- endfor -%}
       </section>
     </div>
