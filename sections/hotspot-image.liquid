@@ -105,7 +105,6 @@
               display: block;
             }
 
-
             .hotspot--cta {
               position: relative;
               float: right;
@@ -157,20 +156,6 @@
               }
             }
 
-            @keyframes fadeIn {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
-          }
-
-          .fade-in {
-            animation: fadeIn 0.5s ease-out forwards;
-          }
-
-
             @media screen and (max-width: 420px) {
               .hotspot--cta {
                 width: 20px;
@@ -214,18 +199,26 @@
       position: absolute;
       background-color: white;
       padding: 10px;
-      border-radius: 0px;
+      border-radius: 5px;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       z-index: 10;
       width:400px;
       margin-bottom:100px!important;
       /* Adjust width, max-width, etc., as needed */
+    }
 
-        .hotspot {
-    transition: visibility 0.3s, opacity 0.3s ease;
+    @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
-    }
+  .fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
 {%- endstyle -%}
 <div
   class="hotspot-background"
@@ -271,15 +264,10 @@
     const hotspots = document.querySelectorAll('.hotspot');
     const popups = document.querySelectorAll('.hotspot--popup');
 
-    function closeAllPopupsAndShowHotspots() {
+    function closeAllPopups() {
       popups.forEach(function(popup) {
         popup.style.display = 'none';
         popup.classList.remove('fade-in'); // Ensure to remove the class when hiding
-      });
-      hotspots.forEach(function(hotspot) {
-        // Show the hotspot again with opacity transition
-        hotspot.style.opacity = '1';
-        hotspot.style.visibility = 'visible';
       });
     }
 
@@ -288,23 +276,19 @@
         event.stopPropagation(); // Prevent click from immediately propagating to document
         const popup = this.querySelector('.hotspot--popup');
 
-        // Close all popups first and show all hotspots
-        closeAllPopupsAndShowHotspots();
+        // Close all popups first
+        closeAllPopups();
 
         // Then open the clicked hotspot's popup and add the fade-in class
         popup.style.display = 'block';
         popup.classList.add('fade-in');
-
-        // Hide the current hotspot with opacity transition
-        this.style.opacity = '0';
-        setTimeout(() => { this.style.visibility = 'hidden'; }, 300); // Delay hiding for the opacity transition to complete
       });
     });
 
     document.addEventListener('click', function(event) {
       const isClickInsideHotspot = event.target.closest('.hotspot');
       if (!isClickInsideHotspot) {
-        closeAllPopupsAndShowHotspots();
+        closeAllPopups();
       }
     });
 
