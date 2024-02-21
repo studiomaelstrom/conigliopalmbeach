@@ -242,6 +242,26 @@
   .hotspot:hover .hotspot-text {
     visibility: visible;
   }
+
+  #top {
+    top: -40px;
+    left: -50%;
+  }
+
+  #bottom {
+    top: 25px;
+    left: -50%;
+  }
+
+  #left {
+    top: -8px;
+    right: 120%;
+  }
+
+  #right {
+    top: -8px;
+    left: 120%;
+  }
 {%- endstyle -%}
 
 <div
@@ -269,14 +289,9 @@
         {%- for block in section.blocks -%}
           <div class="hotspot" id="hotspot-{{ block.id }}">
             <span class="hotspot--cta" id="hotspot-button"></span>
-            <span class="hotspot-text">Popup text information here.</span>
+            <span class="hotspot-text" id="top">Popup text information here.</span>
           </div>
         {%- endfor -%}
-        <div class="popup" id="popup-block">
-          <div class="popup-content">
-            <p>Some text in the popup</p>
-          </div>
-        </div>
       </section>
     </div>
   </div>
