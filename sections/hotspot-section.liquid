@@ -340,28 +340,6 @@
       cursor: pointer; /* Indicates the element is clickable */
     }
 
-    .tooltip {
-    visibility: hidden;
-    width: 200px;
-    background-color: #F47722;
-    color: #FFFFFF;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -100px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .link-hotspot:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-  }
-
   @media screen and (max-width: 770px) {
     .tooltip {
     visibility: hidden;
@@ -377,6 +355,27 @@
     opacity: 0;
     transition: opacity 0.3s;
   }
+  }
+
+
+    .tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: #F47722;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .link-hotspot:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
   }
 {%- endstyle -%}
 <div
