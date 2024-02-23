@@ -42,6 +42,12 @@
       "info": "Choose a product to display in this section."
     },
         {
+  "type": "checkbox",
+  "id": "hovertext",
+  "label": "Show Text On Hover",
+  "default": true
+},
+        {
   "type": "text",
   "id": "tooltip_text",
   "label": "Hover Text",
@@ -78,6 +84,12 @@
       "id": "hotspot-url",
       "label": "Hotspot Link"
       },
+        {
+  "type": "checkbox",
+  "id": "hovertext",
+  "label": "Show Text On Hover",
+  "default": true
+},
         {
   "type": "text",
   "id": "tooltip_text",
@@ -416,7 +428,9 @@
               <h3>{{ product.title }}</h3>
               <a href="{{ product.url }}" class="outline-button">View Product</a>
             </div>
-            <div class="tooltip">{{ block.settings.tooltip_text }}</div>
+            {% if block.settings.hovertext %}
+              <div class="tooltip">{{ block.settings.tooltip_text }}</div>
+            {% endif %}
           </div>
         {% elsif block.type == 'link' %}
           <!-- Hotspot to a URL -->
@@ -427,7 +441,9 @@
             <a href="{{ block.settings.hotspot-url }}" target="_blank">
               <span class="hotspot--cta"></span>
             </a>
-            <div class="tooltip">{{ block.settings.tooltip_text }}</div>
+            {% if block.settings.hovertext %}
+              <div class="tooltip">{{ block.settings.tooltip_text }}</div>
+            {% endif %}
           </div>
         {% endif %}
       {%- endfor -%}
