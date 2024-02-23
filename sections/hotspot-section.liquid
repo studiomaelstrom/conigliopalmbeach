@@ -117,233 +117,269 @@
 {% endschema %}
 
 {%- style -%}
-  /* General section styling, adjusting width based on settings */
-  .section-{{ section.id }}-width {
-    width: 100%; /* Full width initially */
-    padding: {{ 100 | minus:section.settings.width | times:1.5}}px; /* Dynamic padding calculation based on section width */
-    margin: auto; /* Center the section */
-  }
+                          .section-{{ section.id }}-width {
+                            width: 100%;
+                            padding: {{ 100 | minus:section.settings.width | times:1.5}}px;
+                            margin:auto;
+                          }
 
-  /* Adjusts section width for screens wider than 750px */
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-width {
-      width: {{ section.settings.width }}%; /* Apply width setting */
-      margin: auto; /* Center the section */
-    }
-  }
+                          @media screen and (min-width: 750px) {
+                            .section-{{ section.id }}-width {
+                              width: {{ section.settings.width }}%;
+                              margin:auto;
+                            }
+                          }
 
-  /* Wrapper for hotspots, positioned relative to its parent */
-  .hotspots--wrapper {
-    position: relative;
-    margin: auto; /* Center the wrapper */
-  }
+                          .hotspots--wrapper {
+                            position: relative;
+                            margin: auto;
+                          }
 
-  /* Ensures the image fills its container */
-  .hotspots--figure {
-    width: 100%;
-  }
+                          .hotspots--figure {
+                            width: 100%;
+                          }
 
-  /* Styling for individual hotspots */
-  .hotspot {
-    position: absolute; /* Positioned absolutely within its parent .hotspots--wrapper */
-    display: block;
-  }
+                          .hotspot {
+                            position: absolute;
+                            display: block;
+                          }
 
-  /* Clickable area within a hotspot */
-  .hotspot--cta {
-    position: relative;
-    float: right; /* Align to the right within its container */
-    display: inline-block; /* Allows setting width and height */
-    width: 25px; /* Fixed width */
-    height: 25px; /* Fixed height */
-    border-radius: 50%; /* Circular shape */
-    background: {{section.settings.hotspot_color}}; /* Background color from settings */
-    transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s; /* Smooth transition for hover effects */
-  }
+                          .hotspot--cta {
+                            position: relative;
+                            float: right;
+                            display: inline-block;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            background: {{section.settings.hotspot_color}};
+                            transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
+                          }
 
-  /* Inner circle of the hotspot for additional visual effect */
-  .hotspot--cta::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto; /* Center within the .hotspot--cta */
-    width: 10px; /* Fixed width */
-    height: 10px; /* Fixed height */
-    border-radius: 50%; /* Circular shape */
-    background: {{section.settings.hotspot_inner}}; /* Inner color from settings */
-    z-index: 2; /* Ensure it's above the hotspot background */
-    transition: opacity 0.6s; /* Fade effect for hover */
-    animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite; /* Pulsing animation */
-  }
+                          .hotspot--cta::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            margin: auto;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background: {{section.settings.hotspot_inner}};
+                            z-index: 2;
+                            transition: opacity 0.6s;
+                            animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
+                          }
 
-  /* Hover effects for the hotspot */
-  .hotspot:hover .hotspot--cta {
-    transform: scale(0.6); /* Scale down effect */
-    cursor: pointer; /* Change cursor to pointer to indicate clickability */
-  }
+                          .hotspot:hover .hotspot--cta {
+                            transform: scale(0.6);
+                            cursor:pointer;
+                          }
 
-  .hotspot:hover .hotspot--cta:after {
-    opacity: 0; /* Fade out the inner circle on hover */
-  }
+                          .hotspot:hover .hotspot--cta:after {
+                            opacity: 0;
+                            cursor:pointer;
+                          }
 
-  /* Keyframes for the pulsing animation of the hotspot */
-  @keyframes pulse {
-    0%, 66%, 100% {
-      transform: scale(0.4); /* Start, midpoint, and end at smaller size */
-    }
-    33% {
-      transform: scale(1); /* Scale up at the third */
-    }
-  }
+                          @keyframes pulse {
+                            0% {
+                              transform: scale(0.4);
+                            }
+                            33% {
+                              transform: scale(1);
+                            }
+                            66% {
+                              transform: scale(0.4);
+                            }
+                            100% {
+                              transform: scale(0.4);
+                            }
+                          }
 
-  /* Adjustments for smaller screens */
-  @media screen and (max-width: 770px) {
-    .hotspot--cta, .hotspot--cta::after {
-      width: 12px; /* Smaller size for smaller screens */
-      height: 12px;
-    }
-    .hotspot:hover .hotspot--cta {
-      transform: scale(0.8); /* Less scale down effect */
-      background: {{section.settings.hotspot_color}}; /* Ensure background color is visible */
-    }
-  }
+                          @media screen and (max-width: 770px) {
 
-  /* Dynamic positioning for hotspots based on settings */
-  {%- for block in section.blocks -%}
-    {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
-    {{ hotspot_position }}{
-      top: {{ block.settings.top }}%;
-      left: {{ block.settings.left }}%;
-    }
-  {%- endfor -%}
+                          .hotspot--cta {
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background: transparent;
+                            transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
+                          }
 
-  /* Styling for the popup that appears when a hotspot is clicked */
-  .hotspot--popup {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positioned absolutely within its parent */
-    background-color: white; /* Background color */
-    padding: 10px; /* Padding around content */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Shadow for depth */
-    z-index: 10; /* Ensure it's above other content */
-    width: 400px; /* Fixed width */
-    margin-bottom: 100px!important; /* Ensure it doesn't overlap other content */
-  }
+                          .hotspot--cta::after {
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background: {{section.settings.hotspot_color}};
+                            z-index: 2;
+                            transition: opacity 0.6s;
+                            animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
+                          }
 
-  /* Animation for fading in the popup */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
+                          .hotspot:hover .hotspot--cta {
+                            transform: scale(0.8);
+                            background: {{section.settings.hotspot_color}};
+                            cursor:pointer;
+                          }
 
-  .fade-in {
-    animation: fadeIn 0.5s ease-out forwards; /* Apply the fadeIn animation */
-  }
+                          .hotspot:hover .hotspot--cta:after {
+                            opacity: 0;
+                            cursor:pointer;
+                          }
+                          }
 
-  /* Styling for the modal background */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed position */
-    z-index: 100; /* High z-index to ensure it's on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Allow scrolling if needed */
-    background-color: rgba(0,0,0,0.4); /* Semi-transparent background */
-    opacity: 0;
-    visibility: hidden; /* Initially not visible */
-    transition: opacity 0.5s, visibility 0.5s; /* Smooth transition for showing/hiding */
-  }
+                            {%- for block in section.blocks -%}
+                              {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+                              {{ hotspot_position }}{
+                                top: {{ block.settings.top }}%;
+                                left: {{ block.settings.left }}%;
+                              }
 
-  /* Styling for the content within the modal */
-  .modal-content {
-    background-color: #fefefe; /* White background */
-    margin: 5% auto; /* Centered with margin from top */
-    padding: 20px; /* Padding around content */
-    border: 1px solid #888; /* Border for definition */
-    max-width: 400px; /* Maximum width */
-    width: 80%; /* Width relative to parent */
-    max-height: 800px; /* Maximum height to ensure it doesn't get too tall */
-  }
+                        {%- assign info_position = '#info-' | append: block.id -%}
+                              {{ info_position }}{
+                                top: {{ block.settings.itop }}%;
+                                left: {{ block.settings.ileft }}%;
+                              }
+                            {%- endfor -%}
 
-  /* Styling for images within the modal */
-  .modal-content img {
-    max-height: 500px; /* Limit image height */
-    width: 100%; /* Full width to adapt to container */
-  }
 
-  /* Styling for text and links within the modal */
-  .modal-content h3, .modal-content a {
-    text-align: center; /* Center align content */
-    margin-top: 15px; /* Space above each element */
-  }
+                    .hotspot--popup {
+                    display: none;
+                    position: absolute;
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                    z-index: 10;
+                    width:400px;
+                    margin-bottom:100px!important;
+                    /* Adjust width, max-width, etc., as needed */
+                  }
 
-  /* Styling for links within the modal */
-  .modal-content a {
-    padding: 5px 10px; /* Padding for clickable area */
-    border: 1px solid #F47722; /* Border color from settings */
-    color: #F47722; /* Text color from settings */
-    text-decoration: none; /* No underline */
-    text-transform: uppercase; /* Uppercase text for style */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-  }
+                  @keyframes fadeIn {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
 
-  /* Hover effect for links */
-  .modal-content a:hover {
-    background-color: #F47722; /* Background color on hover */
-    color: #FFFFFF; /* Text color on hover */
-  }
+                .fade-in {
+                  animation: fadeIn 0.5s ease-out forwards;
+                }
 
-  /* Styling for the close text in the modal */
-  .modal-close-text {
-    color: #888; /* Grey text for subtlety */
-    cursor: pointer; /* Indicates it's clickable */
-    text-align: center; /* Center aligned */
-    margin-top: 8px; /* Space from content above */
-    font-size: 12px; /* Smaller font size */
-    text-decoration: underline; /* Underlined to indicate it's clickable */
-    text-underline-offset: 2px; /* Offset for the underline */
-  }
+                /* Centered Popup Modal */
+              .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 100; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                margin:auto;
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.5s, visibility 0.5s; /* Smooth transition for opacity and visibility */
+              }
 
-  /* Styling for the hotspot link */
-  .link-hotspot {
-    display: block; /* Block display to fill the area */
-    position: absolute; /* Positioned absolutely within its parent */
-    width: 25px; /* Fixed width */
-    height: 25px; /* Fixed height */
-    cursor: pointer; /* Indicates it's clickable */
-  }
+              /* Fade class to add when showing the modal */
+              .fade-in {
+                opacity: 1;
+                visibility: visible;
+              }
 
-  /* Tooltip styling */
-  .tooltip {
-    visibility: hidden; /* Hidden by default */
-    width: 150px; /* Fixed width */
-    background-color: #FDF9F7; /* Light background color */
-    color: #888; /* Grey text for readability */
-    text-align: center; /* Center aligned text */
-    border-radius: 6px; /* Rounded corners */
-    padding: 5px 0; /* Padding top and bottom */
-    position: absolute; /* Positioned absolutely */
-    z-index: 2; /* Ensures it's above other content but below modals/popups */
-    bottom: 125%; /* Position above the hotspot */
-    left: 50%; /* Center horizontally */
-    margin-left: -75px; /* Offset to truly center based on its width */
-    opacity: 0; /* Start invisible */
-    transition: opacity 0.3s; /* Fade in/out effect */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    font-style: italic; /* Italic font for style */
-    text-decoration: underline; /* Underlined text */
-    text-underline-offset: 2px; /* Offset for the underline */
-  }
+              /* Modal Content */
+              .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto; /* 15% from the top and centered */
+                padding: 20px;
+                border: 1px solid #888;
+                max-width: 400px;
+                width: 80%;
+                max-height: 800px; /* Maximum height */
+              }
 
-  /* Show tooltip on hover */
-  .link-hotspot:hover .tooltip, .hotspot:hover .tooltip {
-    visibility: visible; /* Make visible */
-    opacity: 1; /* Fully opaque */
+              /* Modal Content Styles */
+            .modal-content img {
+              max-height: 500px; /* Maintain aspect ratio */
+              width:100%
+            }
+
+            .modal-content h3,
+            .modal-content a {
+              text-align: center; /* Center-align text */
+              display: block; /* Make the link take its own line */
+              margin-top: 15px; /* Add some space above the title and link */
+            }
+
+            /* Outline Button Styles */
+            .modal-content a {
+              padding: 5px 10px;
+              border: 1px solid #F47722; /* Use your theme's primary color or any color you prefer */
+              color: #F47722; /* Text color */
+              text-decoration: none; /* Remove underline from the link */
+              text-transform: uppercase;
+              transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+            }
+
+            .modal-content a:hover {
+              background-color: #F47722; /* Button fill color on hover */
+              color: #FFFFFF; /* Text color on hover */
+            }
+
+            .modal-close-text {
+            color: #888; /* Grey text */
+            cursor: pointer; /* Indicates the text is clickable */
+            text-align: center; /* Center the text */
+            margin-top: 8px; /* Space from the content above */
+            font-size: 12px; /* Adjust size as needed */
+            text-decoration:underline;
+              text-underline-offset:2px;
+          }
+
+          .link-hotspot {
+          display: block;
+          position: absolute;
+          /* Adjust the size as needed to make the clickable area appropriate */
+          width: 25px;
+          height: 25px;
+          cursor: pointer; /* Indicates the element is clickable */
+        }
+
+        .tooltip {
+        visibility: hidden;
+        width: 150px;
+        background-color: #FDF9F7;
+    color: #888; /* Grey text */
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+         z-index: 2;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.3s;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 2px 10px;
+        font-style:italic;
+                  text-decoration:underline;
+              text-underline-offset:2px;
+      }
+
+      .link-hotspot:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+
+    .hotspot:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
   }
 {%- endstyle -%}
 <div
