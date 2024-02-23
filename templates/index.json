@@ -7,8 +7,8 @@
           "type": "hotspot",
           "settings": {
             "product": "silk-dupioni-convertible-beach-pant",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
+            "hovertext": true,
+            "tooltip_text": "Shop Now",
             "top": 36,
             "left": 25
           }
@@ -18,7 +18,7 @@
           "settings": {
             "product": "silk-dupioni-ruffle-power-pareo",
             "hovertext": true,
-            "tooltip_text": "Hover Text Here",
+            "tooltip_text": "Shop Now",
             "top": 50,
             "left": 78
           }
