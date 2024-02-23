@@ -361,6 +361,24 @@
     visibility: visible;
     opacity: 1;
   }
+
+  @media screen and (max-width: 770px) {
+    .tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: #F47722;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  }
 {%- endstyle -%}
 <div
   class="section-{{ section.id }}-width"
