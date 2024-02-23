@@ -20,11 +20,6 @@
       "default": "#FFF"
     },
     {
-      "type": "text",
-      "id": "bg",
-      "label": "Background Image URL (Optional)"
-    },
-    {
       "type": "range",
       "id": "margins",
       "min": 0,
@@ -181,18 +176,6 @@
                       }
                     {%- endfor -%}
 
-                .hotspot-background {
-                  flex: 0 0 auto;
-                  width: 95%;
-                  display: flex;
-                  align-self: center;
-                  align-items: center;
-                  margin-left:auto;
-                  margin-right:auto;
-                  flex-direction: column;
-                  justify-content: center;
-                }
-
 
             .hotspot--popup {
             display: none;
@@ -297,54 +280,46 @@
     }
 {%- endstyle -%}
 <div
-  class="hotspot-background"
+  class="page-margins"
   style="
     margin-top: {{ section.settings.margins }}px;
     margin-bottom: {{ section.settings.margins }}px;
-    {% if section.settings.bg != blank %}
-     background-size: cover;
-    background-image: url('{{ section.settings.bg }}');
-    {% else %}
-      background-image: none;
-    {% endif %}
   "
 >
   <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-    <div class="page-width">
-      <section class="hotspots--wrapper">
-        <img
-          src="{{ section.settings.image }}"
-          alt=""
-          class="hotspots--figure"
-        >
+    <section class="hotspots--wrapper">
+      <img
+        src="{{ section.settings.image }}"
+        alt=""
+        class="hotspots--figure"
+      >
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-          <!-- Modal content -->
-          <div class="modal-content">
-            <!-- Dynamic content will be loaded here -->
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <!-- Dynamic content will be loaded here -->
+        </div>
+      </div>
+
+      <!-- Hotspot Trigger -->
+      {%- for block in section.blocks -%}
+        <div
+          class="hotspot"
+          id="hotspot-{{ block.id }}"
+          style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
+        >
+          <span class="hotspot--cta"></span>
+          <!-- Hidden Product Info Container -->
+          <div class="hotspot--product-info" style="display: none;">
+            {% assign product = all_products[block.settings.product] %}
+            <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
+            <h3>{{ product.title }}</h3>
+            <a href="{{ product.url }}" class="outline-button">View Product</a>
           </div>
         </div>
-
-        <!-- Hotspot Trigger -->
-        {%- for block in section.blocks -%}
-          <div
-            class="hotspot"
-            id="hotspot-{{ block.id }}"
-            style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
-          >
-            <span class="hotspot--cta"></span>
-            <!-- Hidden Product Info Container -->
-            <div class="hotspot--product-info" style="display: none;">
-              {% assign product = all_products[block.settings.product] %}
-              <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
-              <h3>{{ product.title }}</h3>
-              <a href="{{ product.url }}" class="outline-button">View Product</a>
-            </div>
-          </div>
-        {%- endfor -%}
-      </section>
-    </div>
+      {%- endfor -%}
+    </section>
   </div>
 </div>
 
