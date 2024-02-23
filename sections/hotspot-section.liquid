@@ -117,22 +117,22 @@
 {% endschema %}
 
 {%- style -%}
-  /* Section width and margin settings */
+  /* General section styling, adjusting width based on settings */
   .section-{{ section.id }}-width {
-    width: 100%; /* Full width to ensure it spans the entire width of its container */
-    padding: {{ 100 | minus:section.settings.width | times:1.5}}px; /* Dynamic padding based on section width setting */
-    margin:auto; /* Center the section horizontally */
+    width: 100%; /* Full width initially */
+    padding: {{ 100 | minus:section.settings.width | times:1.5}}px; /* Dynamic padding calculation based on section width */
+    margin: auto; /* Center the section */
   }
 
-  /* Adjust section width on screens wider than 750px */
+  /* Adjusts section width for screens wider than 750px */
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-width {
-      width: {{ section.settings.width }}%; /* Set width as specified in section settings */
-      margin:auto; /* Keep the section centered */
+      width: {{ section.settings.width }}%; /* Apply width setting */
+      margin: auto; /* Center the section */
     }
   }
 
-  /* Wrapper for hotspot elements, positioned relative to its parent */
+  /* Wrapper for hotspots, positioned relative to its parent */
   .hotspots--wrapper {
     position: relative;
     margin: auto; /* Center the wrapper */
@@ -182,12 +182,11 @@
   /* Hover effects for the hotspot */
   .hotspot:hover .hotspot--cta {
     transform: scale(0.6); /* Scale down effect */
-    cursor:pointer; /* Change cursor to pointer to indicate clickability */
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
   }
 
   .hotspot:hover .hotspot--cta:after {
     opacity: 0; /* Fade out the inner circle on hover */
-    cursor:pointer;
   }
 
   /* Keyframes for the pulsing animation of the hotspot */
@@ -230,8 +229,8 @@
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Shadow for depth */
     z-index: 10; /* Ensure it's above other content */
-    width:400px; /* Fixed width */
-    margin-bottom:100px!important; /* Ensure it doesn't overlap other content */
+    width: 400px; /* Fixed width */
+    margin-bottom: 100px!important; /* Ensure it doesn't overlap other content */
   }
 
   /* Animation for fading in the popup */
