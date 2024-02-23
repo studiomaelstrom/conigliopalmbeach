@@ -7,8 +7,8 @@
           "type": "hotspot",
           "settings": {
             "product": "silk-dupioni-convertible-beach-pant",
-            "top": 40,
-            "left": 13
+            "top": 36,
+            "left": 25
           }
         },
         "hotspot_bDwyJ6": {
@@ -16,13 +16,22 @@
           "settings": {
             "product": "silk-dupioni-ruffle-power-pareo",
             "top": 50,
-            "left": 53
+            "left": 78
+          }
+        },
+        "link_WRRdif": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "https:\/\/en.wikipedia.org\/wiki\/Disco",
+            "top": 10,
+            "left": 3
           }
         }
       },
       "block_order": [
         "hotspot_Qwi9UN",
-        "hotspot_bDwyJ6"
+        "hotspot_bDwyJ6",
+        "link_WRRdif"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/DesktopSite1-RC.png?v=1708666024",
