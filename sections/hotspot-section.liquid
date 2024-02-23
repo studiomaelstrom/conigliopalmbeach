@@ -75,7 +75,6 @@
 
 {%- style -%}
                   .section-{{ section.id }}-width {
-
                     width: 100%;
                     padding: {{ 100 | minus:section.settings.width | times:1.5}}px;
                     margin:auto;
@@ -154,14 +153,32 @@
                   }
 
                   @media screen and (max-width: 420px) {
-                    .hotspot--cta {
-                      width: 20px;
-                      height: 20px;
-                    }
-                    .hotspot--cta::after {
-                      width: 5px;
-                      height: 5px;
-                    }
+
+                  .hotspot--cta {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background: {{section.settings.hotspot_color}};
+                    transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
+                  }
+
+                  .hotspot--cta::after {
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: {{section.settings.hotspot_inner}};
+                    z-index: 2;
+                    transition: opacity 0.6s;
+                    animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
+                  }
+
+                  .hotspot:hover .hotspot--cta {
+                    transform: scale(0.6);
+                  }
+
+                  .hotspot:hover .hotspot--cta:after {
+                    opacity: 0;
+                  }
                   }
 
                     {%- for block in section.blocks -%}
