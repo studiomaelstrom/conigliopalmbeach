@@ -75,13 +75,16 @@
 
 {%- style -%}
                   .section-{{ section.id }}-width {
-                    width: {{ section.settings.width }}%;
+
+                    width: 100%;
+                      padding:calc((100-{{ section.settings.width }})px);
+                    margin:auto;
                   }
 
                   @media screen and (min-width: 750px) {
                     .section-{{ section.id }}-width {
-                      width: 100%;
-                      padding:calc(100-{{ section.settings.width }})px;
+                      width: {{ section.settings.width }}%;
+                      margin:auto;
                     }
                   }
 
