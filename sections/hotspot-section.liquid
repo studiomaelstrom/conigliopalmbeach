@@ -105,224 +105,237 @@
 {% endschema %}
 
 {%- style -%}
-                  .section-{{ section.id }}-width {
-                    width: 100%;
-                    padding: {{ 100 | minus:section.settings.width | times:1.5}}px;
-                    margin:auto;
-                  }
-
-                  @media screen and (min-width: 750px) {
                     .section-{{ section.id }}-width {
-                      width: {{ section.settings.width }}%;
+                      width: 100%;
+                      padding: {{ 100 | minus:section.settings.width | times:1.5}}px;
                       margin:auto;
                     }
-                  }
 
-                  .hotspots--wrapper {
-                    position: relative;
-                    margin: auto;
-                  }
-
-                  .hotspots--figure {
-                    width: 100%;
-                  }
-
-                  .hotspot {
-                    position: absolute;
-                    display: block;
-                  }
-
-                  .hotspot--cta {
-                    position: relative;
-                    float: right;
-                    display: inline-block;
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                    background: {{section.settings.hotspot_color}};
-                    transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
-                  }
-
-                  .hotspot--cta::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    bottom: 0;
-                    right: 0;
-                    margin: auto;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    background: {{section.settings.hotspot_inner}};
-                    z-index: 2;
-                    transition: opacity 0.6s;
-                    animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
-                  }
-
-                  .hotspot:hover .hotspot--cta {
-                    transform: scale(0.6);
-                  }
-
-                  .hotspot:hover .hotspot--cta:after {
-                    opacity: 0;
-                  }
-
-                  @keyframes pulse {
-                    0% {
-                      transform: scale(0.4);
-                    }
-                    33% {
-                      transform: scale(1);
-                    }
-                    66% {
-                      transform: scale(0.4);
-                    }
-                    100% {
-                      transform: scale(0.4);
-                    }
-                  }
-
-                  @media screen and (max-width: 770px) {
-
-                  .hotspot--cta {
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                    background: transparent;
-                    transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
-                  }
-
-                  .hotspot--cta::after {
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                    background: {{section.settings.hotspot_color}};
-                    z-index: 2;
-                    transition: opacity 0.6s;
-                    animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
-                  }
-
-                  .hotspot:hover .hotspot--cta {
-                    transform: scale(0.8);
-                    background: {{section.settings.hotspot_color}};
-                  }
-
-                  .hotspot:hover .hotspot--cta:after {
-                    opacity: 0;
-                  }
-                  }
-
-                    {%- for block in section.blocks -%}
-                      {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
-                      {{ hotspot_position }}{
-                        top: {{ block.settings.top }}%;
-                        left: {{ block.settings.left }}%;
+                    @media screen and (min-width: 750px) {
+                      .section-{{ section.id }}-width {
+                        width: {{ section.settings.width }}%;
+                        margin:auto;
                       }
+                    }
 
-                {%- assign info_position = '#info-' | append: block.id -%}
-                      {{ info_position }}{
-                        top: {{ block.settings.itop }}%;
-                        left: {{ block.settings.ileft }}%;
+                    .hotspots--wrapper {
+                      position: relative;
+                      margin: auto;
+                    }
+
+                    .hotspots--figure {
+                      width: 100%;
+                    }
+
+                    .hotspot {
+                      position: absolute;
+                      display: block;
+                    }
+
+                    .hotspot--cta {
+                      position: relative;
+                      float: right;
+                      display: inline-block;
+                      width: 25px;
+                      height: 25px;
+                      border-radius: 50%;
+                      background: {{section.settings.hotspot_color}};
+                      transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
+                    }
+
+                    .hotspot--cta::after {
+                      content: "";
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      bottom: 0;
+                      right: 0;
+                      margin: auto;
+                      width: 10px;
+                      height: 10px;
+                      border-radius: 50%;
+                      background: {{section.settings.hotspot_inner}};
+                      z-index: 2;
+                      transition: opacity 0.6s;
+                      animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
+                    }
+
+                    .hotspot:hover .hotspot--cta {
+                      transform: scale(0.6);
+                    }
+
+                    .hotspot:hover .hotspot--cta:after {
+                      opacity: 0;
+                    }
+
+                    @keyframes pulse {
+                      0% {
+                        transform: scale(0.4);
                       }
-                    {%- endfor -%}
+                      33% {
+                        transform: scale(1);
+                      }
+                      66% {
+                        transform: scale(0.4);
+                      }
+                      100% {
+                        transform: scale(0.4);
+                      }
+                    }
+
+                    @media screen and (max-width: 770px) {
+
+                    .hotspot--cta {
+                      width: 12px;
+                      height: 12px;
+                      border-radius: 50%;
+                      background: transparent;
+                      transition: all cubic-bezier(0.8, 0, 0.2, 1) 0.4s;
+                    }
+
+                    .hotspot--cta::after {
+                      width: 12px;
+                      height: 12px;
+                      border-radius: 50%;
+                      background: {{section.settings.hotspot_color}};
+                      z-index: 2;
+                      transition: opacity 0.6s;
+                      animation: pulse 1.5s cubic-bezier(0.8, 0, 0.2, 1) 0s infinite;
+                    }
+
+                    .hotspot:hover .hotspot--cta {
+                      transform: scale(0.8);
+                      background: {{section.settings.hotspot_color}};
+                    }
+
+                    .hotspot:hover .hotspot--cta:after {
+                      opacity: 0;
+                    }
+                    }
+
+                      {%- for block in section.blocks -%}
+                        {%- assign hotspot_position = '#hotspot-' | append: block.id -%}
+                        {{ hotspot_position }}{
+                          top: {{ block.settings.top }}%;
+                          left: {{ block.settings.left }}%;
+                        }
+
+                  {%- assign info_position = '#info-' | append: block.id -%}
+                        {{ info_position }}{
+                          top: {{ block.settings.itop }}%;
+                          left: {{ block.settings.ileft }}%;
+                        }
+                      {%- endfor -%}
 
 
-            .hotspot--popup {
-            display: none;
-            position: absolute;
-            background-color: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            z-index: 10;
-            width:400px;
-            margin-bottom:100px!important;
-            /* Adjust width, max-width, etc., as needed */
+              .hotspot--popup {
+              display: none;
+              position: absolute;
+              background-color: white;
+              padding: 10px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0,0,0,0.5);
+              z-index: 10;
+              width:400px;
+              margin-bottom:100px!important;
+              /* Adjust width, max-width, etc., as needed */
+            }
+
+            @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
           }
 
-          @keyframes fadeIn {
-          from {
-            opacity: 0;
+          .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
           }
-          to {
-            opacity: 1;
-          }
+
+          /* Centered Popup Modal */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 100; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          margin:auto;
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.5s, visibility 0.5s; /* Smooth transition for opacity and visibility */
         }
 
+        /* Fade class to add when showing the modal */
         .fade-in {
-          animation: fadeIn 0.5s ease-out forwards;
+          opacity: 1;
+          visibility: visible;
         }
 
-        /* Centered Popup Modal */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 100; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        margin:auto;
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s, visibility 0.5s; /* Smooth transition for opacity and visibility */
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: 5% auto; /* 15% from the top and centered */
+          padding: 20px;
+          border: 1px solid #888;
+          max-width: 400px;
+          width: 80%;
+          max-height: 800px; /* Maximum height */
+        }
+
+        /* Modal Content Styles */
+      .modal-content img {
+        max-height: 500px; /* Maintain aspect ratio */
+        width:100%
       }
 
-      /* Fade class to add when showing the modal */
-      .fade-in {
-        opacity: 1;
-        visibility: visible;
+      .modal-content h3,
+      .modal-content a {
+        text-align: center; /* Center-align text */
+        display: block; /* Make the link take its own line */
+        margin-top: 15px; /* Add some space above the title and link */
       }
 
-      /* Modal Content */
-      .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        max-width: 400px;
-        width: 80%;
-        max-height: 800px; /* Maximum height */
+      /* Outline Button Styles */
+      .modal-content a {
+        padding: 5px 10px;
+        border: 1px solid #F47722; /* Use your theme's primary color or any color you prefer */
+        color: #F47722; /* Text color */
+        text-decoration: none; /* Remove underline from the link */
+        text-transform: uppercase;
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
       }
 
-      /* Modal Content Styles */
-    .modal-content img {
-      max-height: 500px; /* Maintain aspect ratio */
-      width:100%
+      .modal-content a:hover {
+        background-color: #F47722; /* Button fill color on hover */
+        color: #FFFFFF; /* Text color on hover */
+      }
+
+      .modal-close-text {
+      color: #888; /* Grey text */
+      cursor: pointer; /* Indicates the text is clickable */
+      text-align: center; /* Center the text */
+      margin-top: 8px; /* Space from the content above */
+      font-size: 12px; /* Adjust size as needed */
+      text-decoration:underline;
     }
 
-    .modal-content h3,
-    .modal-content a {
-      text-align: center; /* Center-align text */
-      display: block; /* Make the link take its own line */
-      margin-top: 15px; /* Add some space above the title and link */
-    }
+    .link-hotspot {
+    display: block;
+    position: absolute;
+    /* Adjust the size as needed to make the clickable area appropriate */
+    width: 25px;
+    height: 25px;
+    cursor: pointer; /* Indicates the element is clickable */
+  }
 
-    /* Outline Button Styles */
-    .modal-content a {
-      padding: 5px 10px;
-      border: 1px solid #F47722; /* Use your theme's primary color or any color you prefer */
-      color: #F47722; /* Text color */
-      text-decoration: none; /* Remove underline from the link */
-      text-transform: uppercase;
-      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
-    }
-
-    .modal-content a:hover {
-      background-color: #F47722; /* Button fill color on hover */
-      color: #FFFFFF; /* Text color on hover */
-    }
-
-    .modal-close-text {
-    color: #888; /* Grey text */
-    cursor: pointer; /* Indicates the text is clickable */
-    text-align: center; /* Center the text */
-    margin-top: 8px; /* Space from the content above */
-    font-size: 12px; /* Adjust size as needed */
-    text-decoration:underline;
+  .link-hotspot .hotspot--cta {
+    /* Your existing styles should apply correctly */
   }
 {%- endstyle -%}
 <div
@@ -345,20 +358,32 @@
 
       <!-- Hotspot Trigger -->
       {%- for block in section.blocks -%}
-        <div
-          class="hotspot"
-          id="hotspot-{{ block.id }}"
-          style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
-        >
-          <span class="hotspot--cta"></span>
-          <!-- Hidden Product Info Container -->
-          <div class="hotspot--product-info" style="display: none;">
-            {% assign product = all_products[block.settings.product] %}
-            <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
-            <h3>{{ product.title }}</h3>
-            <a href="{{ product.url }}" class="outline-button">View Product</a>
+        {% if block.type == 'hotspot' %}
+          <!-- Existing Hotspot for Product Info -->
+          <div
+            class="hotspot product-hotspot"
+            style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
+          >
+            <span class="hotspot--cta"></span>
+            <!-- Hidden Product Info Container -->
+            <div class="hotspot--product-info" style="display: none;">
+              {% assign product = all_products[block.settings.product] %}
+              <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
+              <h3>{{ product.title }}</h3>
+              <a href="{{ product.url }}" class="outline-button">View Product</a>
+            </div>
           </div>
-        </div>
+        {% elsif block.type == 'link' %}
+          <!-- New Hotspot that links directly to a URL -->
+          <a
+            href="{{ block.settings.hotspot-url }}"
+            target="_blank"
+            class="hotspot link-hotspot"
+            style="top: {{ block.settings.top }}%; left: {{ block.settings.left }}%;"
+          >
+            <span class="hotspot--cta"></span>
+          </a>
+        {% endif %}
       {%- endfor -%}
     </section>
   </div>
