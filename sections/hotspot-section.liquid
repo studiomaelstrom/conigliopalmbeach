@@ -266,7 +266,7 @@
     .modal-content a {
       text-align: center; /* Center-align text */
       display: block; /* Make the link take its own line */
-      margin-top: 10px; /* Add some space above the title and link */
+      margin-top: 15px; /* Add some space above the title and link */
     }
 
     /* Outline Button Styles */
@@ -297,20 +297,19 @@
   class="section-{{ section.id }}-width"
 >
   <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <!-- Dynamic content will be loaded here -->
+      </div>
+    </div>
     <section class="hotspots--wrapper">
       <img
         src="{{ section.settings.image }}"
         alt=""
         class="hotspots--figure"
       >
-
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <!-- Dynamic content will be loaded here -->
-        </div>
-      </div>
 
       <!-- Hotspot Trigger -->
       {%- for block in section.blocks -%}
