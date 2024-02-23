@@ -117,115 +117,118 @@
 {% endschema %}
 
 {%- style -%}
-  /* General styling for the section based on its ID */
+  /* General section styling */
   .section-{{ section.id }}-width {
     width: 100%;
-    padding: {{ 100 | minus: section.settings.width | times: 1.5 }}px; /* Dynamically calculate padding based on section width */
-    margin: auto; /* Center the section */
+    padding: {{ 100 | minus: section.settings.width | times: 1.5 }}px;
+    margin: auto;
   }
 
-  /* Adjust the section width for larger screens */
+  /* Adjustments for larger screens */
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-width {
-      width: {{ section.settings.width }}%; /* Use the width setting from the section settings */
-      margin: auto; /* Ensure it remains centered */
+      width: {{ section.settings.width }}%;
+      margin: auto;
     }
   }
 
-  /* Wrapper for hotspots to position them relative to the image */
+  /* Wrapper for positioning hotspots relative to the image */
   .hotspots--wrapper {
     position: relative;
-    margin: auto; /* Center the wrapper */
+    margin: auto;
   }
 
-  /* Ensure the image fills the width of its container */
+  /* Ensures the image fills its container */
   .hotspots--figure {
     width: 100%;
   }
 
-  /* Basic styling for hotspot indicators */
+  /* Basic styling for hotspots */
   .hotspot {
-    position: absolute; /* Position absolutely within the relative wrapper */
-    display: block; /* Ensure each hotspot is a block-level element */
+    position: absolute;
+    display: block;
   }
 
-  /* Styling for the clickable area of the hotspot */
+  /* Styling for the clickable hotspot area */
   .hotspot--cta {
     position: relative;
-    display: inline-block; /* Make the hotspot clickable area inline-block */
+    display: inline-block;
     width: 25px;
     height: 25px;
-    border-radius: 50%; /* Circular hotspots */
-    background: {{ section.settings.hotspot_color }}; /* Use the hotspot color setting */
-    transition: all 0.4s cubic-bezier(0.8, 0, 0.2, 1); /* Smooth transition for hover effects */
+    border-radius: 50%;
+    background: {{ section.settings.hotspot_color }};
+    transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1);
   }
 
-  /* Inner circle of the hotspot for visual effect */
+  /* Inner circle styling for visual effect */
   .hotspot--cta::after {
     content: "";
     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the circle correctly */
     width: 10px;
     height: 10px;
-    border-radius: 50%; /* Circular shape */
-    background: {{ section.settings.hotspot_inner }}; /* Inner color from settings */
-    z-index: 2; /* Ensure it's above the hotspot background */
-    transition: opacity 0.6s; /* Fade effect */
-    animation: pulse 1.5s infinite cubic-bezier(0.8, 0, 0.2, 1); /* Pulsing animation */
+    border-radius: 50%;
+    background: {{ section.settings.hotspot_inner }};
+    z-index: 2;
+    transition: opacity 0.6s;
+    animation: pulse 1.5s infinite cubic-bezier(0.8, 0, 0.2, 1);
   }
 
-  /* Hover effects to scale down the hotspot and make the inner circle disappear */
+  /* Hover effects for the hotspot */
   .hotspot:hover .hotspot--cta {
-    transform: scale(0.6); /* Scale down effect */
+    transform: scale(0.6);
   }
 
   .hotspot:hover .hotspot--cta:after {
-    opacity: 0; /* Make the inner circle disappear */
+    opacity: 0;
   }
 
-  /* Pulsing animation keyframes */
+  /* Keyframes for the pulsing animation */
   @keyframes pulse {
     0%, 66%, 100% {
-      transform: scale(0.4);
+      transform: scale(1);
     }
     33% {
-      transform: scale(1);
+      transform: scale(1.5);
     }
   }
 
   /* Adjustments for smaller screens */
   @media screen and (max-width: 770px) {
     .hotspot--cta, .hotspot--cta::after {
-      width: 12px; /* Smaller hotspots for smaller screens */
+      width: 12px;
       height: 12px;
     }
   }
 
-  /* Tooltip styling for additional information on hover */
+  /* Tooltip styling */
   .tooltip {
-    visibility: hidden; /* Initially hidden */
-    width: 150px; /* Fixed width */
-    background-color: #FDF9F7; /* Light background */
-    color: #888; /* Grey text */
-    text-align: center; /* Centered text */
-    border-radius: 6px; /* Rounded corners */
-    padding: 5px 0; /* Padding for text */
-    position: absolute; /* Positioned absolutely within the hotspot */
-    z-index: 2; /* Ensure it's above other elements */
-    bottom: 125%; /* Position above the hotspot */
-    left: 50%; /* Center horizontally */
-    margin-left: -75px; /* Offset to truly center */
-    opacity: 0; /* Start with it transparent */
-    transition: opacity 0.3s; /* Fade in effect */
-    box-shadow: rgba(0, 0, 0, 0.3) 0 2px 10px; /* Subtle shadow for depth */
-    font-style: italic; /* Italic text for style */
-    text-decoration: underline; /* Underlined text */
-    text-underline-offset: 2px; /* Adjust underline position */
+    visibility: hidden;
+    width: 150px;
+    background-color: #FDF9F7;
+    color: #888;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-style: italic;
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
-  /* Show tooltip on hover */
+  /* Show the tooltip on hover */
   .link-hotspot:hover .tooltip, .hotspot:hover .tooltip {
-    visibility: visible; /* Make the tooltip visible */
-    opacity: 1; /* Fully opaque */
+    visibility: visible;
+    opacity: 1;
   }
 {%- endstyle -%}
 <div
