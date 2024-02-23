@@ -3,6 +3,16 @@
     "hotspot_section_XpAGqQ": {
       "type": "hotspot-section",
       "blocks": {
+        "link_WRRdif": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "https:\/\/en.wikipedia.org\/wiki\/Disco",
+            "hovertext": true,
+            "tooltip_text": "Disco Disco!",
+            "top": 10,
+            "left": 3
+          }
+        },
         "hotspot_Qwi9UN": {
           "type": "hotspot",
           "settings": {
@@ -23,16 +33,6 @@
             "left": 78
           }
         },
-        "link_WRRdif": {
-          "type": "link",
-          "settings": {
-            "hotspot-url": "https:\/\/en.wikipedia.org\/wiki\/Disco",
-            "hovertext": true,
-            "tooltip_text": "Disco Disco!",
-            "top": 10,
-            "left": 3
-          }
-        },
         "link_WV63Wk": {
           "type": "link",
           "settings": {
@@ -45,9 +45,9 @@
         }
       },
       "block_order": [
+        "link_WRRdif",
         "hotspot_Qwi9UN",
         "hotspot_bDwyJ6",
-        "link_WRRdif",
         "link_WV63Wk"
       ],
       "settings": {
