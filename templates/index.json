@@ -7,6 +7,8 @@
           "type": "hotspot",
           "settings": {
             "product": "silk-dupioni-convertible-beach-pant",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
             "top": 36,
             "left": 25
           }
@@ -15,6 +17,8 @@
           "type": "hotspot",
           "settings": {
             "product": "silk-dupioni-ruffle-power-pareo",
+            "hovertext": true,
+            "tooltip_text": "Hover Text Here",
             "top": 50,
             "left": 78
           }
@@ -23,6 +27,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/en.wikipedia.org\/wiki\/Disco",
+            "hovertext": true,
             "tooltip_text": "Disco Disco!",
             "top": 10,
             "left": 3
@@ -32,6 +37,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "shopify:\/\/products\/dolman-mini-dress",
+            "hovertext": true,
             "tooltip_text": "Click Me!",
             "top": 73,
             "left": 84
@@ -58,6 +64,8 @@
           "type": "hotspot",
           "settings": {
             "product": "silk-dupioni-convertible-beach-pant",
+            "hovertext": true,
+            "tooltip_text": "Hover Text Here",
             "top": 15,
             "left": 20
           }
@@ -66,6 +74,8 @@
           "type": "hotspot",
           "settings": {
             "product": "silk-dupioni-ruffle-power-pareo",
+            "hovertext": true,
+            "tooltip_text": "Hover Text Here",
             "top": 45,
             "left": 63
           }
