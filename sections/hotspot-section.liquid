@@ -432,42 +432,27 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const productHotspots = document.querySelectorAll('.product-hotspot');
+      document.addEventListener('DOMContentLoaded', function() {
+    const hotspots = document.querySelectorAll('.product-hotspot');
+    const modal = document.querySelector('.modal');
+    const modalContentContainer = modal.querySelector('.modal-content');
 
-    productHotspots.forEach(hotspot => {
+    hotspots.forEach(hotspot => {
       hotspot.addEventListener('click', function() {
-        const productHandle = this.getAttribute('data-product-handle');
-        // Assuming you have a way to fetch product details based on the product handle
-        // For demonstration, we're directly showing the modal
-        const modalContentContainer = document.querySelector('.modal-content');
+        const productInfo = this.querySelector('.hotspot--product-info').innerHTML;
         const closeButtonHtml = '<div class="modal-close-text">Close</div>'; // Close button HTML
-
-        // Fetch product details and populate modalContentContainer.innerHTML accordingly
-        // For now, just showing the close button
-        modalContentContainer.innerHTML = closeButtonHtml;
-
-        const modal = document.querySelector('.modal');
+        modalContentContainer.innerHTML = productInfo + closeButtonHtml; // Insert product info and close button into modal
         modal.style.display = "block"; // Show the modal
         setTimeout(() => modal.classList.add('fade-in'), 10); // Add class to start fade-in animation
       });
     });
 
-    // Close the modal logic
-    const closeModalElements = document.querySelectorAll('.modal, .modal-close-text');
-    closeModalElements.forEach(element => {
-      element.addEventListener('click', function(event) {
-        if (event.target.classList.contains('modal-close-text') || event.target === element) {
-          const modal = document.querySelector('.modal');
-          modal.classList.remove('fade-in'); // Start fade-out animation
-          setTimeout(() => modal.style.display = "none", 500); // Delay hiding the modal to allow fade-out to complete
-        }
-      });
-    });
-
-    // Prevent modal content click from closing the modal
-    document.querySelector('.modal-content').addEventListener('click', function(event) {
-      event.stopPropagation();
+    // Close the modal if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+      if (event.target == modal || event.target.classList.contains('modal-close-text')) {
+        modal.classList.remove('fade-in'); // Start fade-out animation
+        setTimeout(() => modal.style.display = "none", 500); // Delay hiding the modal to allow fade-out to complete
+      }
     });
   });
 </script>
