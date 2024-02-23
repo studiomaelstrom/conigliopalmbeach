@@ -21,13 +21,13 @@
     },
     {
       "type": "range",
-      "id": "margins",
+      "id": "width",
       "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Margins",
-      "default": 50
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Width",
+      "default": 95
     }
   ],
   "blocks": [
@@ -74,15 +74,14 @@
 {% endschema %}
 
 {%- style -%}
-                  .section-{{ section.id }}-padding {
-                    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-                    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+                  .section-{{ section.id }}-width {
+                    width: {{ section.settings.width }}%;
                   }
 
                   @media screen and (min-width: 750px) {
-                    .section-{{ section.id }}-padding {
-                      padding-top: {{ section.settings.padding_top }}px;
-                      padding-bottom: {{ section.settings.padding_bottom }}px;
+                    .section-{{ section.id }}-width {
+                      width: 100%;
+                      padding:calc(100-{{ section.settings.width }})px;
                     }
                   }
 
@@ -280,8 +279,7 @@
     }
 {%- endstyle -%}
 <div
-  class="page-margins"
-  style="    margin: {{ section.settings.margins }}px;"
+  class="section-{{ section.id }}-width"
 >
   <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
     <section class="hotspots--wrapper">
