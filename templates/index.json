@@ -63,7 +63,7 @@
         "hotspot_bNHnaz": {
           "type": "hotspot",
           "settings": {
-            "product": "silk-dupioni-ruffle-power-pareo",
+            "product": "cotton-convertible-beach-pant",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 48,
@@ -105,7 +105,7 @@
         "link_qFP4gm": {
           "type": "link",
           "settings": {
-            "hotspot-url": "",
+            "hotspot-url": "shopify:\/\/products\/sunday-morning-jumpsuit",
             "hovertext": true,
             "tooltip_text": "Take A Seat...",
             "top": 54,
