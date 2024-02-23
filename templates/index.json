@@ -23,15 +23,26 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/en.wikipedia.org\/wiki\/Disco",
+            "tooltip_text": "Hover Text Here",
             "top": 10,
             "left": 3
+          }
+        },
+        "link_WV63Wk": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "shopify:\/\/products\/dolman-mini-dress",
+            "tooltip_text": "Click Me!",
+            "top": 73,
+            "left": 84
           }
         }
       },
       "block_order": [
         "hotspot_Qwi9UN",
         "hotspot_bDwyJ6",
-        "link_WRRdif"
+        "link_WRRdif",
+        "link_WV63Wk"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/DesktopSite1-RC.png?v=1708666024",
