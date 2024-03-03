@@ -1,0 +1,130 @@
+{% schema %}
+{
+  "name": "Ticker Text",
+  "settings": [
+    {
+    "type": "textarea",
+    "id": "text",
+    "label": "Scrolling Text",
+    "default": "Temporary scrolling placeholder here"
+  },
+    {
+    "type": "range",
+    "id": "text-size",
+    "label": "Font Size",
+    "min": 10,
+    "max": 24,
+    "unit": "px",
+    "step": 1,
+    "default": 16
+  },
+    {
+    "type": "color",
+    "id": "text-color",
+    "label": "Text Color",
+    "default": "#FFFFFF"
+  },
+    {
+    "type": "color",
+    "id": "background-color",
+    "label": "Background Color",
+    "default": "#000000"
+  },
+
+    {
+    "type": "range",
+    "id": "speed",
+    "label": "Scroll Speed",
+    "min": 0,
+    "max": 150,
+    "step": 10,
+    "default": 50
+  },
+    {
+    "type": "range",
+    "id": "space",
+    "label": "Spacing",
+    "min": 0,
+    "max": 20,
+    "step": 1,
+    "default": 5
+  },
+    {
+    "type": "text",
+    "id": "divider",
+    "label": "Divider",
+    "default": "•"
+  },
+    {
+    "type": "range",
+    "id": "height",
+    "label": "Height",
+    "min": 1,
+    "max": 8,
+    "step": 1,
+    "default": 3
+  }
+  ],"presets": [
+    {
+      "name": "Ticker Text"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="ticker-wrapper">
+  <div class="ticker_container">
+    <span id="ticker_text">
+      {{- section.settings.text }}
+      {% capture count %}{{ section.settings.space }}{% endcapture %}
+      {% for num in (1..count) %}
+        &nbsp;
+      {% endfor -%}
+      {{ section.settings.divider }}
+      {% for num in (1..count) %}
+        &nbsp;
+      {% endfor -%}
+    </span>
+  </div>
+</div>
+
+<script>
+  // This Function repeats the News-Ticker-Text
+    var repeatText = document.getElementById("ticker_text").textContent;
+    document.getElementById("ticker_text").innerHTML = repeatText.repeat(2000);
+</script>
+
+{% style %}
+  .ticker-wrapper{
+  width: 100%;
+  margin: 0;
+  }
+  .ticker_container {
+    display:flex;
+    justify-content: flex-end;
+    vertical-align: center;
+    height: {{ section.settings.height }}rem;
+    background: {{ section.settings.background-color }};
+    padding: 0;
+
+    #ticker_text {
+    display: flex;
+    align-items: center;
+    font-size: {{ section.settings.text-size }};
+    letter-spacing: 1px;
+    color: {{ section.settings.text-color }};
+    font-weight: 400;
+
+    position: relative;
+    white-space: nowrap;
+
+    animation: mymove {{ 200 | minus:section.settings.speed }}s infinite;
+    animation-timing-function: linear;
+    }
+  }
+
+  @keyframes mymove {
+    from {right: -1920px;}
+    to {right: 1920px;}
+  }
+{% endstyle %}
