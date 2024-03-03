@@ -16,6 +16,15 @@
         "height": 5
       }
     },
+    "custom_liquid_h6prJp": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "hotspot_section_XpAGqQ": {
       "type": "hotspot-section",
       "blocks": {
@@ -118,6 +127,7 @@
   },
   "order": [
     "ticker_text_6frNjK",
+    "custom_liquid_h6prJp",
     "hotspot_section_XpAGqQ",
     "hotspot_section_w7VitL",
     "hotspot_section_9WX3nW",
