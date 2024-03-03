@@ -1,5 +1,14 @@
 {
   "sections": {
+    "custom_liquid_LGjeEa": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
     "ticker_text_6frNjK": {
       "type": "ticker-text",
       "custom_css": [
@@ -126,6 +135,7 @@
     }
   },
   "order": [
+    "custom_liquid_LGjeEa",
     "ticker_text_6frNjK",
     "custom_liquid_h6prJp",
     "hotspot_section_XpAGqQ",
