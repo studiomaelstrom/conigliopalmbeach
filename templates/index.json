@@ -11,9 +11,9 @@
         "text-color": "#312f2e",
         "background-color": "#f47722",
         "speed": 50,
-        "space": 9,
+        "space": 6,
         "divider": "•",
-        "height": 6
+        "height": 5
       }
     },
     "hotspot_section_XpAGqQ": {
