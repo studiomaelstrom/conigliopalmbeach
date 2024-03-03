@@ -1,39 +1,5 @@
 {
   "sections": {
-    "custom_liquid_LGjeEa": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 16,
-        "padding_bottom": 0
-      }
-    },
-    "ticker_text_6frNjK": {
-      "type": "ticker-text",
-      "custom_css": [
-
-      ],
-      "settings": {
-        "text": "PLACEHOLDER TEXT HERE",
-        "text-size": 16,
-        "text-color": "#312f2e",
-        "background-color": "#f47722",
-        "speed": 50,
-        "space": 6,
-        "divider": "•",
-        "height": 5
-      }
-    },
-    "custom_liquid_h6prJp": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "hotspot_section_XpAGqQ": {
       "type": "hotspot-section",
       "blocks": {
@@ -91,6 +57,31 @@
         "width": 90
       }
     },
+    "custom_liquid_h6prJp": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "ticker_text_6frNjK": {
+      "type": "ticker-text",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "text": "PLACEHOLDER TEXT HERE",
+        "text-size": 16,
+        "text-color": "#312f2e",
+        "background-color": "#f47722",
+        "speed": 50,
+        "space": 6,
+        "divider": "•",
+        "height": 5
+      }
+    },
     "hotspot_section_w7VitL": {
       "type": "hotspot-section",
       "blocks": {
@@ -135,10 +126,9 @@
     }
   },
   "order": [
-    "custom_liquid_LGjeEa",
-    "ticker_text_6frNjK",
-    "custom_liquid_h6prJp",
     "hotspot_section_XpAGqQ",
+    "custom_liquid_h6prJp",
+    "ticker_text_6frNjK",
     "hotspot_section_w7VitL",
     "hotspot_section_9WX3nW",
     "hotspot_section_FeUwVk"
