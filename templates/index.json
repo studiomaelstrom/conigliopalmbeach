@@ -104,8 +104,8 @@
       "settings": {
         "text": "Temporary scrolling placeholder here",
         "text-size": 16,
-        "text-color": "#a95858",
-        "background-color": "#000000",
+        "text-color": "#312f2e",
+        "background-color": "#f47722",
         "speed": 50,
         "space": 5,
         "divider": "•",
