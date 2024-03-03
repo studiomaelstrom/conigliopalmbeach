@@ -2,13 +2,16 @@
   "sections": {
     "ticker_text_6frNjK": {
       "type": "ticker-text",
+      "custom_css": [
+
+      ],
       "settings": {
-        "text": "PLACEHOLDER TEXT",
+        "text": "PLACEHOLDER TEXT HERE",
         "text-size": 16,
         "text-color": "#312f2e",
         "background-color": "#f47722",
         "speed": 50,
-        "space": 5,
+        "space": 9,
         "divider": "•",
         "height": 6
       }
