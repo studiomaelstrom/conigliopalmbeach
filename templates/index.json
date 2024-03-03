@@ -98,12 +98,26 @@
         "hotspot_inner": "#f47722",
         "width": 90
       }
+    },
+    "ticker_text_6frNjK": {
+      "type": "ticker-text",
+      "settings": {
+        "text": "Temporary scrolling placeholder here",
+        "text-size": 16,
+        "text-color": "#a95858",
+        "background-color": "#000000",
+        "speed": 50,
+        "space": 5,
+        "divider": "•",
+        "height": 4
+      }
     }
   },
   "order": [
     "hotspot_section_XpAGqQ",
     "hotspot_section_w7VitL",
     "hotspot_section_9WX3nW",
-    "hotspot_section_FeUwVk"
+    "hotspot_section_FeUwVk",
+    "ticker_text_6frNjK"
   ]
 }
