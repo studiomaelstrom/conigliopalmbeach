@@ -117,16 +117,6 @@
             "left": 30
           }
         },
-        "hotspot_rwHD8b": {
-          "type": "hotspot",
-          "settings": {
-            "product": "silk-habotai-v-neck-maxi",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 43,
-            "left": 57
-          }
-        },
         "hotspot_BVcqfd": {
           "type": "hotspot",
           "settings": {
@@ -166,15 +156,25 @@
             "top": 50,
             "left": 42
           }
+        },
+        "hotspot_68Tj4R": {
+          "type": "hotspot",
+          "settings": {
+            "product": "dolman-mini-dress",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 34,
+            "left": 53
+          }
         }
       },
       "block_order": [
         "hotspot_Wcbf7n",
-        "hotspot_rwHD8b",
         "hotspot_BVcqfd",
         "hotspot_6j6xCn",
         "hotspot_9Gt8Rn",
-        "hotspot_xW3ctT"
+        "hotspot_xW3ctT",
+        "hotspot_68Tj4R"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-2.webp?v=1709465384",
@@ -195,10 +195,21 @@
             "top": 68,
             "left": 41
           }
+        },
+        "hotspot_GYkQgx": {
+          "type": "hotspot",
+          "settings": {
+            "product": "silk-dupioni-ball-skirt",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 50,
+            "left": 77
+          }
         }
       },
       "block_order": [
-        "hotspot_XckTei"
+        "hotspot_XckTei",
+        "hotspot_GYkQgx"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3.webp?v=1709465384",
