@@ -26,21 +26,21 @@
         "hotspot_bDwyJ6": {
           "type": "hotspot",
           "settings": {
-            "product": "silk-dupioni-ruffle-power-pareo",
+            "product": "poplin-classic-button-down",
             "hovertext": false,
             "tooltip_text": "Shop Now",
-            "top": 50,
-            "left": 78
+            "top": 46,
+            "left": 90
           }
         },
         "link_WV63Wk": {
           "type": "link",
           "settings": {
-            "hotspot-url": "shopify:\/\/products\/dolman-mini-dress",
+            "hotspot-url": "shopify:\/\/products\/cardigan",
             "hovertext": true,
             "tooltip_text": "Click Me!",
-            "top": 73,
-            "left": 84
+            "top": 48,
+            "left": 49
           }
         }
       },
