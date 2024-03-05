@@ -32,12 +32,23 @@
             "top": 46,
             "left": 90
           }
+        },
+        "hotspot_EEBG6D": {
+          "type": "hotspot",
+          "settings": {
+            "product": "cardigan",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 46,
+            "left": 52
+          }
         }
       },
       "block_order": [
         "link_WRRdif",
         "hotspot_Qwi9UN",
-        "hotspot_bDwyJ6"
+        "hotspot_bDwyJ6",
+        "hotspot_EEBG6D"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-1.webp?v=1709465383",
