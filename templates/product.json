@@ -94,16 +94,16 @@
           "settings": {
             "heading": "Fabric Content",
             "icon": "leather",
-            "row_content": "",
+            "row_content": "<p>{{ product.metafields.product.material | metafield_tag }}<\/p>",
             "page": ""
           }
         },
         "collapsible_row_kH4kWX": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Measurements",
+            "heading": "Fit",
             "icon": "ruler",
-            "row_content": "",
+            "row_content": "<p>{{ product.metafields.product.measure | metafield_tag }}<\/p>",
             "page": ""
           }
         },
@@ -112,7 +112,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
-            "row_content": "",
+            "row_content": "<p>{{ product.metafields.product.care | metafield_tag }}<\/p>",
             "page": ""
           }
         }
