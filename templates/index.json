@@ -149,11 +149,11 @@
         "hotspot_xW3ctT": {
           "type": "hotspot",
           "settings": {
-            "product": "poplin-classic-button-down",
+            "product": "p0001",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
-            "top": 44,
-            "left": 38
+            "top": 50,
+            "left": 42
           }
         }
       },
