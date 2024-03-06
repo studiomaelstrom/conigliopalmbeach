@@ -95,7 +95,7 @@
         "scroll_text_xq3A6T": {
           "type": "scroll-text",
           "settings": {
-            "text": "Placeholder here"
+            "text": "Text One"
           }
         },
         "scroll_text_68HYfL": {
@@ -107,7 +107,7 @@
         "scroll_text_6FMfbc": {
           "type": "scroll-text",
           "settings": {
-            "text": "Placeholder 2323"
+            "text": "Another Option"
           }
         }
       },
