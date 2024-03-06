@@ -91,6 +91,31 @@
     },
     "ticker_text_6frNjK": {
       "type": "ticker-text",
+      "blocks": {
+        "scroll_text_xq3A6T": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Placeholder here"
+          }
+        },
+        "scroll_text_68HYfL": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Placeholder 2"
+          }
+        },
+        "scroll_text_6FMfbc": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Placeholder 2323"
+          }
+        }
+      },
+      "block_order": [
+        "scroll_text_xq3A6T",
+        "scroll_text_68HYfL",
+        "scroll_text_6FMfbc"
+      ],
       "custom_css": [
 
       ],
