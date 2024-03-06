@@ -140,51 +140,14 @@
         "padding_bottom": 36
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Behind the Design...",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Christina Coniglio is on a mission to authentically reference and storytell the original island energy from a local designer’s perspective.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "large",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
         "column-0": {
           "type": "column",
           "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Spend your time finding a perfect design in our wide range collection of high-quality apparel and enjoy free shipping on all orders over $100. <\/p>",
+            "title": "Shipping",
+            "text": "<p>We offer flat rate shipping on all orders. Please proceed to checkout to view rates.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -193,7 +156,7 @@
           "type": "column",
           "settings": {
             "title": "Returns & Exchanges",
-            "text": "<p>Shop with peace of mind knowing that our 30-day return policy allows you to easily return or exchange any item that doesn't meet your expectations.<\/p>",
+            "text": "<p>Returns are for in store credit or product exchange only and must be made within 14 days of delivery. We cannot provide a return label. To initiate a return or exchange, email us to admin@conigliopalmbeach.com<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -222,10 +185,11 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like...",
-        "heading_size": "h1",
-        "products_to_show": 4,
+        "heading_size": "h2",
+        "products_to_show": 5,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "image_ratio": "portrait",
@@ -242,7 +206,6 @@
   "order": [
     "main",
     "collapsible_content_GYXi7g",
-    "image-with-text",
     "multicolumn",
     "related-products"
   ]
