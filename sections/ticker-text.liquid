@@ -88,15 +88,17 @@
 <div class="ticker-wrapper">
   <div class="ticker_container">
     <span id="ticker_text">
-      {{- section.settings.text }}
-      {% capture count %}{{ section.settings.space }}{% endcapture %}
-      {% for num in (1..count) %}
-        &nbsp;
-      {% endfor -%}
-      {{ section.settings.divider }}
-      {% for num in (1..count) %}
-        &nbsp;
-      {% endfor -%}
+      {%- for block in section.blocks -%}
+        {{- block.settings.text }}
+        {% capture count %}{{ section.settings.space }}{% endcapture %}
+        {% for num in (1..count) %}
+          &nbsp;
+        {% endfor -%}
+        {{ section.settings.divider }}
+        {% for num in (1..count) %}
+          &nbsp;
+        {% endfor -%}
+      {%- endfor -%}
     </span>
   </div>
 </div>
