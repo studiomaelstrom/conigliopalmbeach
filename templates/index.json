@@ -236,6 +236,16 @@
             "top": 34,
             "left": 53
           }
+        },
+        "hotspot_fjL4Lr": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 35,
+            "left": 19
+          }
         }
       },
       "block_order": [
@@ -244,7 +254,8 @@
         "hotspot_6j6xCn",
         "hotspot_9Gt8Rn",
         "hotspot_xW3ctT",
-        "hotspot_68Tj4R"
+        "hotspot_68Tj4R",
+        "hotspot_fjL4Lr"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-2.webp?v=1709465384",
