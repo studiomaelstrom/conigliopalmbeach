@@ -56,11 +56,21 @@
         "hotspot_xT4G4z": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "cardigan",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 43,
             "left": 12
+          }
+        },
+        "hotspot_AXTAGk": {
+          "type": "hotspot",
+          "settings": {
+            "product": "embroidered-bunny-pullover",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 40,
+            "left": 44
           }
         }
       },
@@ -70,7 +80,8 @@
         "hotspot_EEBG6D",
         "hotspot_kTETjb",
         "hotspot_tmWJHX",
-        "hotspot_xT4G4z"
+        "hotspot_xT4G4z",
+        "hotspot_AXTAGk"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-1_1.webp?v=1709768536",
