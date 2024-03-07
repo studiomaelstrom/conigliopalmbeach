@@ -133,6 +133,12 @@
           "settings": {
             "text": "Ruffle Power Pareo Forever!"
           }
+        },
+        "scroll_text_JCBjxH": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "FREE SIZE BECAUSE IT MATTERS"
+          }
         }
       },
       "block_order": [
@@ -142,7 +148,8 @@
         "scroll_text_hWQWhQ",
         "scroll_text_zrJLiU",
         "scroll_text_qMLgeJ",
-        "scroll_text_4FiReG"
+        "scroll_text_4FiReG",
+        "scroll_text_JCBjxH"
       ],
       "custom_css": [
 
