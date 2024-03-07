@@ -70,6 +70,16 @@
             "top": 46,
             "left": 15
           }
+        },
+        "link_FG8RUH": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "https:\/\/www.palmbeachdailynews.com\/story\/entertainment\/dining\/2020\/08\/19\/palm-beach-eatery-chez-jean-pierre-closes-after-29-years\/42231075\/",
+            "hovertext": false,
+            "tooltip_text": "Oh, to have one more night with you...",
+            "top": 45,
+            "left": 68
+          }
         }
       },
       "block_order": [
@@ -78,7 +88,8 @@
         "link_iHHrXK",
         "link_zfb3Ca",
         "link_mKnnmU",
-        "link_8yHirJ"
+        "link_8yHirJ",
+        "link_FG8RUH"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-TheGuidebook.webp?v=1709793579",
