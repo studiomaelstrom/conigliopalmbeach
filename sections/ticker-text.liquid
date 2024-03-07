@@ -81,19 +81,21 @@
 
 <div class="ticker-wrapper">
   <div class="ticker_container">
-    <span id="ticker_text">
+    <div id="ticker_text">
       {%- for block in section.blocks -%}
-        {{- block.settings.text }}
-        {% capture count %}{{ section.settings.space }}{% endcapture %}
-        {% for num in (1..count) %}
-          &nbsp;
-        {% endfor -%}
-        {{ section.settings.divider }}
-        {% for num in (1..count) %}
-          &nbsp;
-        {% endfor -%}
+        <span class="ticker_item">
+          {{- block.settings.text -}}
+          {% capture count %}{{ section.settings.space }}{% endcapture %}
+          {% for num in (1..count) %}
+            &nbsp;
+          {% endfor -%}
+          {{ section.settings.divider }}
+          {% for num in (1..count) %}
+            &nbsp;
+          {% endfor -%}
+        </span>
       {%- endfor -%}
-    </span>
+    </div>
   </div>
 </div>
 
@@ -104,37 +106,36 @@
 </script>
 
 {% style %}
-  .ticker-wrapper{
-  width: 100%;
-  margin: 0;
-    overflow:hidden;
+  .ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
   }
-  .ticker_container {
-    display:flex;
-    justify-content: flex-end;
-    vertical-align: center;
-    height: {{ section.settings.height }}rem;
-    background: {{ section.settings.background-color }};
-    padding: 0;
 
-    #ticker_text {
+  .ticker_container {
     display: flex;
     align-items: center;
-    font-size: {{ section.settings.text-size }};
+    justify-content: flex-start;
+    height: {{ section.settings.height }}rem;
+    background: {{ section.settings.background-color }};
+  }
+
+  #ticker_text {
+    display: inline-block;
+    font-size: {{ section.settings.text-size }}px;
     letter-spacing: 1px;
     color: {{ section.settings.text-color }};
     font-weight: 500;
-
-    position: relative;
     white-space: nowrap;
-
-    animation: mymove {{ 200 | minus:section.settings.speed }}s infinite;
-    animation-timing-function: linear;
-    }
+    animation: tickerMove {{ 200 | minus: section.settings.speed }}s linear infinite;
   }
 
-  @keyframes mymove {
-    from {right: -1920px;}
-    to {right: 1920px;}
+  @keyframes tickerMove {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
 {% endstyle %}
