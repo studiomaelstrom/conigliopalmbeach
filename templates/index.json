@@ -3,16 +3,6 @@
     "hotspot_section_XpAGqQ": {
       "type": "hotspot-section",
       "blocks": {
-        "link_WRRdif": {
-          "type": "link",
-          "settings": {
-            "hotspot-url": "https:\/\/en.wikipedia.org\/wiki\/Disco",
-            "hovertext": true,
-            "tooltip_text": "Let's Dance!",
-            "top": 10,
-            "left": 6
-          }
-        },
         "hotspot_Qwi9UN": {
           "type": "hotspot",
           "settings": {
@@ -59,13 +49,12 @@
             "product": "free-the-body-tee-1",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
-            "top": 37,
+            "top": 47,
             "left": 29
           }
         }
       },
       "block_order": [
-        "link_WRRdif",
         "hotspot_Qwi9UN",
         "hotspot_bDwyJ6",
         "hotspot_EEBG6D",
