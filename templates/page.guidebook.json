@@ -95,7 +95,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.lycettedesigns.com\/collections\/new-arrivals",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Hop on the needlepoint trend, NOW!",
             "top": 65,
             "left": 93
@@ -105,7 +105,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.greenspb.com\/",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Going to Green's... want anything?",
             "top": 78,
             "left": 86
