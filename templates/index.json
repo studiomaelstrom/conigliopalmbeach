@@ -223,7 +223,7 @@
             "product": "p0001",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
-            "top": 50,
+            "top": 30,
             "left": 42
           }
         },
