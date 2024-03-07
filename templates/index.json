@@ -310,10 +310,32 @@
             "top": 16,
             "left": 82
           }
+        },
+        "hotspot_pbdhER": {
+          "type": "hotspot",
+          "settings": {
+            "product": "silk-dupioni-ball-skirt",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 17,
+            "left": 70
+          }
+        },
+        "hotspot_eRAR3X": {
+          "type": "hotspot",
+          "settings": {
+            "product": "shirred-half-placket-blouse",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 18,
+            "left": 56
+          }
         }
       },
       "block_order": [
-        "hotspot_8Kprh9"
+        "hotspot_8Kprh9",
+        "hotspot_pbdhER",
+        "hotspot_eRAR3X"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3_1.webp?v=1709768536",
