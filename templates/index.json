@@ -225,8 +225,8 @@
             "product": "modern-layering-tunic",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
-            "top": 33,
-            "left": 26
+            "top": 40,
+            "left": 39
           }
         },
         "hotspot_9Gt8Rn": {
@@ -237,16 +237,6 @@
             "tooltip_text": "Hover Text Here",
             "top": 36,
             "left": 9
-          }
-        },
-        "hotspot_xW3ctT": {
-          "type": "hotspot",
-          "settings": {
-            "product": "p0001",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 31,
-            "left": 42
           }
         },
         "hotspot_68Tj4R": {
@@ -295,7 +285,6 @@
         "hotspot_BVcqfd",
         "hotspot_6j6xCn",
         "hotspot_9Gt8Rn",
-        "hotspot_xW3ctT",
         "hotspot_68Tj4R",
         "hotspot_fjL4Lr",
         "hotspot_Dh7GAe",
