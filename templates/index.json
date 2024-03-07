@@ -256,21 +256,6 @@
         "width": 90
       }
     },
-    "video_XTVWmg": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "enable_video_looping": true,
-        "video": "shopify:\/\/files\/videos\/Sunset (1).mp4",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hotspot_section_FeUwVk": {
       "type": "hotspot-section",
       "settings": {
@@ -288,7 +273,6 @@
     "ticker_text_6frNjK",
     "hotspot_section_w7VitL",
     "hotspot_section_9WX3nW",
-    "video_XTVWmg",
     "hotspot_section_FeUwVk"
   ]
 }
