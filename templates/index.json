@@ -127,6 +127,12 @@
           "settings": {
             "text": "It's made in India!"
           }
+        },
+        "scroll_text_4FiReG": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Ruffle Power Pareo Forever!"
+          }
         }
       },
       "block_order": [
@@ -135,7 +141,8 @@
         "scroll_text_6FMfbc",
         "scroll_text_hWQWhQ",
         "scroll_text_zrJLiU",
-        "scroll_text_qMLgeJ"
+        "scroll_text_qMLgeJ",
+        "scroll_text_4FiReG"
       ],
       "custom_css": [
 
