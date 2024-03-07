@@ -147,7 +147,6 @@
         "text-size": 16,
         "text-color": "#312f2e",
         "background-color": "#f47722",
-        "speed": 20,
         "space": 6,
         "divider": "•",
         "height": 6
@@ -233,6 +232,16 @@
         "width": 90
       }
     },
+    "hotspot_section_KeCBDN": {
+      "type": "hotspot-section",
+      "settings": {
+        "image": "",
+        "hotspot_color": "#F47722",
+        "hotspot_inner": "#FFF",
+        "icon": "",
+        "width": 95
+      }
+    },
     "hotspot_section_9WX3nW": {
       "type": "hotspot-section",
       "blocks": {
@@ -296,6 +305,7 @@
     "custom_liquid_h6prJp",
     "ticker_text_6frNjK",
     "hotspot_section_w7VitL",
+    "hotspot_section_KeCBDN",
     "hotspot_section_9WX3nW",
     "hotspot_section_FeUwVk"
   ]
