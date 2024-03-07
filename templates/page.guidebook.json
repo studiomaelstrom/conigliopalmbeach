@@ -90,6 +90,16 @@
             "top": 61,
             "left": 37
           }
+        },
+        "link_xHAwVm": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "https:\/\/www.lycettedesigns.com\/collections\/new-arrivals",
+            "hovertext": false,
+            "tooltip_text": "Hop on the needlepoint trend, NOW!",
+            "top": 65,
+            "left": 93
+          }
         }
       },
       "block_order": [
@@ -100,7 +110,8 @@
         "link_mKnnmU",
         "link_8yHirJ",
         "link_FG8RUH",
-        "link_xQFyHY"
+        "link_xQFyHY",
+        "link_xHAwVm"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-TheGuidebook.webp?v=1709793579",
