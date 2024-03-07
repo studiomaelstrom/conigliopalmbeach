@@ -158,7 +158,7 @@
         "text-size": 16,
         "text-color": "#312f2e",
         "background-color": "#f47722",
-        "speed": 50,
+        "speed": 80,
         "space": 6,
         "divider": "•",
         "height": 6
