@@ -115,13 +115,20 @@
           "settings": {
             "text": "Surf Report: Waves are double over head at Flagpole, but Reef is flat"
           }
+        },
+        "scroll_text_zrJLiU": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "CONIGLIO MEANS RABBIT"
+          }
         }
       },
       "block_order": [
         "scroll_text_xq3A6T",
         "scroll_text_68HYfL",
         "scroll_text_6FMfbc",
-        "scroll_text_hWQWhQ"
+        "scroll_text_hWQWhQ",
+        "scroll_text_zrJLiU"
       ],
       "custom_css": [
 
