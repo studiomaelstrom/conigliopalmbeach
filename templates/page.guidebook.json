@@ -120,6 +120,16 @@
             "top": 91,
             "left": 50
           }
+        },
+        "link_eRWr7J": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "https:\/\/www.publix.com\/pd\/publix-chicken-tender-sub\/BMO-DSB-100011?origin=collections1",
+            "hovertext": false,
+            "tooltip_text": "Will you get me a chicken tender sub and an iced tea? Yes, banana pepper, as always.",
+            "top": 95,
+            "left": 7
+          }
         }
       },
       "block_order": [
@@ -133,7 +143,8 @@
         "link_xQFyHY",
         "link_xHAwVm",
         "link_F4gpLb",
-        "link_XqrHhX"
+        "link_XqrHhX",
+        "link_eRWr7J"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-TheGuidebook.webp?v=1709793579",
