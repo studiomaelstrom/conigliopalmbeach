@@ -37,15 +37,26 @@
             "hotspot-url": "https:\/\/www.instagram.com\/churchmousepalmbeach\/",
             "hovertext": false,
             "tooltip_text": "Seriously, a treasure trove",
-            "top": 33,
+            "top": 22,
             "left": 10
+          }
+        },
+        "link_zfb3Ca": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "",
+            "hovertext": false,
+            "tooltip_text": "I mean... I need...",
+            "top": 27,
+            "left": 50
           }
         }
       },
       "block_order": [
         "link_KLggWP",
         "link_Ub8Rkz",
-        "link_iHHrXK"
+        "link_iHHrXK",
+        "link_zfb3Ca"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-TheGuidebook.webp?v=1709793579",
