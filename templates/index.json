@@ -147,7 +147,7 @@
         "text-size": 16,
         "text-color": "#312f2e",
         "background-color": "#f47722",
-        "speed": 130,
+        "speed": 10,
         "space": 6,
         "divider": "•",
         "height": 6
