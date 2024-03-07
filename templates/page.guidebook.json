@@ -65,7 +65,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.classicbookshop.com\/",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Nothin' better",
             "top": 46,
             "left": 15
