@@ -52,6 +52,16 @@
             "top": 47,
             "left": 29
           }
+        },
+        "hotspot_xT4G4z": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 43,
+            "left": 12
+          }
         }
       },
       "block_order": [
@@ -59,7 +69,8 @@
         "hotspot_bDwyJ6",
         "hotspot_EEBG6D",
         "hotspot_kTETjb",
-        "hotspot_tmWJHX"
+        "hotspot_tmWJHX",
+        "hotspot_xT4G4z"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-1_1.webp?v=1709768536",
@@ -232,16 +243,6 @@
         "width": 90
       }
     },
-    "hotspot_section_KeCBDN": {
-      "type": "hotspot-section",
-      "settings": {
-        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/PALM.gif?v=1709841642",
-        "hotspot_color": "#F47722",
-        "hotspot_inner": "#FFF",
-        "icon": "",
-        "width": 45
-      }
-    },
     "hotspot_section_9WX3nW": {
       "type": "hotspot-section",
       "blocks": {
@@ -305,7 +306,6 @@
     "custom_liquid_h6prJp",
     "ticker_text_6frNjK",
     "hotspot_section_w7VitL",
-    "hotspot_section_KeCBDN",
     "hotspot_section_9WX3nW",
     "hotspot_section_FeUwVk"
   ]
