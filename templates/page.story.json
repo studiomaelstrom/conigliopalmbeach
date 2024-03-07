@@ -11,11 +11,11 @@
     "hotspot_section_EmVAEG": {
       "type": "hotspot-section",
       "settings": {
-        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-TheStory1.webp?v=1709793578",
-        "hotspot_color": "#F47722",
-        "hotspot_inner": "#FFF",
+        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/THESTORY_TAB.png?v=1709852025",
+        "hotspot_color": "#f47722",
+        "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95
+        "width": 100
       }
     }
   },
