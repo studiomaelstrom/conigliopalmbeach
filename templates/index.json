@@ -95,7 +95,7 @@
         "scroll_text_xq3A6T": {
           "type": "scroll-text",
           "settings": {
-            "text": "Weather Report: As always, it's 77 and balmy at CPB."
+            "text": "Weather Report: As always, it's 77 and balmy at CPB"
           }
         },
         "scroll_text_68HYfL": {
@@ -109,12 +109,19 @@
           "settings": {
             "text": "Don't call the studio. Please shop online."
           }
+        },
+        "scroll_text_hWQWhQ": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Surf Report: Waves are double over head at Flagpole, but Reef is flat"
+          }
         }
       },
       "block_order": [
         "scroll_text_xq3A6T",
         "scroll_text_68HYfL",
-        "scroll_text_6FMfbc"
+        "scroll_text_6FMfbc",
+        "scroll_text_hWQWhQ"
       ],
       "custom_css": [
 
