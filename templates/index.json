@@ -301,41 +301,19 @@
     "hotspot_section_9WX3nW": {
       "type": "hotspot-section",
       "blocks": {
-        "hotspot_XckTei": {
+        "hotspot_8Kprh9": {
           "type": "hotspot",
           "settings": {
-            "product": "cardigan",
+            "product": "embroidered-bunny-pullover",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
-            "top": 68,
-            "left": 41
-          }
-        },
-        "hotspot_GYkQgx": {
-          "type": "hotspot",
-          "settings": {
-            "product": "silk-dupioni-ball-skirt",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 50,
-            "left": 77
-          }
-        },
-        "hotspot_GadjeC": {
-          "type": "hotspot",
-          "settings": {
-            "product": "silk-dupioni-convertible-beach-pant",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 45,
-            "left": 81
+            "top": 16,
+            "left": 82
           }
         }
       },
       "block_order": [
-        "hotspot_XckTei",
-        "hotspot_GYkQgx",
-        "hotspot_GadjeC"
+        "hotspot_8Kprh9"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3_1.webp?v=1709768536",
