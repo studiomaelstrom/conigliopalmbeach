@@ -80,77 +80,69 @@
 {% endschema %}
 
 <div class="ticker-wrapper">
-  <div class="ticker_container">
-    <div id="ticker_text">
-      <!-- First span for the repeated text -->
-      <span class="ticker_item">
-        {%- for block in section.blocks -%}
-          {{- block.settings.text -}}
-          {% capture count %}{{ section.settings.space }}{% endcapture %}
-          {% for num in (1..count) %}
-            &nbsp;
-          {% endfor -%}
-          {{ section.settings.divider }}
-          {% for num in (1..count) %}
-            &nbsp;
-          {% endfor -%}
-        {%- endfor -%}
-      </span>
-      <!-- Second span identical to the first for the seamless loop -->
-      <span class="ticker_item">
-        {%- for block in section.blocks -%}
-          {{- block.settings.text -}}
-          {% capture count %}{{ section.settings.space }}{% endcapture %}
-          {% for num in (1..count) %}
-            &nbsp;
-          {% endfor -%}
-          {{ section.settings.divider }}
-          {% for num in (1..count) %}
-            &nbsp;
-          {% endfor -%}
-        {%- endfor -%}
-      </span>
-    </div>
+  <div id="ticker_text" class="ticker-text">
+    <!-- Repeated text blocks for continuous effect -->
+    {%- for block in section.blocks -%}
+      {{ block.settings.text }}
+      {% if forloop.last == false %}
+        {{ section.settings.divider | times: section.settings.space }}
+      {% endif %}
+    {%- endfor -%}
   </div>
 </div>
 
 <script>
-  // This Function repeats the News-Ticker-Text
-    var repeatText = document.getElementById("ticker_text").textContent;
-    document.getElementById("ticker_text").innerHTML = repeatText.repeat(2000);
+document.addEventListener('DOMContentLoaded', function() {
+  const tickerText = document.getElementById('ticker_text');
+  let moveTicker = () => {
+    let currentTransform = parseFloat(window.getComputedStyle(tickerText).getPropertyValue('transform').split(',')[4]);
+    if (isNaN(currentTransform)) { currentTransform = 0; }
+    tickerText.style.transform = `translateX(${currentTransform - 1}px)`;
+
+    // Reset position for infinite loop
+    const tickerWidth = tickerText.offsetWidth;
+    const wrapperWidth = tickerText.parentElement.offsetWidth;
+    if (Math.abs(currentTransform) > tickerWidth) {
+      tickerText.style.transform = 'translateX(0)';
+    }
+  };
+
+  // Adjust the interval time to control speed, smaller is faster
+  setInterval(moveTicker, 20);
+});
 </script>
 
 {% style %}
   .ticker-wrapper {
-    width: 100%;
     overflow: hidden;
-    margin: 0;
-  }
-
-  .ticker_container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: {{ section.settings.height }}rem;
-    background: {{ section.settings.background-color }};
-  }
-
-  #ticker_text {
-    display: flex; /* Changed to flex to have the spans side by side */
-    font-size: {{ section.settings.text-size }}px;
-    letter-spacing: 1px;
-    color: {{ section.settings.text-color }};
-    font-weight: 500;
     white-space: nowrap;
-    animation: tickerMove 120s linear infinite;
+    background: {{ section.settings.background-color }};
+    height: {{ section.settings.height }}rem;
+    position: relative;
   }
 
-  @keyframes tickerMove {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%); /* Move left by half of the total width */
-    }
+  .ticker-text {
+    position: absolute;
+    white-space: nowrap;
+    font-size: {{ section.settings.text-size }}px;
+    color: {{ section.settings.text-color }};
+    display: inline-block;
   }
+    #ticker_text {
+      display: flex; /* Changed to flex to have the spans side by side */
+      font-size: {{ section.settings.text-size }}px;
+      letter-spacing: 1px;
+      color: {{ section.settings.text-color }};
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    @keyframes tickerMove {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%); /* Move left by half of the total width */
+      }
+    }
 {% endstyle %}
