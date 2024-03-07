@@ -120,6 +120,8 @@
     document.getElementById("ticker_text").innerHTML = repeatText.repeat(2000);
 </script>
 
+{% assign animation_duration = 10 | plus: section.settings.speed | times: 0.333 %}
+
 {% style %}
   .ticker-wrapper {
     width: 100%;
@@ -142,7 +144,8 @@
     color: {{ section.settings.text-color }};
     font-weight: 500;
     white-space: nowrap;
-    animation: tickerMove calc(10s + (section.settings.speed * 0.333)) linear infinite;
+    animation: tickerMove {{ animation_duration }}s linear infinite;
+
   }
 
   @keyframes tickerMove {
