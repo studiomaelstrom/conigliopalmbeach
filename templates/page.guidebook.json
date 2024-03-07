@@ -115,7 +115,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.sunrisebarbershop.com\/",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Have a standing appointment -- every first Friday at 11",
             "top": 91,
             "left": 50
@@ -125,7 +125,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.publix.com\/pd\/publix-chicken-tender-sub\/BMO-DSB-100011?origin=collections1",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Will you get me a chicken tender sub and an iced tea? Yes, banana pepper, as always.",
             "top": 95,
             "left": 7
