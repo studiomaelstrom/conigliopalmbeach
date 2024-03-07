@@ -121,6 +121,12 @@
           "settings": {
             "text": "CONIGLIO MEANS RABBIT"
           }
+        },
+        "scroll_text_qMLgeJ": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "It's made in India!"
+          }
         }
       },
       "block_order": [
@@ -128,7 +134,8 @@
         "scroll_text_68HYfL",
         "scroll_text_6FMfbc",
         "scroll_text_hWQWhQ",
-        "scroll_text_zrJLiU"
+        "scroll_text_zrJLiU",
+        "scroll_text_qMLgeJ"
       ],
       "custom_css": [
 
