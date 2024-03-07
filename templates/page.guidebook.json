@@ -35,7 +35,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.instagram.com\/churchmousepalmbeach\/",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Seriously, a treasure trove",
             "top": 22,
             "left": 10
@@ -45,7 +45,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/stubbsandwootton.com\/collections\/womens-classic\/products\/storm-women",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "I mean... I need...",
             "top": 27,
             "left": 50
@@ -55,7 +55,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/tidy.menu\/e-r-bradleys-saloon\/files?file=qrfile%2F20220121T194157867-8c96a9b8-3bbd-46cf-b276-b8f8b3ab5f52.jpg",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "The one and only.",
             "top": 23,
             "left": 92
