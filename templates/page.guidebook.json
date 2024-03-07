@@ -75,7 +75,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.palmbeachdailynews.com\/story\/entertainment\/dining\/2020\/08\/19\/palm-beach-eatery-chez-jean-pierre-closes-after-29-years\/42231075\/",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Oh, to have one more night with you...",
             "top": 45,
             "left": 68
@@ -85,7 +85,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.instagram.com\/pbgirlsclub\/?hl=en",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "If we didn't get it at CPB, we got it here.",
             "top": 61,
             "left": 37
