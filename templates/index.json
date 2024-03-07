@@ -72,6 +72,16 @@
             "top": 40,
             "left": 44
           }
+        },
+        "hotspot_hm7mhR": {
+          "type": "hotspot",
+          "settings": {
+            "product": "half-placket-shirred-mini-dress",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 42,
+            "left": 80
+          }
         }
       },
       "block_order": [
@@ -81,7 +91,8 @@
         "hotspot_kTETjb",
         "hotspot_tmWJHX",
         "hotspot_xT4G4z",
-        "hotspot_AXTAGk"
+        "hotspot_AXTAGk",
+        "hotspot_hm7mhR"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-1_1.webp?v=1709768536",
