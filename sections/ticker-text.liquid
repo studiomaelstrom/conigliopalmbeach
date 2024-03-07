@@ -80,14 +80,37 @@
 {% endschema %}
 
 <div class="ticker-wrapper">
-  <div id="ticker_text" class="ticker-text">
-    <!-- Repeated text blocks for continuous effect -->
-    {%- for block in section.blocks -%}
-      {{ block.settings.text }}
-      {% if forloop.last == false %}
-        {{ section.settings.divider | times: section.settings.space }}
-      {% endif %}
-    {%- endfor -%}
+  <div class="ticker_container">
+    <div id="ticker_text">
+      <!-- First span for the repeated text -->
+      <span class="ticker_item">
+        {%- for block in section.blocks -%}
+          {{- block.settings.text -}}
+          {% capture count %}{{ section.settings.space }}{% endcapture %}
+          {% for num in (1..count) %}
+            &nbsp;
+          {% endfor -%}
+          {{ section.settings.divider }}
+          {% for num in (1..count) %}
+            &nbsp;
+          {% endfor -%}
+        {%- endfor -%}
+      </span>
+      <!-- Second span identical to the first for the seamless loop -->
+      <span class="ticker_item">
+        {%- for block in section.blocks -%}
+          {{- block.settings.text -}}
+          {% capture count %}{{ section.settings.space }}{% endcapture %}
+          {% for num in (1..count) %}
+            &nbsp;
+          {% endfor -%}
+          {{ section.settings.divider }}
+          {% for num in (1..count) %}
+            &nbsp;
+          {% endfor -%}
+        {%- endfor -%}
+      </span>
+    </div>
   </div>
 </div>
 
@@ -114,35 +137,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 {% style %}
   .ticker-wrapper {
+    width: 100%;
     overflow: hidden;
-    white-space: nowrap;
-    background: {{ section.settings.background-color }};
+    margin: 0;
+  }
+
+  .ticker_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     height: {{ section.settings.height }}rem;
-    position: relative;
+    background: {{ section.settings.background-color }};
   }
 
-  .ticker-text {
-    position: absolute;
-    white-space: nowrap;
+  #ticker_text {
+    display: flex; /* Changed to flex to have the spans side by side */
     font-size: {{ section.settings.text-size }}px;
+    letter-spacing: 1px;
     color: {{ section.settings.text-color }};
-    display: inline-block;
+    font-weight: 500;
+    white-space: nowrap;
+    animation: tickerMove 120s linear infinite;
   }
-    #ticker_text {
-      display: flex; /* Changed to flex to have the spans side by side */
-      font-size: {{ section.settings.text-size }}px;
-      letter-spacing: 1px;
-      color: {{ section.settings.text-color }};
-      font-weight: 500;
-      white-space: nowrap;
-    }
 
-    @keyframes tickerMove {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%); /* Move left by half of the total width */
-      }
+  @keyframes tickerMove {
+    0% {
+      transform: translateX(0%);
     }
+    100% {
+      transform: translateX(-50%); /* Move left by half of the total width */
+    }
+  }
 {% endstyle %}
