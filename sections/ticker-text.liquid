@@ -82,8 +82,9 @@
 <div class="ticker-wrapper">
   <div class="ticker_container">
     <div id="ticker_text">
-      {%- for block in section.blocks -%}
-        <span class="ticker_item">
+      <!-- First span for the repeated text -->
+      <span class="ticker_item">
+        {%- for block in section.blocks -%}
           {{- block.settings.text -}}
           {% capture count %}{{ section.settings.space }}{% endcapture %}
           {% for num in (1..count) %}
@@ -93,11 +94,31 @@
           {% for num in (1..count) %}
             &nbsp;
           {% endfor -%}
-        </span>
-      {%- endfor -%}
+        {%- endfor -%}
+      </span>
+      <!-- Second span identical to the first for the seamless loop -->
+      <span class="ticker_item">
+        {%- for block in section.blocks -%}
+          {{- block.settings.text -}}
+          {% capture count %}{{ section.settings.space }}{% endcapture %}
+          {% for num in (1..count) %}
+            &nbsp;
+          {% endfor -%}
+          {{ section.settings.divider }}
+          {% for num in (1..count) %}
+            &nbsp;
+          {% endfor -%}
+        {%- endfor -%}
+      </span>
     </div>
   </div>
 </div>
+
+<script>
+  // This Function repeats the News-Ticker-Text
+    var repeatText = document.getElementById("ticker_text").textContent;
+    document.getElementById("ticker_text").innerHTML = repeatText.repeat(2000);
+</script>
 
 {% style %}
   .ticker-wrapper {
@@ -115,7 +136,7 @@
   }
 
   #ticker_text {
-    display: inline-block;
+    display: flex; /* Changed to flex to have the spans side by side */
     font-size: {{ section.settings.text-size }}px;
     letter-spacing: 1px;
     color: {{ section.settings.text-color }};
@@ -125,11 +146,11 @@
   }
 
   @keyframes tickerMove {
-    from {
-      transform: translateX(100%);
+    0% {
+      transform: translateX(0%);
     }
-    to {
-      transform: translateX(-100%);
+    100% {
+      transform: translateX(-50%); /* Move left by half of the total width */
     }
   }
 {% endstyle %}
