@@ -415,7 +415,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.kdpproductfacts.com\/product\/a0e3h000003LKACAA4\/sunkist-orange-flavored-soda-12-fl-oz-us",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Canned sunshine",
             "top": 94,
             "left": 50
@@ -425,7 +425,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.hawaiiantropic.com\/collections\/shop-all?gad_source=1&gclid=CjwKCAiA6KWvBhAREiwAFPZM7lr__epHht8v97HEv63o3ihAdrVQw2yN7Ar-y_5Gm1SirGwJEWJ9NRoCSrMQAvD_BwE",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Always on hand... you never know when you'll need it!",
             "top": 77,
             "left": 21
