@@ -147,7 +147,7 @@
           "type": "column",
           "settings": {
             "title": "Shipping",
-            "text": "<p>We offer flat rate shipping on all orders. Please proceed to checkout to view rates.<\/p>",
+            "text": "<p>We ship orders out every Tuesday and Friday. Right now, we offer flat rate shipping on all orders. Please proceed to checkout to view rates.<\/p>",
             "link_label": "",
             "link": ""
           }
