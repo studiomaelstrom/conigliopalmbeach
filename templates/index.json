@@ -51,6 +51,7 @@
           "type": "hotspot",
           "settings": {
             "product": "silk-habotai-v-neck-maxi",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130949.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 42,
@@ -61,6 +62,7 @@
           "type": "hotspot",
           "settings": {
             "product": "b0001",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_8_0096_d26bca31-d854-4831-989a-a3a2fde37b55.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 45,
@@ -69,6 +71,7 @@
         },
         "hotspot_hm7mhR": {
           "type": "hotspot",
+          "disabled": true,
           "settings": {
             "product": "half-placket-shirred-mini-dress",
             "hovertext": false,
@@ -81,6 +84,7 @@
           "type": "hotspot",
           "settings": {
             "product": "poplin-convertible-beach-pant",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_21_0146.jpg",
             "hovertext": false,
             "tooltip_text": "Shop Now",
             "top": 39,
@@ -91,6 +95,7 @@
           "type": "hotspot",
           "settings": {
             "product": "poplin-classic-button-down",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_9_0099.jpg",
             "hovertext": false,
             "tooltip_text": "Shop Now",
             "top": 46,
