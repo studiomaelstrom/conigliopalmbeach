@@ -317,40 +317,11 @@
     "hotspot_section_9WX3nW": {
       "type": "hotspot-section",
       "blocks": {
-        "hotspot_8Kprh9": {
-          "type": "hotspot",
-          "settings": {
-            "product": "embroidered-bunny-pullover",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 16,
-            "left": 82
-          }
-        },
-        "hotspot_pbdhER": {
-          "type": "hotspot",
-          "settings": {
-            "product": "silk-dupioni-ball-skirt",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 17,
-            "left": 70
-          }
-        },
-        "hotspot_eRAR3X": {
-          "type": "hotspot",
-          "settings": {
-            "product": "shirred-half-placket-blouse",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 18,
-            "left": 56
-          }
-        },
         "hotspot_b86JRB": {
           "type": "hotspot",
           "settings": {
             "product": "b0001",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_10_0101_e2a2ec7f-fec8-437c-aa4a-e3553c1c7e3d.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 17,
@@ -361,36 +332,73 @@
           "type": "hotspot",
           "settings": {
             "product": "dolman-mini-dress",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130865.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 21,
             "left": 52
           }
         },
+        "hotspot_eRAR3X": {
+          "type": "hotspot",
+          "settings": {
+            "product": "shirred-half-placket-blouse",
+            "variant_img": "shopify:\/\/shop_images\/ShirredBlouse_red.jpg",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 18,
+            "left": 56
+          }
+        },
         "hotspot_BTjhRY": {
           "type": "hotspot",
           "settings": {
             "product": "long-tie-side-tunic",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130839.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 21,
             "left": 60
           }
         },
+        "hotspot_pbdhER": {
+          "type": "hotspot",
+          "settings": {
+            "product": "silk-dupioni-ball-skirt",
+            "variant_img": "shopify:\/\/shop_images\/WhiteBallSkirt.jpg",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 17,
+            "left": 70
+          }
+        },
         "hotspot_RidKPX": {
           "type": "hotspot",
           "settings": {
             "product": "silk-dupioni-convertible-beach-pant",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130881.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 24,
             "left": 74
           }
         },
+        "hotspot_8Kprh9": {
+          "type": "hotspot",
+          "settings": {
+            "product": "embroidered-bunny-pullover",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_15_0111.jpg",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 16,
+            "left": 82
+          }
+        },
         "hotspot_dnV9dj": {
           "type": "hotspot",
           "settings": {
             "product": "v-neck-boyfriend-cardigan",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_17_0119_1_3fe4de08-80fd-4ab8-bc1a-5cef45ec79cc.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 41,
@@ -459,13 +467,13 @@
         }
       },
       "block_order": [
-        "hotspot_8Kprh9",
-        "hotspot_pbdhER",
-        "hotspot_eRAR3X",
         "hotspot_b86JRB",
         "hotspot_qyqVfN",
+        "hotspot_eRAR3X",
         "hotspot_BTjhRY",
+        "hotspot_pbdhER",
         "hotspot_RidKPX",
+        "hotspot_8Kprh9",
         "hotspot_dnV9dj",
         "hotspot_KJMWD7",
         "link_EMqmDP",
@@ -489,10 +497,11 @@
           "type": "hotspot",
           "settings": {
             "product": "silk-dupioni-ruffle-power-pareo",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_27_0180_fd0f3b39-e9f2-49b4-a2d6-4914a34d1a2e.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
-            "top": 18,
-            "left": 27
+            "top": 17,
+            "left": 30
           }
         },
         "hotspot_fWczme": {
@@ -501,18 +510,19 @@
             "product": "denim-embroidered-hat",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
-            "top": 8,
-            "left": 50
+            "top": 7,
+            "left": 45
           }
         },
         "hotspot_PcXWY9": {
           "type": "hotspot",
           "settings": {
             "product": "v-neck-boyfriend-cardigan",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_17_0121_1.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 11,
-            "left": 91
+            "left": 90
           }
         }
       },
