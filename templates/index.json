@@ -380,6 +380,16 @@
             "top": 41,
             "left": 40
           }
+        },
+        "hotspot_KJMWD7": {
+          "type": "hotspot",
+          "settings": {
+            "product": "cotton-gauze-ruffle-power-pareo",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 46,
+            "left": 41
+          }
         }
       },
       "block_order": [
@@ -390,7 +400,8 @@
         "hotspot_qyqVfN",
         "hotspot_BTjhRY",
         "hotspot_RidKPX",
-        "hotspot_dnV9dj"
+        "hotspot_dnV9dj",
+        "hotspot_KJMWD7"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3_1.webp?v=1709768536",
