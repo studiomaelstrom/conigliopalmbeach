@@ -18,6 +18,7 @@
           "type": "hotspot",
           "settings": {
             "product": "free-the-body-tee-1",
+            "variant_img": "shopify:\/\/shop_images\/FreeTheBody_teal.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 47,
@@ -28,6 +29,7 @@
           "type": "hotspot",
           "settings": {
             "product": "embroidered-bunny-pullover",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_12_0107_2.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 41,
@@ -38,10 +40,11 @@
           "type": "hotspot",
           "settings": {
             "product": "cardigan",
+            "variant_img": "shopify:\/\/shop_images\/240207_SHOT_17_0124_c51b1d46-3ebe-4fab-85c0-966994ffa4ab.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
-            "top": 46,
-            "left": 51
+            "top": 37,
+            "left": 53
           }
         },
         "hotspot_kTETjb": {
