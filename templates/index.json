@@ -477,11 +477,22 @@
             "top": 8,
             "left": 50
           }
+        },
+        "hotspot_PcXWY9": {
+          "type": "hotspot",
+          "settings": {
+            "product": "v-neck-boyfriend-cardigan",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 11,
+            "left": 91
+          }
         }
       },
       "block_order": [
         "hotspot_7eaB4k",
-        "hotspot_fWczme"
+        "hotspot_fWczme",
+        "hotspot_PcXWY9"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-4.webp?v=1709465385",
