@@ -390,6 +390,16 @@
             "top": 46,
             "left": 41
           }
+        },
+        "link_EMqmDP": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "https:\/\/www.partycity.com\/disco-mirror-ball-308640.html",
+            "hovertext": true,
+            "tooltip_text": "Let's dance!",
+            "top": 52,
+            "left": 46
+          }
         }
       },
       "block_order": [
@@ -401,7 +411,8 @@
         "hotspot_BTjhRY",
         "hotspot_RidKPX",
         "hotspot_dnV9dj",
-        "hotspot_KJMWD7"
+        "hotspot_KJMWD7",
+        "link_EMqmDP"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3_1.webp?v=1709768536",
