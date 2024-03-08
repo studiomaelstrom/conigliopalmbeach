@@ -208,14 +208,59 @@
     "hotspot_section_w7VitL": {
       "type": "hotspot-section",
       "blocks": {
+        "hotspot_9Gt8Rn": {
+          "type": "hotspot",
+          "settings": {
+            "product": "silk-habotai-halter-dress",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130913.jpg",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 36,
+            "left": 9
+          }
+        },
+        "hotspot_fjL4Lr": {
+          "type": "hotspot",
+          "settings": {
+            "product": "silk-dupioni-ball-skirt",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130917.jpg",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 35,
+            "left": 19
+          }
+        },
         "hotspot_Wcbf7n": {
           "type": "hotspot",
           "settings": {
             "product": "shirt-dress",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130849.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 35,
             "left": 30
+          }
+        },
+        "hotspot_Dh7GAe": {
+          "type": "hotspot",
+          "settings": {
+            "product": "shirred-half-placket-blouse",
+            "variant_img": "shopify:\/\/shop_images\/ShirredBlouse_red.jpg",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 33,
+            "left": 35
+          }
+        },
+        "hotspot_6j6xCn": {
+          "type": "hotspot",
+          "settings": {
+            "product": "modern-layering-tunic",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130854.jpg",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 35,
+            "left": 39
           }
         },
         "hotspot_BVcqfd": {
@@ -228,60 +273,22 @@
             "left": 49
           }
         },
-        "hotspot_6j6xCn": {
-          "type": "hotspot",
-          "settings": {
-            "product": "modern-layering-tunic",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 35,
-            "left": 39
-          }
-        },
-        "hotspot_9Gt8Rn": {
-          "type": "hotspot",
-          "settings": {
-            "product": "silk-habotai-halter-dress",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 36,
-            "left": 9
-          }
-        },
         "hotspot_68Tj4R": {
           "type": "hotspot",
           "settings": {
             "product": "dolman-mini-dress",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130858.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 34,
             "left": 53
           }
         },
-        "hotspot_fjL4Lr": {
-          "type": "hotspot",
-          "settings": {
-            "product": "silk-dupioni-ball-skirt",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 35,
-            "left": 19
-          }
-        },
-        "hotspot_Dh7GAe": {
-          "type": "hotspot",
-          "settings": {
-            "product": "shirred-half-placket-blouse",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 33,
-            "left": 35
-          }
-        },
         "hotspot_QwzLVc": {
           "type": "hotspot",
           "settings": {
             "product": "silk-habotai-v-neck-maxi",
+            "variant_img": "shopify:\/\/shop_images\/240221-CCPB_Product2130950.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 36,
@@ -290,13 +297,13 @@
         }
       },
       "block_order": [
-        "hotspot_Wcbf7n",
-        "hotspot_BVcqfd",
-        "hotspot_6j6xCn",
         "hotspot_9Gt8Rn",
-        "hotspot_68Tj4R",
         "hotspot_fjL4Lr",
+        "hotspot_Wcbf7n",
         "hotspot_Dh7GAe",
+        "hotspot_6j6xCn",
+        "hotspot_BVcqfd",
+        "hotspot_68Tj4R",
         "hotspot_QwzLVc"
       ],
       "settings": {
