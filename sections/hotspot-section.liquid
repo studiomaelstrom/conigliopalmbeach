@@ -38,13 +38,19 @@
   "blocks": [
     {
       "type": "hotspot",
-      "name": "Hotspot",
+      "name": "Product",
       "settings": [
         {
       "type": "product",
       "id": "product",
       "label": "Select a product",
       "info": "Choose a product to display in this section."
+    },
+        {
+      	"type": "image_picker",
+    "id": "variant_img",
+    "label": "Variant Image",
+      "info": "Choose an image to display for this product."
     },
         {
   "type": "checkbox",
@@ -488,7 +494,11 @@
             <!-- Hidden Product Info Container -->
             <div class="hotspot--product-info" style="display: none;">
               {% assign product = all_products[block.settings.product] %}
-              <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
+              {% if block.settings.variant_img != blank %}
+              <img src="{{ block.settings.variant_img | img_url: '600x' }}" alt="{{ product.title }}">
+              {% else %}
+                <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
+              {% endif %}
               <h3>{{ product.title }}</h3>
               <a href="{{ product.url }}" class="outline-button">View Product</a>
             </div>
@@ -514,7 +524,7 @@
     </section>
   </div>
 </div>
-
+ 
 <script>
       document.addEventListener('DOMContentLoaded', function() {
     const hotspots = document.querySelectorAll('.product-hotspot');
