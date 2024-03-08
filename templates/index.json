@@ -360,6 +360,16 @@
             "top": 21,
             "left": 60
           }
+        },
+        "hotspot_RidKPX": {
+          "type": "hotspot",
+          "settings": {
+            "product": "silk-dupioni-convertible-beach-pant",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 24,
+            "left": 74
+          }
         }
       },
       "block_order": [
@@ -368,7 +378,8 @@
         "hotspot_eRAR3X",
         "hotspot_b86JRB",
         "hotspot_qyqVfN",
-        "hotspot_BTjhRY"
+        "hotspot_BTjhRY",
+        "hotspot_RidKPX"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3_1.webp?v=1709768536",
