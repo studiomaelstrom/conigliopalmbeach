@@ -3,24 +3,34 @@
     "hotspot_section_XpAGqQ": {
       "type": "hotspot-section",
       "blocks": {
-        "hotspot_Qwi9UN": {
+        "hotspot_xT4G4z": {
           "type": "hotspot",
           "settings": {
-            "product": "poplin-convertible-beach-pant",
+            "product": "cardigan",
             "hovertext": false,
-            "tooltip_text": "Shop Now",
-            "top": 39,
-            "left": 85
+            "tooltip_text": "Hover Text Here",
+            "top": 43,
+            "left": 12
           }
         },
-        "hotspot_bDwyJ6": {
+        "hotspot_tmWJHX": {
           "type": "hotspot",
           "settings": {
-            "product": "poplin-classic-button-down",
+            "product": "free-the-body-tee-1",
             "hovertext": false,
-            "tooltip_text": "Shop Now",
-            "top": 46,
-            "left": 90
+            "tooltip_text": "Hover Text Here",
+            "top": 47,
+            "left": 29
+          }
+        },
+        "hotspot_AXTAGk": {
+          "type": "hotspot",
+          "settings": {
+            "product": "embroidered-bunny-pullover",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 41,
+            "left": 44
           }
         },
         "hotspot_EEBG6D": {
@@ -43,34 +53,14 @@
             "left": 56
           }
         },
-        "hotspot_tmWJHX": {
+        "hotspot_PXQyJL": {
           "type": "hotspot",
           "settings": {
-            "product": "free-the-body-tee-1",
+            "product": "b0001",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
-            "top": 47,
-            "left": 29
-          }
-        },
-        "hotspot_xT4G4z": {
-          "type": "hotspot",
-          "settings": {
-            "product": "cardigan",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 43,
-            "left": 12
-          }
-        },
-        "hotspot_AXTAGk": {
-          "type": "hotspot",
-          "settings": {
-            "product": "embroidered-bunny-pullover",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 41,
-            "left": 44
+            "top": 45,
+            "left": 72
           }
         },
         "hotspot_hm7mhR": {
@@ -83,27 +73,37 @@
             "left": 80
           }
         },
-        "hotspot_PXQyJL": {
+        "hotspot_Qwi9UN": {
           "type": "hotspot",
           "settings": {
-            "product": "b0001",
+            "product": "poplin-convertible-beach-pant",
             "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 45,
-            "left": 72
+            "tooltip_text": "Shop Now",
+            "top": 39,
+            "left": 85
+          }
+        },
+        "hotspot_bDwyJ6": {
+          "type": "hotspot",
+          "settings": {
+            "product": "poplin-classic-button-down",
+            "hovertext": false,
+            "tooltip_text": "Shop Now",
+            "top": 46,
+            "left": 90
           }
         }
       },
       "block_order": [
-        "hotspot_Qwi9UN",
-        "hotspot_bDwyJ6",
+        "hotspot_xT4G4z",
+        "hotspot_tmWJHX",
+        "hotspot_AXTAGk",
         "hotspot_EEBG6D",
         "hotspot_kTETjb",
-        "hotspot_tmWJHX",
-        "hotspot_xT4G4z",
-        "hotspot_AXTAGk",
+        "hotspot_PXQyJL",
         "hotspot_hm7mhR",
-        "hotspot_PXQyJL"
+        "hotspot_Qwi9UN",
+        "hotspot_bDwyJ6"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-1_1.webp?v=1709768536",
