@@ -410,6 +410,16 @@
             "top": 75,
             "left": 32
           }
+        },
+        "link_9h4mVH": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "https:\/\/www.kdpproductfacts.com\/product\/a0e3h000003LKACAA4\/sunkist-orange-flavored-soda-12-fl-oz-us",
+            "hovertext": false,
+            "tooltip_text": "Canned sunshine",
+            "top": 94,
+            "left": 50
+          }
         }
       },
       "block_order": [
@@ -423,7 +433,8 @@
         "hotspot_dnV9dj",
         "hotspot_KJMWD7",
         "link_EMqmDP",
-        "link_r3PBXC"
+        "link_r3PBXC",
+        "link_9h4mVH"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3_1.webp?v=1709768536",
