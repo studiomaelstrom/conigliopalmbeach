@@ -400,6 +400,16 @@
             "top": 52,
             "left": 46
           }
+        },
+        "link_r3PBXC": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "https:\/\/livingwithivey.com\/",
+            "hovertext": false,
+            "tooltip_text": "Our signature scent! It's from Living with Ivey!",
+            "top": 75,
+            "left": 32
+          }
         }
       },
       "block_order": [
@@ -412,7 +422,8 @@
         "hotspot_RidKPX",
         "hotspot_dnV9dj",
         "hotspot_KJMWD7",
-        "link_EMqmDP"
+        "link_EMqmDP",
+        "link_r3PBXC"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3_1.webp?v=1709768536",
