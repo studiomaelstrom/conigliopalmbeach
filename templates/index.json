@@ -430,6 +430,16 @@
             "top": 77,
             "left": 21
           }
+        },
+        "link_fetJ4f": {
+          "type": "link",
+          "settings": {
+            "hotspot-url": "https:\/\/www.instagram.com\/showponypalmbeach\/?hl=en",
+            "hovertext": false,
+            "tooltip_text": "Where we get all of our furniture and decor...",
+            "top": 34,
+            "left": 27
+          }
         }
       },
       "block_order": [
@@ -445,7 +455,8 @@
         "link_EMqmDP",
         "link_r3PBXC",
         "link_9h4mVH",
-        "link_dgPf9Q"
+        "link_dgPf9Q",
+        "link_fetJ4f"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3_1.webp?v=1709768536",
