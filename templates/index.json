@@ -405,7 +405,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/livingwithivey.com\/",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Our signature scent! It's from Living with Ivey!",
             "top": 74,
             "left": 33
@@ -435,7 +435,7 @@
           "type": "link",
           "settings": {
             "hotspot-url": "https:\/\/www.instagram.com\/showponypalmbeach\/?hl=en",
-            "hovertext": false,
+            "hovertext": true,
             "tooltip_text": "Where we get all of our furniture and decor...",
             "top": 34,
             "left": 27
