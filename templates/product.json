@@ -89,57 +89,6 @@
         "padding_bottom": 12
       }
     },
-    "collapsible_content_GYXi7g": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_AUBKe7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Fabric Content",
-            "icon": "leather",
-            "row_content": "<p>{{ product.metafields.product.material | metafield_tag }}<\/p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_kH4kWX": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Fit",
-            "icon": "ruler",
-            "row_content": "<p>{{ product.metafields.product.measure | metafield_tag }}<\/p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_cpgtyt": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "row_content": "<p>{{ product.metafields.product.care | metafield_tag }}<\/p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_AUBKe7",
-        "collapsible_row_kH4kWX",
-        "collapsible_row_cpgtyt"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "section",
-        "color_scheme": "",
-        "container_color_scheme": "scheme-5",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -204,7 +153,6 @@
   },
   "order": [
     "main",
-    "collapsible_content_GYXi7g",
     "multicolumn",
     "related-products"
   ]
