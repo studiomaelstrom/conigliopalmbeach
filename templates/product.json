@@ -95,7 +95,7 @@
         "collapsible_row_AUBKe7": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Fabric Content",
+            "heading": "Material Content",
             "icon": "leather",
             "row_content": "<p>{{ product.metafields.product.material | metafield_tag }}<\/p>",
             "page": ""
