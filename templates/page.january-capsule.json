@@ -2,13 +2,169 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hotspot_section_JfxQLn": {
+      "type": "hotspot-section",
+      "settings": {
+        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-1_1.webp?v=1709768536",
+        "hotspot_color": "#f5f5f5",
+        "hotspot_inner": "#f47722",
+        "icon": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/BunnyHotpot-Resize.png?v=1709767475",
+        "width": 90
+      }
+    },
+    "custom_liquid_8Lz8Xd": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "ticker_text_FFEtce": {
+      "type": "ticker-text",
+      "blocks": {
+        "scroll_text_PqWKJK": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Weather Report: As always, it's 77 and balmy at CPB"
+          }
+        },
+        "scroll_text_gFhKFU": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "FREE SIZE FOR THE FUTURE"
+          }
+        },
+        "scroll_text_KjPCF4": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Call the studio, just to chit chat"
+          }
+        },
+        "scroll_text_A8B4n9": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Surf Report: Waves are double over head at Flagpole, but Reef is flat"
+          }
+        },
+        "scroll_text_XP7qYe": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "CONIGLIO MEANS RABBIT"
+          }
+        },
+        "scroll_text_b9MQ78": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "It's made in India!"
+          }
+        },
+        "scroll_text_PiHAbQ": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Ruffle Power Pareo Forever"
+          }
+        },
+        "scroll_text_VfY4mf": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "FREE SIZE BECAUSE IT MATTERS"
+          }
+        }
+      },
+      "block_order": [
+        "scroll_text_PqWKJK",
+        "scroll_text_gFhKFU",
+        "scroll_text_KjPCF4",
+        "scroll_text_A8B4n9",
+        "scroll_text_XP7qYe",
+        "scroll_text_b9MQ78",
+        "scroll_text_PiHAbQ",
+        "scroll_text_VfY4mf"
+      ],
+      "settings": {
+        "text-size": 16,
+        "text-color": "#312f2e",
+        "background-color": "#f47722",
+        "space": 6,
+        "divider": "•",
+        "height": 6
+      }
+    },
+    "hotspot_section_kMWExm": {
+      "type": "hotspot-section",
+      "settings": {
+        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-2.webp?v=1709465384",
+        "hotspot_color": "#f5f5f5",
+        "hotspot_inner": "#f47722",
+        "icon": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/BunnyHotpot-Resize.png?v=1709767475",
+        "width": 90
+      }
+    },
+    "hotspot_section_jGmP3A": {
+      "type": "hotspot-section",
+      "settings": {
+        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-3_1.webp?v=1709768536",
+        "hotspot_color": "#f5f5f5",
+        "hotspot_inner": "#f47722",
+        "icon": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/BunnyHotpot-Resize.png?v=1709767475",
+        "width": 90
+      }
+    },
+    "hotspot_section_XLMdaE": {
+      "type": "hotspot-section",
+      "settings": {
+        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/ConiglioPalmBeach-Spring2024-Desktop-4.webp?v=1709465385",
+        "hotspot_color": "#f5f5f5",
+        "hotspot_inner": "#f47722",
+        "icon": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/BunnyHotpot-Resize.png?v=1709767475",
+        "width": 90
+      }
+    },
+    "featured_collection_LT7JVV": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "web-launch",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hotspot_section_JfxQLn",
+    "custom_liquid_8Lz8Xd",
+    "ticker_text_FFEtce",
+    "hotspot_section_kMWExm",
+    "hotspot_section_jGmP3A",
+    "hotspot_section_XLMdaE",
+    "featured_collection_LT7JVV"
   ]
 }
