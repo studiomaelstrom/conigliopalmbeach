@@ -11,6 +11,32 @@
     },
     "hotspot_section_4EmjLw": {
       "type": "hotspot-section",
+      "blocks": {
+        "hotspot_HEJHDV": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 18,
+            "left": 52
+          }
+        },
+        "hotspot_6JRnwK": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 15,
+            "left": 62
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_HEJHDV",
+        "hotspot_6JRnwK"
+      ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/SpringDesktop1.png?v=1714013408",
         "hotspot_color": "#F47722",
@@ -52,6 +78,12 @@
             "text": "Surf Report: Waves are double over head at Flagpole, but Reef is flat"
           }
         },
+        "scroll_text_bezFna": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Open Mon - Sat, 11 to 6(ish)"
+          }
+        },
         "scroll_text_zrJLiU": {
           "type": "scroll-text",
           "settings": {
@@ -81,12 +113,6 @@
           "settings": {
             "text": "FREE SIZE BECAUSE IT MATTERS"
           }
-        },
-        "scroll_text_bezFna": {
-          "type": "scroll-text",
-          "settings": {
-            "text": "Open Mon - Sat, 11 to 6(ish)"
-          }
         }
       },
       "block_order": [
@@ -95,12 +121,12 @@
         "scroll_text_cyVCq3",
         "scroll_text_6FMfbc",
         "scroll_text_hWQWhQ",
+        "scroll_text_bezFna",
         "scroll_text_zrJLiU",
         "scroll_text_TtLQDp",
         "scroll_text_qMLgeJ",
         "scroll_text_4FiReG",
-        "scroll_text_JCBjxH",
-        "scroll_text_bezFna"
+        "scroll_text_JCBjxH"
       ],
       "custom_css": [
 
