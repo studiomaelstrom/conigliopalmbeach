@@ -243,7 +243,8 @@
         "hotspot_iWWH3k": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "high-side-slit-long-top",
+            "variant_img": "shopify:\/\/shop_images\/240422_Shot_15_0066.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 66,
