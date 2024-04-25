@@ -6,7 +6,7 @@
         "custom_liquid_Ez3yx6": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": ""
+            "custom_liquid": "{{ product.metafields.product.badge }}"
           }
         },
         "vendor": {
