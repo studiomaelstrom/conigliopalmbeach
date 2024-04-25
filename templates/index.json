@@ -37,7 +37,8 @@
         "hotspot_RbTEhb": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "move-and-groove-pant",
+            "variant_img": "shopify:\/\/shop_images\/CPB_MoveAndGroove.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 47,
