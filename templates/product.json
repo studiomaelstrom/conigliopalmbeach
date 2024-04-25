@@ -57,6 +57,13 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "text_yG6qrm": {
+          "type": "text",
+          "settings": {
+            "text": "Text block",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
@@ -68,7 +75,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "share"
+        "share",
+        "text_yG6qrm"
       ],
       "custom_css": [
         ".product__description {font-size: 15px;}"
