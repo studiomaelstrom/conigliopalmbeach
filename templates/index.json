@@ -160,7 +160,8 @@
         "hotspot_iXGC3G": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "beaded-party-top",
+            "variant_img": "shopify:\/\/shop_images\/240422_Shot_18_0079.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 21,
