@@ -116,12 +116,23 @@
         "icon": "",
         "width": 95
       }
+    },
+    "hotspot_section_VeBP8j": {
+      "type": "hotspot-section",
+      "settings": {
+        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/SpringDEsktop3.png?v=1714013410",
+        "hotspot_color": "#F47722",
+        "hotspot_inner": "#FFF",
+        "icon": "",
+        "width": 95
+      }
     }
   },
   "order": [
     "custom_liquid_h6prJp",
     "hotspot_section_4EmjLw",
     "ticker_text_6frNjK",
-    "hotspot_section_Fx33je"
+    "hotspot_section_Fx33je",
+    "hotspot_section_VeBP8j"
   ]
 }
