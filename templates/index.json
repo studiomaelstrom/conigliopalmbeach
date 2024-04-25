@@ -182,7 +182,8 @@
         "hotspot_CdcBWT": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "bandhani-maxi-dress",
+            "variant_img": "shopify:\/\/shop_images\/240422_Shot_1_0003.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 76,
