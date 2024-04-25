@@ -211,7 +211,6 @@
           "type": "hotspot",
           "settings": {
             "product": "low-back-tie-maxi-dress",
-            "variant_img": "shopify:\/\/shop_images\/240401_Shot_25_0077.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 44,
@@ -255,7 +254,6 @@
           "type": "hotspot",
           "settings": {
             "product": "shirred-half-placket-maxi-dress",
-            "variant_img": "shopify:\/\/shop_images\/240401_Shot_20_0058.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 75,
@@ -271,7 +269,7 @@
         "hotspot_9g9zVY"
       ],
       "settings": {
-        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/SpringDEsktop3.png?v=1714013410",
+        "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/Desktop3fix.png?v=1714069630",
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
