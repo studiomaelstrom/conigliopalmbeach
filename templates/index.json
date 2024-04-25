@@ -210,7 +210,8 @@
         "hotspot_cwqkr4": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "low-back-tie-maxi-dress",
+            "variant_img": "shopify:\/\/shop_images\/240401_Shot_25_0077.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 44,
@@ -220,11 +221,23 @@
         "hotspot_HhtQhG": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "embroidered-bunny-pullover",
+            "variant_img": "shopify:\/\/shop_images\/240422_Shot_16_0071.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 41,
             "left": 89
+          }
+        },
+        "hotspot_NnfQ4E": {
+          "type": "hotspot",
+          "settings": {
+            "product": "its-better-in-pb-classic-tee",
+            "variant_img": "shopify:\/\/shop_images\/240401_Shot_27_0084.jpg",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 41,
+            "left": 50
           }
         },
         "hotspot_iWWH3k": {
@@ -251,6 +264,7 @@
       "block_order": [
         "hotspot_cwqkr4",
         "hotspot_HhtQhG",
+        "hotspot_NnfQ4E",
         "hotspot_iWWH3k",
         "hotspot_9g9zVY"
       ],
