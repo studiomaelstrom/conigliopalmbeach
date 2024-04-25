@@ -81,6 +81,12 @@
           "settings": {
             "text": "FREE SIZE BECAUSE IT MATTERS"
           }
+        },
+        "scroll_text_bezFna": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Open Mon - Sat, 11 to 6(ish)"
+          }
         }
       },
       "block_order": [
@@ -93,7 +99,8 @@
         "scroll_text_TtLQDp",
         "scroll_text_qMLgeJ",
         "scroll_text_4FiReG",
-        "scroll_text_JCBjxH"
+        "scroll_text_JCBjxH",
+        "scroll_text_bezFna"
       ],
       "custom_css": [
 
