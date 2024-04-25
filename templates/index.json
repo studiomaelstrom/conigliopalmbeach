@@ -146,6 +146,12 @@
             "text": "FREE SIZE FOR THE FUTURE"
           }
         },
+        "scroll_text_cyVCq3": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "561-247-6334"
+          }
+        },
         "scroll_text_6FMfbc": {
           "type": "scroll-text",
           "settings": {
@@ -162,6 +168,12 @@
           "type": "scroll-text",
           "settings": {
             "text": "CONIGLIO MEANS RABBIT"
+          }
+        },
+        "scroll_text_TtLQDp": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "561-247-6334"
           }
         },
         "scroll_text_qMLgeJ": {
@@ -186,9 +198,11 @@
       "block_order": [
         "scroll_text_xq3A6T",
         "scroll_text_68HYfL",
+        "scroll_text_cyVCq3",
         "scroll_text_6FMfbc",
         "scroll_text_hWQWhQ",
         "scroll_text_zrJLiU",
+        "scroll_text_TtLQDp",
         "scroll_text_qMLgeJ",
         "scroll_text_4FiReG",
         "scroll_text_JCBjxH"
