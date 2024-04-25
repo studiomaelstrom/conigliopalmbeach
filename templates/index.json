@@ -26,7 +26,8 @@
         "hotspot_6JRnwK": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "ruffle-power-pareo-in-cotton-gauze",
+            "variant_img": "shopify:\/\/shop_images\/CPB_S24_PoppyPurple_Pareo_Gauze.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 15,
