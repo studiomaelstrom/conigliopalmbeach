@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "custom_liquid_fHqXdL": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if  product.metafields.product.badge %}\n<style>#badge {\n  animation: 10s rotate infinite linear;\n}\n\n@keyframes rotate {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(-360deg);\n  }\n}\n\n\/* Style SVG Text *\/\n.badge-text {\n  font: normal 13px sans-serif;\n  fill: #FFF;\n  text-transform: uppercase;\n}<\/style>\n<svg id=\"badge\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\" fill=\"currentColor\">\n  <path id=\"svg-text-circle\" d=\"M 20 50 C 20 33.43 33.43 20 50 20 C 66.57 20 80 33.43 80 50 C 80 66.57 66.57 80 50 80 C 33.43 80 20 66.57 20 50 Z\" fill=\"none\"><\/path>\n  <circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#F47722\"><\/circle>\n    <text dy=\"-2\" textLength=\"100\">\n    <!-- textLength (essentially the circumference of the circle) is used as an alternative to letter-spacing for Firefox, which currently doesn't support letter-spacing for SVG -->\n\t\t<textPath class=\"badge-text\" xlink:href=\"#svg-text-circle\">{{ product.metafields.product.badge }}<\/textPath>\n\t<\/text>\n <\/svg>\n{% endif %}"
+          }
+        },
         "vendor": {
           "type": "text",
           "disabled": true,
@@ -60,6 +66,7 @@
         }
       },
       "block_order": [
+        "custom_liquid_fHqXdL",
         "vendor",
         "title",
         "caption",
