@@ -189,45 +189,12 @@
             "top": 76,
             "left": 77
           }
-        },
-        "hotspot_h9tmX8": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 70,
-            "left": 30
-          }
-        },
-        "hotspot_6U6jrC": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 80,
-            "left": 26
-          }
-        },
-        "hotspot_d8zHje": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 73,
-            "left": 12
-          }
         }
       },
       "block_order": [
         "hotspot_iXGC3G",
         "hotspot_qEXwWd",
-        "hotspot_CdcBWT",
-        "hotspot_h9tmX8",
-        "hotspot_6U6jrC",
-        "hotspot_d8zHje"
+        "hotspot_CdcBWT"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/SpringDesktop2.png?v=1714013408",
