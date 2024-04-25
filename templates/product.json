@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "custom_liquid_Ez3yx6": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
         "vendor": {
           "type": "text",
           "disabled": true,
@@ -57,16 +63,10 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "text_yG6qrm": {
-          "type": "text",
-          "settings": {
-            "text": "Text block",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
+        "custom_liquid_Ez3yx6",
         "vendor",
         "title",
         "caption",
@@ -75,8 +75,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "share",
-        "text_yG6qrm"
+        "share"
       ],
       "custom_css": [
         ".product__description {font-size: 15px;}"
