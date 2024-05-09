@@ -58,13 +58,20 @@
           "settings": {
             "text": "These are the classics for a reason!"
           }
+        },
+        "scroll_text_BFdJpT": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Just in time for summer!"
+          }
         }
       },
       "block_order": [
         "scroll_text_qkfhrd",
         "scroll_text_rXWbzn",
         "scroll_text_A9rTqa",
-        "scroll_text_TVthze"
+        "scroll_text_TVthze",
+        "scroll_text_BFdJpT"
       ],
       "settings": {
         "text-size": 14,
