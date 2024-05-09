@@ -31,10 +31,54 @@
         "padding_top": 20,
         "padding_bottom": 0
       }
+    },
+    "ticker_text_FxWrnH": {
+      "type": "ticker-text",
+      "blocks": {
+        "scroll_text_qkfhrd": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "All Petit Palm Pre-Orders ship 6\/15!"
+          }
+        },
+        "scroll_text_rXWbzn": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Pre-Order Pareos and Button Downs here!"
+          }
+        },
+        "scroll_text_A9rTqa": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "All Wavy Gingham Pre-Orders ship by 7\/15!"
+          }
+        },
+        "scroll_text_TVthze": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "These are the classics for a reason!"
+          }
+        }
+      },
+      "block_order": [
+        "scroll_text_qkfhrd",
+        "scroll_text_rXWbzn",
+        "scroll_text_A9rTqa",
+        "scroll_text_TVthze"
+      ],
+      "settings": {
+        "text-size": 14,
+        "text-color": "#FFFFFF",
+        "background-color": "#f47722",
+        "space": 5,
+        "divider": "•",
+        "height": 3
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "ticker_text_FxWrnH"
   ]
 }
