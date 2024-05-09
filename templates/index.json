@@ -44,12 +44,23 @@
             "top": 47,
             "left": 78
           }
+        },
+        "hotspot_ecgDPb": {
+          "type": "hotspot",
+          "settings": {
+            "product": "wavy-gingham-ruffle-power-pareo-in-silk-dupioni-pre-order",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 34,
+            "left": 24
+          }
         }
       },
       "block_order": [
         "hotspot_HEJHDV",
         "hotspot_6JRnwK",
-        "hotspot_RbTEhb"
+        "hotspot_RbTEhb",
+        "hotspot_ecgDPb"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/SpringDesktop1.png?v=1714013408",
