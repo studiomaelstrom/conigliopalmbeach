@@ -47,24 +47,24 @@
             "text": "All Wavy Gingham Pre-Orders ship by 7\/15!"
           }
         },
-        "scroll_text_VRyMWb": {
-          "type": "scroll-text",
-          "settings": {
-            "text": "Take us on your vacation!"
-          }
-        },
         "scroll_text_mcBPLB": {
           "type": "scroll-text",
           "settings": {
             "text": "Summer can't get here soon enough..."
+          }
+        },
+        "scroll_text_VRyMWb": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Take us on your vacation!"
           }
         }
       },
       "block_order": [
         "scroll_text_qkfhrd",
         "scroll_text_A9rTqa",
-        "scroll_text_VRyMWb",
-        "scroll_text_mcBPLB"
+        "scroll_text_mcBPLB",
+        "scroll_text_VRyMWb"
       ],
       "settings": {
         "text-size": 14,
