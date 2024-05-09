@@ -58,13 +58,20 @@
           "settings": {
             "text": "Take us on your vacation!"
           }
+        },
+        "scroll_text_jtHWUc": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Questions? Email admin@conigliopalmbeach.com"
+          }
         }
       },
       "block_order": [
         "scroll_text_qkfhrd",
         "scroll_text_A9rTqa",
         "scroll_text_mcBPLB",
-        "scroll_text_VRyMWb"
+        "scroll_text_VRyMWb",
+        "scroll_text_jtHWUc"
       ],
       "settings": {
         "text-size": 14,
