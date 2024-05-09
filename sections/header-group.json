@@ -41,41 +41,20 @@
             "text": "All Petit Palm Pre-Orders ship 6\/15!"
           }
         },
-        "scroll_text_rXWbzn": {
-          "type": "scroll-text",
-          "settings": {
-            "text": "Pre-Order Pareos and Button Downs here!"
-          }
-        },
         "scroll_text_A9rTqa": {
           "type": "scroll-text",
           "settings": {
             "text": "All Wavy Gingham Pre-Orders ship by 7\/15!"
           }
-        },
-        "scroll_text_TVthze": {
-          "type": "scroll-text",
-          "settings": {
-            "text": "These are the classics for a reason!"
-          }
-        },
-        "scroll_text_BFdJpT": {
-          "type": "scroll-text",
-          "settings": {
-            "text": "Just in time for summer!"
-          }
         }
       },
       "block_order": [
         "scroll_text_qkfhrd",
-        "scroll_text_rXWbzn",
-        "scroll_text_A9rTqa",
-        "scroll_text_TVthze",
-        "scroll_text_BFdJpT"
+        "scroll_text_A9rTqa"
       ],
       "settings": {
         "text-size": 14,
-        "text-color": "#FFFFFF",
+        "text-color": "#faf9f9",
         "background-color": "#f47722",
         "space": 5,
         "divider": "•",
