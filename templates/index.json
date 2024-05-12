@@ -278,26 +278,9 @@
         "width": 95
       }
     },
-    "image_gallery_BEzHmU": {
-      "type": "image-gallery",
-      "blocks": {
-        "image_jqC7yX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/3_65b6a8dd-47f6-43c6-9449-bf287b2b2136.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_jqC7yX"
-      ],
+    "insta_gallery_VQzKHy": {
+      "type": "insta-gallery",
       "settings": {
-        "heading": "<h2>Image Gallery<\/h2>",
-        "images_per_row": 3,
-        "images_per_row_mobile": 3,
-        "grid_gap": 10,
-        "full_width": true,
-        "mobile_slider": true
       }
     }
   },
@@ -307,6 +290,6 @@
     "ticker_text_6frNjK",
     "hotspot_section_Fx33je",
     "hotspot_section_VeBP8j",
-    "image_gallery_BEzHmU"
+    "insta_gallery_VQzKHy"
   ]
 }
