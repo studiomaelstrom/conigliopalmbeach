@@ -278,9 +278,26 @@
         "width": 95
       }
     },
-    "insta_gallery_VQzKHy": {
-      "type": "insta-gallery",
+    "image_gallery_cRCBNA": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_qchp7M": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/RACK-3-compressed.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_qchp7M"
+      ],
       "settings": {
+        "heading": "<h2>Image Gallery<\/h2>",
+        "images_per_row": 3,
+        "images_per_row_mobile": 3,
+        "grid_gap": 10,
+        "full_width": true,
+        "mobile_slider": true
       }
     }
   },
@@ -290,6 +307,6 @@
     "ticker_text_6frNjK",
     "hotspot_section_Fx33je",
     "hotspot_section_VeBP8j",
-    "insta_gallery_VQzKHy"
+    "image_gallery_cRCBNA"
   ]
 }
