@@ -292,11 +292,53 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/73493b525ddda0817cc99be06d41f264.jpg"
           }
+        },
+        "image_HzqCjF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/RACK-1-compressed.jpg"
+          }
+        },
+        "image_Y8wCzi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/12623894_xl.webp"
+          }
+        },
+        "image_HtBzwq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_d01e0a7d-ab71-47b6-b303-8c4d8a7b5919.webp"
+          }
+        },
+        "image_f8HqaF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-tilts-her-head-back-and-smiles-outdoors.jpg"
+          }
+        },
+        "image_YnrFgk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/here-you-go.jpg"
+          }
+        },
+        "image_tkKTdQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fog-on-dark-waters-edge.jpg"
+          }
         }
       },
       "block_order": [
         "image_E9L7Mt",
-        "image_zF7YrJ"
+        "image_zF7YrJ",
+        "image_HzqCjF",
+        "image_Y8wCzi",
+        "image_HtBzwq",
+        "image_f8HqaF",
+        "image_YnrFgk",
+        "image_tkKTdQ"
       ],
       "settings": {
       }
