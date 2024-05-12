@@ -299,6 +299,11 @@
         "full_width": true,
         "mobile_slider": true
       }
+    },
+    "insta_gallery_DXyH8D": {
+      "type": "insta-gallery",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -307,6 +312,7 @@
     "ticker_text_6frNjK",
     "hotspot_section_Fx33je",
     "hotspot_section_VeBP8j",
-    "image_gallery_cRCBNA"
+    "image_gallery_cRCBNA",
+    "insta_gallery_DXyH8D"
   ]
 }
