@@ -85,6 +85,30 @@
 {% endstyle %}
 
 <div class="masonry">
+
+    {%- for block in section.blocks -%}
+      <div class="item">
+      {%- assign image = block.settings.image -%}
+      <a href="{{ image | img_url: '1600x' }}" data-desktop="{{ image | img_url: '1600x' }}" data-mobile="{{ image | img_url: '749x' }}" class="mw-image-gallery__item" target="_blank" title="{{ image.alt }}">
+          <img 
+            srcset="
+                  {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if image.width >= 1066 -%}{{ image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ image | image_url }} {{ image.width }}w
+                "
+            src="{{ image | image_url: width: 533 }}"
+            sizes="(min-width: {{ settings_page_width }}px) {{ settings_page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+            alt="{{ image.alt | default: page.title | append: " " | append: forloop.index }}"
+            loading="lazy"
+            >
+      </a>
+        </div>
+    {%- endfor -%}
+  
   <div class="item">
     
     <img src="http://www.pixeden.com/media/k2/galleries/468/001-business-card-clip-brand-mock-up-vol-20-psd.jpg">
