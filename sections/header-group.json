@@ -64,6 +64,12 @@
           "settings": {
             "text": "Questions? Email admin@conigliopalmbeach.com"
           }
+        },
+        "scroll_text_TFaU4L": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Call the studio! 561-247-6334"
+          }
         }
       },
       "block_order": [
@@ -71,7 +77,8 @@
         "scroll_text_mcBPLB",
         "scroll_text_A9rTqa",
         "scroll_text_VRyMWb",
-        "scroll_text_jtHWUc"
+        "scroll_text_jtHWUc",
+        "scroll_text_TFaU4L"
       ],
       "settings": {
         "text-size": 14,
