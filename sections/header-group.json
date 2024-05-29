@@ -41,6 +41,12 @@
             "text": "All Petit Palm Pre-Orders ship 6\/15!"
           }
         },
+        "scroll_text_DWhQqy": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "If you have a question, give us a call! 561-247-6334"
+          }
+        },
         "scroll_text_mcBPLB": {
           "type": "scroll-text",
           "settings": {
@@ -74,6 +80,7 @@
       },
       "block_order": [
         "scroll_text_qkfhrd",
+        "scroll_text_DWhQqy",
         "scroll_text_mcBPLB",
         "scroll_text_A9rTqa",
         "scroll_text_VRyMWb",
