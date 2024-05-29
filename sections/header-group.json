@@ -53,6 +53,12 @@
             "text": "Summer can't get here soon enough..."
           }
         },
+        "scroll_text_tGnYda": {
+          "type": "scroll-text",
+          "settings": {
+            "text": "Email us! admin@conigliopalmbeach.com"
+          }
+        },
         "scroll_text_A9rTqa": {
           "type": "scroll-text",
           "settings": {
@@ -82,6 +88,7 @@
         "scroll_text_qkfhrd",
         "scroll_text_DWhQqy",
         "scroll_text_mcBPLB",
+        "scroll_text_tGnYda",
         "scroll_text_A9rTqa",
         "scroll_text_VRyMWb",
         "scroll_text_jtHWUc",
