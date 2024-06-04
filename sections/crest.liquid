@@ -38,10 +38,20 @@
       #crest {
         transition: opacity 0.6s ease-out;
       }
-      
       .inactive {
         display:none;
       }
+      .overlay{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #333;
+        position: absolute;
+        width: 100%;
+        z-index: 400;
+        height: 100%;
+        top: 0px;
+      }
     </style>
 
-    <div id="crest" class="inactive">Show after idle.</div>
+    <div id="crest" class="inactive">
+      <div class="overlay">Show after idle.</div>
+    </div>
