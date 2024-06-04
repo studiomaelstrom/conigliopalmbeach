@@ -19,7 +19,7 @@
           "info": "Defaults to the Coniglio Instagram page."
         },
         {
-          "type": "text",
+          "type": "inline_richtext",
           "id": "image_caption",
           "label": "Caption (Optional)"
         }
@@ -126,7 +126,7 @@
           <img src="{{ image | image_url }}" loading="lazy">
       </div></a>
       {% if block.settings.image_caption %}
-        <p>{{ block.settings.image_caption }}</p>
+        {{ block.settings.image_caption }}
       {% endif %}
       </div>
     {%- endfor -%}
