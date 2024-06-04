@@ -11,6 +11,11 @@
           "type":"image_picker",
           "id":"image",
           "label":"Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Link"
         }
       ]
     }
@@ -88,7 +93,7 @@
     {%- for block in section.blocks -%}
       <div class="item">
       {%- assign image = block.settings.image -%}
-      <a href="{{ image | img_url: '1600x' }}" data-desktop="{{ image | img_url: '1600x' }}" data-mobile="{{ image | img_url: '749x' }}" class="mw-image-gallery__item" target="www.instagram.com/conigliopalmbeach" title="{{ image.alt }}">
+      <a href="{{ section.settings.image_link }}" class="mw-image-gallery__item" title="{{ image.alt }}">
           <img 
             srcset="
                   {{ image | image_url }} {{ image.width }}w
