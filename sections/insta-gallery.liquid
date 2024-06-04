@@ -13,10 +13,9 @@
           "label":"Image"
         },
         {
-          "type": "text",
+          "type": "url",
           "id": "image_link",
-          "label": "Link",
-          "default": "https://www.instagram.com/conigliopalmbeach/"
+          "label": "Link"
         }
       ]
     }
@@ -92,7 +91,7 @@
 
 <div class="masonry">
     {%- for block in section.blocks -%}
-      <a href="{{ section.settings.image_link }}">
+      <a href="{{ block.settings.image_link }}">
       <div class="item">
       {%- assign image = block.settings.image -%}
           <img src="{{ image | image_url }}">
