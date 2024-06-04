@@ -95,7 +95,7 @@
       <a href="{{ section.settings.image_link }}">
       <div class="item">
       {%- assign image = block.settings.image -%}
-          <img src="{{ image }}" width="500">
+          <img src="{{ image | image_url }}">
         </div>
       </a>
     {%- endfor -%}
