@@ -12,26 +12,13 @@
 {% endschema %}
 
 <script type="text/javascript">
-var idleTime = 0;
-$(document).ready(function () {
-//Increment the idle time counter every minute.
-var idleInterval = setInterval(timerIncrement, 1000); // 1 minute
 
-//Zero the idle timer on mouse movement.
-$(this).mousemove(function (e) {
-    idleTime = 0;
-});
-$(this).keypress(function (e) {
-    idleTime = 0;
-});
-});
+setTimeout(function(){
 
-function timerIncrement() {
-idleTime = idleTime + 1;
-if (idleTime > 2) { // 2 minutes
    $(".crest").fadeOut();
-}
-}
+
+
+}, 5000); 
 </script> 
 
     <style>
@@ -54,5 +41,4 @@ if (idleTime > 2) { // 2 minutes
       }
     </style>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div class="crest">Will hide in 2 secs</div>
