@@ -124,6 +124,10 @@
       <div class="frame">
       {%- assign image = block.settings.image -%}
           <img src="{{ image | image_url }}" loading="lazy">
-        </div></a></div>
+      </div></a>
+      {% if block.settings.image_caption %}
+        <p>{{ block.settings.image_caption }}</p>
+      {% endif %}
+      </div>
     {%- endfor -%}
 </div>
