@@ -282,7 +282,7 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-          <script type="text/javascript">
+      <script type="text/javascript">
         var interval = null;
 
         function initInterval(){
@@ -291,7 +291,7 @@
             
             showElement();
         	interval = setTimeout(function(){
-            	$(".crest").fadeOut();
+            	$(".btn").fadeOut();
                 clear();
             },2000);
         }
@@ -302,7 +302,7 @@
         }
         
         function showElement(){
-        	$(".crest").fadeIn();
+        	$(".btn").fadeIn();
         }
         
         function registerEvents(){
@@ -328,10 +328,18 @@
         left:       0; 
         position:   fixed; 
       }
+      .btn{
+        width:200px;
+        background:blue;
+        color:#fff;
+        padding:5px;
+        text-align:center;
+      }
     </style>
-    <div class="crest">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Rotating_earth_%28large%29_transparent.gif">
-    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <div class="btn">Will hide in 2 secs</div>
+
     
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
