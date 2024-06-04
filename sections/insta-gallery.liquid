@@ -91,7 +91,12 @@
 
 <div class="masonry">
     {%- for block in section.blocks -%}
-      <a href="{{ block.settings.image_link }}">
+      {% if block.setting.image_link != null %}
+        {% assign img_link = block.settings.image_link %}
+      {% else %}
+        {% assign img_link = "https://www.instagram.com/conigliopalmbeach/" %}
+      {% endif %}
+      <a href="{{ img_link }}">
       <div class="item">
       {%- assign image = block.settings.image -%}
           <img src="{{ image | image_url }}">
