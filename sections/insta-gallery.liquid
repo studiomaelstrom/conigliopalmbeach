@@ -115,9 +115,10 @@
       {% endif %}
       <a href="{{ img_link }}">
       <div class="item">
+      <div class="frame">
       {%- assign image = block.settings.image -%}
           <img src="{{ image | image_url }}" loading="lazy">
-        </div>
+        </div></div>
       </a>
     {%- endfor -%}
 </div>
