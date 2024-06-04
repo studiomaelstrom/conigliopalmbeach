@@ -93,7 +93,6 @@
     {%- for block in section.blocks -%}
       <div class="item">
       {%- assign image = block.settings.image -%}
-      <a href="{{ section.settings.image_link }}">
           <img 
             srcset="
                   {{ image | image_url }} {{ image.width }}w
@@ -103,7 +102,6 @@
             alt="{{ image.alt | default: page.title | append: " " | append: forloop.index }}"
             loading="lazy"
             >
-      </a>
         </div>
     {%- endfor -%}
 </div>
