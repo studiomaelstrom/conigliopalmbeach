@@ -80,11 +80,18 @@
         column-count: 3;
     }
 }
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1200px) and (max-width: 1600px){
     .masonry {
         -moz-column-count: 4;
         -webkit-column-count: 4;
         column-count: 4;
+    }
+}
+@media only screen and (min-width: 1601px) {
+    .masonry {
+        -moz-column-count: 5;
+        -webkit-column-count: 5;
+        column-count: 5;
     }
 }
 {% endstyle %}
