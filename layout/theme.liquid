@@ -35,64 +35,6 @@
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-          <script type="text/javascript">
-        var interval = null;
-
-        function initInterval(){
-            if(interval)
-                clear();
-            
-            showElement();
-        	interval = setTimeout(function(){
-            	$(".btn").fadeOut();
-                clear();
-            },2000);
-        }
-        
-        function clear(){
-        	window.clearInterval(interval);
-            interval = null;
-        }
-        
-        function showElement(){
-        	$(".btn").fadeIn();
-        }
-        
-        function registerEvents(){
-            console.log("Events registering");
-        	$(document).on("mousemove", function(){
-            	initInterval();
-            });
-        }
-        
-        (function(){
-        	registerEvents();
-        })()
-    </script>
-    
-    <style>
-      .overlay{
-        opacity:    0.5; 
-        background: #000; 
-        width:      100%;
-        height:     100%; 
-        z-index:    10;
-        top:        0; 
-        left:       0; 
-        position:   fixed; 
-      }
-      .btn{
-        width:200px;
-        background:blue;
-        color:#fff;
-        padding:5px;
-        text-align:center;
-      }
-    </style>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <div class="btn">Will hide in 2 secs</div>
-
     {{ content_for_header }}
 
     {%- liquid
