@@ -274,6 +274,25 @@
       >
     {%- endif -%}
 
+      <script type="text/javascript">
+        var idleTime = 0;
+        $(document).ready(function () {
+        //Increment the idle time counter every minute.
+        var idleInterval = setInterval(timerIncrement, 1000); // 1 sec
+        
+        //Zero the idle timer on mouse movement.
+        $(this).mousemove(function (e) {
+            idleTime = 0;
+        });
+        });
+        
+        function timerIncrement() {
+        idleTime = idleTime + 1;
+        if (idleTime > 2) { // 2 sec
+            $(".crest").fadeIn();
+        }
+        }
+    </script>
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {
@@ -283,6 +302,22 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    <style>
+      .crest{
+        opacity:    0.5; 
+        background: #000; 
+        width:      100%;
+        height:     100%; 
+        z-index:    10;
+        top:        0; 
+        left:       0; 
+        position:   fixed; 
+      }
+    </style>
+    <div class="crest">
+      
+    </div>
+    
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
