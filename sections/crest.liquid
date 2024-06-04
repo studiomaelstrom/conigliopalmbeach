@@ -11,14 +11,25 @@
   }
 {% endschema %}
 
-<script type="text/javascript">
-
-setTimeout(function(){
-
-   $(".crest").fadeOut();
-
-
-}, 5000); 
+<script>
+  function noIdlingHere() {
+  
+      function yourFunction() {
+          
+      }
+  
+      function resetTimer() {
+          var t = setTimeout(yourFunction, 2000);  // time is in milliseconds
+          clearTimeout(t); // is a global function, just as setTimeout
+      }    
+  
+      window.addEventListener('mousemove', resetTimer, true);
+      window.addEventListener('touchstart', resetTimer, true);
+      window.addEventListener('touchmove', resetTimer, true);
+      window.addEventListener('scroll', resetTimer, true);
+  }
+  
+  noIdlingHere();
 </script> 
 
     <style>
