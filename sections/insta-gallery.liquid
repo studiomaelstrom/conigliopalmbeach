@@ -94,7 +94,7 @@
       <a href="{{ block.settings.image_link }}">
       <div class="item">
       {%- assign image = block.settings.image -%}
-          <img src="{{ image | image_url }}">
+          <img src="{{ image | image_url: width: 300 | image_tag }}">
         </div>
       </a>
     {%- endfor -%}
