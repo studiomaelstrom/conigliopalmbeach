@@ -137,7 +137,7 @@
           <img src="{{ image | image_url }}" loading="lazy">
       </div></a>
       {% if block.settings.image_caption %}
-        <div class="caption" style="color:{{ block.settings.text_color }}">{{ block.settings.image_caption }}</div>
+        <div class="caption" style="color:{{ block.settings.text_color }} !important">{{ block.settings.image_caption }}</div>
       {% endif %}
       </div>
     {%- endfor -%}
