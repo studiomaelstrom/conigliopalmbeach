@@ -289,7 +289,7 @@
         function timerIncrement() {
         idleTime = idleTime + 1;
         if (idleTime > 2) { // 2 sec
-            $("#crest").removeClass("inactive");
+            $("#crest").removeClass("inactive").fadeIn();
         }
         }
     </script>
@@ -314,7 +314,7 @@
         position:   fixed; 
       }
       .inactive{
-        display:none;
+        opacity:0;
       }
     </style>
     <div id="crest" class="inactive">
