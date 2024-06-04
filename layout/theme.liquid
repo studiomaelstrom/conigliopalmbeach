@@ -273,8 +273,16 @@
         onload="this.media='all'"
       >
     {%- endif -%}
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+  </head>
 
-      <script type="text/javascript">
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+          <script type="text/javascript">
         var interval = null;
 
         function initInterval(){
@@ -308,15 +316,7 @@
         	registerEvents();
         })()
     </script>
-    <script>
-      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-      if (Shopify.designMode) {
-        document.documentElement.classList.add('shopify-design-mode');
-      }
-    </script>
-  </head>
-
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    
     <style>
       .overlay{
         opacity:    0.5; 
