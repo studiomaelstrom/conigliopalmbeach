@@ -94,16 +94,7 @@
     {%- for block in section.blocks -%}
       <a href="{{ section.settings.image_link }}">
       <div class="item">
-      {%- assign image = block.settings.image -%}
-          <img 
-            srcset="
-                  {{ image | image_url }} {{ image.width }}w
-                "
-            src="{{ image | image_url: width: 533 }}"
-            sizes="(min-width: {{ settings_page_width }}px) {{ settings_page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-            alt="{{ image.alt | default: page.title | append: " " | append: forloop.index }}"
-            loading="lazy"
-            >
+          {{ section.settings.image }}
         </div>
       </a>
     {%- endfor -%}
