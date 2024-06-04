@@ -286,7 +286,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/447146024_992446472550425_6114802713356379096_n.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C7pmlEIg4U6\/",
-            "image_caption": "Hello! This is a test of the optional caption setting. Text is able to be formatted <strong>bold<\/strong>, <em>italic <\/em>or <a href=\"\/products\/le-orange-hand-embroidered-shirt\" title=\"&quot;Le Orange&quot; Hand Embroidered Shirt\">linked<\/a> separately from the image link."
+            "image_caption": "This is a test of the optional caption setting. Text is able to be formatted <strong>bold<\/strong>, <em>italic <\/em>or <a href=\"\/products\/le-orange-hand-embroidered-shirt\" title=\"&quot;Le Orange&quot; Hand Embroidered Shirt\">linked<\/a> independently from the image link."
           }
         },
         "image_zF7YrJ": {
