@@ -283,7 +283,7 @@
             
             showElement();
         	interval = setTimeout(function(){
-            	$("#crest").fadeOut();
+            	$(".crest").fadeOut();
                 clear();
             },2000);
         }
@@ -294,7 +294,7 @@
         }
         
         function showElement(){
-        	$("#crest").fadeIn();
+        	$(".crest").fadeIn();
         }
         
         function registerEvents(){
@@ -318,7 +318,7 @@
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <style>
-      #crest{
+      .crest{
         opacity:    0.5; 
         background: #000; 
         width:      100%;
@@ -329,7 +329,7 @@
         position:   fixed; 
       }
     </style>
-    <div id="crest">
+    <div class="crest">
     </div>
     
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
