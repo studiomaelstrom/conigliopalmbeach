@@ -286,7 +286,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/447146024_992446472550425_6114802713356379096_n.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C7pmlEIg4U6\/",
-            "image_caption": "This is a test of the optional caption setting. Text is able to be formatted <strong>bold<\/strong>, <em>italic <\/em>or <a href=\"\/products\/le-orange-hand-embroidered-shirt\" title=\"&quot;Le Orange&quot; Hand Embroidered Shirt\">linked<\/a> independently from the image link."
+            "image_caption": "This is a test of the caption setting. Text is multi-line and able to be formatted <strong>bold<\/strong>, <em>italic <\/em>or <a href=\"\/products\/le-orange-hand-embroidered-shirt\" title=\"&quot;Le Orange&quot; Hand Embroidered Shirt\">linked<\/a> independently from the image link."
           }
         },
         "image_zF7YrJ": {
@@ -326,7 +326,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Snapinsta.app_447157564_425968600303169_5865340899354069589_n_1080.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C7m_B3mgaBZ\/",
-            "image_caption": ""
+            "image_caption": "<em>Not all need to have captions, it's optional!<\/em>"
           }
         },
         "image_tkKTdQ": {
