@@ -275,23 +275,38 @@
     {%- endif -%}
 
       <script type="text/javascript">
-        var idleTime = 0;
-        $(document).ready(function () {
-        //Increment the idle time counter every minute.
-        var idleInterval = setInterval(timerIncrement, 1000); // 1 sec
-        
-        //Zero the idle timer on mouse movement.
-        $(this).mousemove(function (e) {
-            idleTime = 0;
-        });
-        });
-        
-        function timerIncrement() {
-        idleTime = idleTime + 1;
-        if (idleTime > 2) { // 2 sec
-            $("#crest").fadeOut();
+        var interval = null;
+
+        function initInterval(){
+            if(interval)
+                clear();
+            
+            showElement();
+        	interval = setTimeout(function(){
+            	$("#crest").fadeOut();
+                clear();
+            },2000);
         }
+        
+        function clear(){
+        	window.clearInterval(interval);
+            interval = null;
         }
+        
+        function showElement(){
+        	$("#crest").fadeIn();
+        }
+        
+        function registerEvents(){
+            console.log("Events registering");
+        	$(document).on("mousemove", function(){
+            	initInterval();
+            });
+        }
+        
+        (function(){
+        	registerEvents();
+        })()
     </script>
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
