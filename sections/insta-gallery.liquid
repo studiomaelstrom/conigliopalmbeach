@@ -73,6 +73,9 @@
     transform: scale(1.05);
     transition: all 0.5s ease;
 }
+.caption{
+  font-size:1em;
+}
 
 @media only screen and (max-width: 320px) {
     .masonry {
@@ -126,7 +129,7 @@
           <img src="{{ image | image_url }}" loading="lazy">
       </div></a>
       {% if block.settings.image_caption %}
-        {{ block.settings.image_caption }}
+        <div class="caption">{{ block.settings.image_caption }}</div>
       {% endif %}
       </div>
     {%- endfor -%}
