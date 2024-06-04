@@ -50,19 +50,25 @@
         height: 100%;
         top: 0px;
         animation: fadeIn 0.5s both ease-in; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       @keyframes fadeIn {
          from    { opacity: 0; }
          to      { opacity: 1; }
       }
       .crest{
-        display:flex;
-        width:100%;
-        margin:auto;
-        text-align:center;
-        justify-content: center;
-        align-items: center;
+        width: 50%; /*or whatever you choose*/
+        margin: auto;
       }
+      .crest img {
+   display: block;
+   width: 100%;
+   max-width: 500px; /*actual image width*/
+   height: auto; /* maintain aspect ratio*/
+   margin: auto; /*optional centering of image*/
+}
       
     </style>
 
