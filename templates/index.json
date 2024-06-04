@@ -9,6 +9,11 @@
         "padding_bottom": 0
       }
     },
+    "crest_Tqp4wJ": {
+      "type": "crest",
+      "settings": {
+      }
+    },
     "hotspot_section_4EmjLw": {
       "type": "hotspot-section",
       "blocks": {
@@ -286,7 +291,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/447146024_992446472550425_6114802713356379096_n.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C7pmlEIg4U6\/",
-            "image_caption": "This is a test of the caption setting. Text is multi-line and able to be formatted <strong>bold<\/strong>, <em>italic <\/em>or <a href=\"\/products\/le-orange-hand-embroidered-shirt\" title=\"&quot;Le Orange&quot; Hand Embroidered Shirt\">linked<\/a> independently from the image link."
+            "image_caption": "This is a test of the caption setting. Text is multi-line and able to be formatted <strong>bold<\/strong>, <em>italic <\/em>or <a href=\"\/products\/le-orange-hand-embroidered-shirt\" title=\"&quot;Le Orange&quot; Hand Embroidered Shirt\">linked<\/a> independently from the image link.",
+            "text_color": "#F47722"
           }
         },
         "image_zF7YrJ": {
@@ -294,7 +300,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Snapinsta.app_414461315_711761447725301_1283311957165358956_n_1080.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C1kFGbLgZji\/?img_index=6",
-            "image_caption": ""
+            "image_caption": "",
+            "text_color": "#F47722"
           }
         },
         "image_HzqCjF": {
@@ -302,7 +309,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Snapinsta.app_447146134_474357761933357_1006428431156310555_n_1024.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C7ug4-PpZZE\/",
-            "image_caption": ""
+            "image_caption": "",
+            "text_color": "#F47722"
           }
         },
         "image_Y8wCzi": {
@@ -310,7 +318,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/446484888_488641506920721_2890957052770630467_n.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C7ug4-PpZZE\/",
-            "image_caption": ""
+            "image_caption": "",
+            "text_color": "#F47722"
           }
         },
         "image_HtBzwq": {
@@ -318,7 +327,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Snapinsta.app_414698856_1070316500676699_6788190452527211736_n_1080.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C1kFGbLgZji",
-            "image_caption": ""
+            "image_caption": "",
+            "text_color": "#F47722"
           }
         },
         "image_f8HqaF": {
@@ -326,7 +336,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Snapinsta.app_447157564_425968600303169_5865340899354069589_n_1080.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C7m_B3mgaBZ\/",
-            "image_caption": "<em>Not all need to have captions, it's optional!<\/em>"
+            "image_caption": "<em>Not all need to have captions, it's optional!<\/em>",
+            "text_color": "#F47722"
           }
         },
         "image_tkKTdQ": {
@@ -334,7 +345,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Snapinsta.app_447074336_1867049380435523_370231473186596215_n_1080.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C7mIAa2g4jI\/",
-            "image_caption": ""
+            "image_caption": "",
+            "text_color": "#F47722"
           }
         },
         "image_YnrFgk": {
@@ -342,7 +354,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/447015477_481628984319347_3238650087921641752_n.jpg",
             "image_link": "https:\/\/www.instagram.com\/p\/C7kR0G7JqVR\/",
-            "image_caption": ""
+            "image_caption": "",
+            "text_color": "#F47722"
           }
         }
       },
@@ -362,6 +375,7 @@
   },
   "order": [
     "custom_liquid_h6prJp",
+    "crest_Tqp4wJ",
     "hotspot_section_4EmjLw",
     "ticker_text_6frNjK",
     "hotspot_section_Fx33je",
