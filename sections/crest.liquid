@@ -29,7 +29,7 @@ $(this).keypress(function (e) {
 function timerIncrement() {
 idleTime = idleTime + 1;
 if (idleTime > 2) { // 2 minutes
-   $(".btn").fadeOut();
+   $(".crest").fadeOut();
 }
 }
 </script> 
@@ -45,7 +45,7 @@ if (idleTime > 2) { // 2 minutes
         left:       0; 
         position:   fixed; 
       }
-      .btn{
+      .crest{
         width:200px;
         background:blue;
         color:#fff;
@@ -54,4 +54,4 @@ if (idleTime > 2) { // 2 minutes
       }
     </style>
 
-    <div class="btn">Will hide in 2 secs</div>
+    <div class="crest">Will hide in 2 secs</div>
