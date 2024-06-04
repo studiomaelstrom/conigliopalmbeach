@@ -119,12 +119,11 @@
       {% else %}
         {% assign img_link = "https://www.instagram.com/conigliopalmbeach/" %}
       {% endif %}
-      <a href="{{ img_link }}">
       <div class="item">
+      <a href="{{ img_link }}">
       <div class="frame">
       {%- assign image = block.settings.image -%}
           <img src="{{ image | image_url }}" loading="lazy">
-        </div></div>
-      </a>
+        </div></a></div>
     {%- endfor -%}
 </div>
