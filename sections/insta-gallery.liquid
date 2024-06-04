@@ -91,7 +91,7 @@
 
 <div class="masonry">
     {%- for block in section.blocks -%}
-      {% if block.setting.image_link %}
+      {% if block.settings.image_link %}
         {% assign img_link = block.settings.image_link %}
       {% else %}
         {% assign img_link = "https://www.instagram.com/conigliopalmbeach/" %}
