@@ -55,9 +55,14 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-shadow: 2px 2px 4px 0 #ccc;
-    img{
+}
+.item img{
       max-width:100%;
-    }
+  &:hover {
+   img {
+    transform: scale(1.1);
+    filter: grayscale(100%);
+   }
 }
 
 @media only screen and (max-width: 320px) {
