@@ -18,11 +18,11 @@
   function showCrest(time) {
     clearTimeout(idleTimer);
     if (idleState == true) {
-      $("#crest").addClass("inactive");
+      $("#crest-box").addClass("inactive");
     }
     idleState = false;
     idleTimer = setTimeout(function() {
-      $("#crest").removeClass("inactive");
+      $("#crest-box").removeClass("inactive");
       idleState = true;
     }, time);
   }
@@ -35,15 +35,15 @@
 </script> 
 
     <style>
-      #crest {
+      #crest-box {
         transition: opacity 0.6s ease-out;
       }
       .inactive {
         display:none;
       }
       .overlay{
-        background-color: rgba(255, 238, 238, 0.5);
-        backdrop-filter: blur(6px);
+        background-color: rgba(255, 238, 238, 0.3);
+        backdrop-filter: blur(4px);
         position: absolute;
         width: 100%;
         z-index: 400;
@@ -58,6 +58,6 @@
       
     </style>
 
-    <div id="crest" class="inactive">
+    <div id="crest-box" class="inactive">
       <div class="overlay">Show after idle.</div>
     </div>
