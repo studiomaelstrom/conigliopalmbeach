@@ -93,14 +93,13 @@
                         {%- endif -%}
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
-                {%- if show_dynamic_checkout -%}
-            {{ form | payment_button }}
-          {%- endif -%}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
           </button>
-          
+          {%- if show_dynamic_checkout -%}
+            {{ form | payment_button }}
+          {%- endif -%}
         </div>
       {%- endform -%}
     </product-form>
