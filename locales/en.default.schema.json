@@ -111,6 +111,9 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Sold out badge color scheme"
+        },
+        "exclusive_badge_text": {
+          "label": "Exclusive badge text"
         }
       }
     },
