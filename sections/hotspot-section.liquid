@@ -33,6 +33,22 @@
       "unit": "%",
       "label": "Width",
       "default": 95
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Tint",
+      "default": "#fff"
+    },
+    {
+      "type": "range",
+      "id": "blur",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Blur Amount",
+      "default": 4
     }
   ],
   "blocks": [
@@ -359,7 +375,8 @@
                 height: 100%; /* Full height */
                 overflow: auto; /* Enable scroll if needed */
                 margin:auto;
-                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                background-color: {{section.settings.bg_color | color_modify: 'alpha', 0.5 }}; /* Black w/ opacity */
+                backdrop-filter: blur(8px);
                 opacity: 0;
                 visibility: hidden;
                 transition: opacity 0.5s, visibility 0.5s; /* Smooth transition for opacity and visibility */
