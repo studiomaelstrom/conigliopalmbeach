@@ -33,12 +33,6 @@
       "unit": "%",
       "label": "Width",
       "default": 95
-    },
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Popup Background Tint",
-      "default": "#fff"
     }
   ],
   "blocks": [
@@ -365,7 +359,7 @@
                 height: 100%; /* Full height */
                 overflow: auto; /* Enable scroll if needed */
                 margin:auto;
-                background-color: {{section.settings.bg_color | color_modify: 'alpha', 0.5 }}; /* Black w/ opacity */
+                background-color: rgba(0,0,0,0.5); /* white w/ opacity */
                 backdrop-filter: blur(4px);
                 opacity: 0;
                 visibility: hidden;
