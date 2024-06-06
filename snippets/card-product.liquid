@@ -125,7 +125,7 @@
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                   class="badge badge--bottom-left color-{{ settings.exclusive_badge_color_scheme }}"
-                >In Studio Exclusive</span>
+                >{{ settings.exclusive_badge_text }}</span>
               {%- else -%}
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -296,7 +296,7 @@
                         {{ 'products.product.add_to_cart' | t }}
                       {%- else -%}
                         {%- if card_product.type == 'Exclusive' -%}
-                          Visit our studio
+                          Unavailable
                         {%- else -%}
                           {{ 'products.product.sold_out' | t }}
                         {%- endif -%}
@@ -321,7 +321,7 @@
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                   class="badge badge--bottom-left color-{{ settings.exclusive_badge_color_scheme }}"
-                >In Studio Exclusive</span>
+                >{{ settings.exclusive_badge_text }}</span>
               {%- else -%}
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"

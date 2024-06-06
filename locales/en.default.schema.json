@@ -114,6 +114,9 @@
         },
         "exclusive_badge_text": {
           "label": "Exclusive badge text"
+        },
+        "exclusive_button_text": {
+          "label": "Exclusive buy button text"
         }
       }
     },
