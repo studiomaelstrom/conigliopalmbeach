@@ -15,7 +15,7 @@
         "hotspot_HEJHDV": {
           "type": "hotspot",
           "settings": {
-            "product": "ruffle-power-pareo-pre-order",
+            "product": "le-orange-hand-embroidered-shirt",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 18,
@@ -25,7 +25,7 @@
         "hotspot_6JRnwK": {
           "type": "hotspot",
           "settings": {
-            "product": "ruffle-power-pareo-in-cotton-gauze",
+            "product": "botanical-illustrations-lounge-pants",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 15,
@@ -35,29 +35,18 @@
         "hotspot_RbTEhb": {
           "type": "hotspot",
           "settings": {
-            "product": "move-and-groove-pant",
+            "product": "vintage-victorian-floral-linen-shirt",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 47,
             "left": 78
-          }
-        },
-        "hotspot_ecgDPb": {
-          "type": "hotspot",
-          "settings": {
-            "product": "wavy-gingham-ruffle-power-pareo-in-silk-dupioni-pre-order",
-            "hovertext": false,
-            "tooltip_text": "Hover Text Here",
-            "top": 34,
-            "left": 24
           }
         }
       },
       "block_order": [
         "hotspot_HEJHDV",
         "hotspot_6JRnwK",
-        "hotspot_RbTEhb",
-        "hotspot_ecgDPb"
+        "hotspot_RbTEhb"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/SpringDesktop1.png?v=1714013408",
@@ -287,7 +276,7 @@
             "image": "shopify:\/\/shop_images\/Snapinsta.app_447157564_425968600303169_5865340899354069589_n_1080.jpg",
             "image_link": "",
             "image_caption": "",
-            "text_color": "#F47722"
+            "text_color": "#f47722"
           }
         },
         "image_mj7BD9": {
@@ -296,7 +285,7 @@
             "image": "shopify:\/\/shop_images\/Snapinsta.app_447146134_474357761933357_1006428431156310555_n_1024.jpg",
             "image_link": "",
             "image_caption": "",
-            "text_color": "#F47722"
+            "text_color": "#f47722"
           }
         },
         "image_hREeLg": {
@@ -305,7 +294,7 @@
             "image": "shopify:\/\/shop_images\/Snapinsta.app_447074336_1867049380435523_370231473186596215_n_1080.jpg",
             "image_link": "",
             "image_caption": "",
-            "text_color": "#F47722"
+            "text_color": "#f47722"
           }
         },
         "image_grpnzE": {
@@ -314,7 +303,7 @@
             "image": "shopify:\/\/shop_images\/447015477_481628984319347_3238650087921641752_n.jpg",
             "image_link": "",
             "image_caption": "",
-            "text_color": "#F47722"
+            "text_color": "#f47722"
           }
         },
         "image_nyECUy": {
@@ -323,7 +312,7 @@
             "image": "shopify:\/\/shop_images\/Snapinsta.app_414698856_1070316500676699_6788190452527211736_n_1080.jpg",
             "image_link": "",
             "image_caption": "",
-            "text_color": "#F47722"
+            "text_color": "#f47722"
           }
         },
         "image_b4HN7q": {
@@ -332,7 +321,7 @@
             "image": "shopify:\/\/shop_images\/447146024_992446472550425_6114802713356379096_n.jpg",
             "image_link": "",
             "image_caption": "",
-            "text_color": "#F47722"
+            "text_color": "#f47722"
           }
         },
         "image_3hB4qc": {
@@ -341,7 +330,7 @@
             "image": "shopify:\/\/shop_images\/Snapinsta.app_414461315_711761447725301_1283311957165358956_n_1080.jpg",
             "image_link": "",
             "image_caption": "",
-            "text_color": "#F47722"
+            "text_color": "#f47722"
           }
         },
         "image_ViQiLX": {
@@ -350,7 +339,7 @@
             "image": "shopify:\/\/shop_images\/446484888_488641506920721_2890957052770630467_n.jpg",
             "image_link": "",
             "image_caption": "",
-            "text_color": "#F47722"
+            "text_color": "#f47722"
           }
         }
       },
