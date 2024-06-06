@@ -15,7 +15,8 @@
         "hotspot_HEJHDV": {
           "type": "hotspot",
           "settings": {
-            "product": "le-orange-hand-embroidered-shirt",
+            "product": "ruffle-power-pareo-pre-order",
+            "variant_img": "shopify:\/\/shop_images\/CPB_S24_PetitPalmRed_Pareo_Gauze_049ce845-e65c-43fe-aff3-eced37d65d38.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 18,
@@ -25,7 +26,8 @@
         "hotspot_6JRnwK": {
           "type": "hotspot",
           "settings": {
-            "product": "botanical-illustrations-lounge-pants",
+            "product": "ruffle-power-pareo-in-cotton-gauze",
+            "variant_img": "shopify:\/\/shop_images\/CPB_S24_PoppyPurple_Pareo_Gauze.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 15,
@@ -35,27 +37,37 @@
         "hotspot_RbTEhb": {
           "type": "hotspot",
           "settings": {
-            "product": "vintage-victorian-floral-linen-shirt",
+            "product": "move-and-groove-pant",
+            "variant_img": "shopify:\/\/shop_images\/CPB_MoveAndGroove.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 47,
             "left": 78
+          }
+        },
+        "hotspot_ecgDPb": {
+          "type": "hotspot",
+          "settings": {
+            "product": "wavy-gingham-ruffle-power-pareo-in-silk-dupioni-pre-order",
+            "hovertext": false,
+            "tooltip_text": "Hover Text Here",
+            "top": 34,
+            "left": 24
           }
         }
       },
       "block_order": [
         "hotspot_HEJHDV",
         "hotspot_6JRnwK",
-        "hotspot_RbTEhb"
+        "hotspot_RbTEhb",
+        "hotspot_ecgDPb"
       ],
       "settings": {
         "image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0841\/0506\/8859\/files\/SpringDesktop1.png?v=1714013408",
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95,
-        "bg_color": "#ffeeee",
-        "blur": 2
+        "width": 95
       }
     },
     "ticker_text_6frNjK": {
@@ -160,6 +172,7 @@
           "type": "hotspot",
           "settings": {
             "product": "beaded-party-top",
+            "variant_img": "shopify:\/\/shop_images\/240422_Shot_18_0079.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 21,
@@ -170,6 +183,7 @@
           "type": "hotspot",
           "settings": {
             "product": "handkerchief-dress",
+            "variant_img": "shopify:\/\/shop_images\/240422_Shot_7_0026.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 50,
@@ -180,6 +194,7 @@
           "type": "hotspot",
           "settings": {
             "product": "bandhani-maxi-dress",
+            "variant_img": "shopify:\/\/shop_images\/240422_Shot_1_0003.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 76,
@@ -197,9 +212,7 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95,
-        "bg_color": "#fff",
-        "blur": 4
+        "width": 95
       }
     },
     "hotspot_section_VeBP8j": {
@@ -219,6 +232,7 @@
           "type": "hotspot",
           "settings": {
             "product": "embroidered-bunny-pullover",
+            "variant_img": "shopify:\/\/shop_images\/240422_Shot_16_0071.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 41,
@@ -229,6 +243,7 @@
           "type": "hotspot",
           "settings": {
             "product": "its-better-in-pb-classic-tee",
+            "variant_img": "shopify:\/\/shop_images\/240401_Shot_27_0084.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 41,
@@ -239,6 +254,7 @@
           "type": "hotspot",
           "settings": {
             "product": "high-side-slit-long-top",
+            "variant_img": "shopify:\/\/shop_images\/240422_Shot_15_0066.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 66,
@@ -268,99 +284,7 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95,
-        "bg_color": "#fff",
-        "blur": 4
-      }
-    },
-    "insta_gallery_RQQbCR": {
-      "type": "insta-gallery",
-      "blocks": {
-        "image_f3cryj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Snapinsta.app_447157564_425968600303169_5865340899354069589_n_1080.jpg",
-            "image_link": "",
-            "image_caption": "",
-            "text_color": "#f47722"
-          }
-        },
-        "image_mj7BD9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Snapinsta.app_447146134_474357761933357_1006428431156310555_n_1024.jpg",
-            "image_link": "",
-            "image_caption": "",
-            "text_color": "#f47722"
-          }
-        },
-        "image_hREeLg": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Snapinsta.app_447074336_1867049380435523_370231473186596215_n_1080.jpg",
-            "image_link": "",
-            "image_caption": "",
-            "text_color": "#f47722"
-          }
-        },
-        "image_grpnzE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/447015477_481628984319347_3238650087921641752_n.jpg",
-            "image_link": "",
-            "image_caption": "",
-            "text_color": "#f47722"
-          }
-        },
-        "image_nyECUy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Snapinsta.app_414698856_1070316500676699_6788190452527211736_n_1080.jpg",
-            "image_link": "",
-            "image_caption": "",
-            "text_color": "#f47722"
-          }
-        },
-        "image_b4HN7q": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/447146024_992446472550425_6114802713356379096_n.jpg",
-            "image_link": "",
-            "image_caption": "",
-            "text_color": "#f47722"
-          }
-        },
-        "image_3hB4qc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Snapinsta.app_414461315_711761447725301_1283311957165358956_n_1080.jpg",
-            "image_link": "",
-            "image_caption": "",
-            "text_color": "#f47722"
-          }
-        },
-        "image_ViQiLX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/446484888_488641506920721_2890957052770630467_n.jpg",
-            "image_link": "",
-            "image_caption": "",
-            "text_color": "#f47722"
-          }
-        }
-      },
-      "block_order": [
-        "image_f3cryj",
-        "image_mj7BD9",
-        "image_hREeLg",
-        "image_grpnzE",
-        "image_nyECUy",
-        "image_b4HN7q",
-        "image_3hB4qc",
-        "image_ViQiLX"
-      ],
-      "disabled": true,
-      "settings": {
+        "width": 95
       }
     }
   },
@@ -369,7 +293,6 @@
     "hotspot_section_4EmjLw",
     "ticker_text_6frNjK",
     "hotspot_section_Fx33je",
-    "hotspot_section_VeBP8j",
-    "insta_gallery_RQQbCR"
+    "hotspot_section_VeBP8j"
   ]
 }
