@@ -1277,6 +1277,12 @@
         "id": "exclusive_badge_text",
         "label": "t:settings_schema.badges.settings.exclusive_badge_text.label",
         "default": "In Studio Exclusive"
+      },
+      {
+        "type": "text",
+        "id": "exclusive_button_text",
+        "label": "t:settings_schema.badges.settings.exclusive_button_text.label",
+        "default": "Visit our studio"
       }
     ]
   },
