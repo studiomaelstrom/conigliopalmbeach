@@ -122,7 +122,10 @@
           <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
               {%- if card_product.type == 'Exclusive' -%}
-                In-Store Exclusive
+                <span
+                  id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge badge--bottom-left color-{{ settings.exclusive_badge_color_scheme }}"
+                >In-Store Exclusive</span>
               {%- else -%}
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -131,7 +134,6 @@
                   {{- 'products.product.sold_out' | t -}}
                 </span>
               {%- endif -%}
-
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
