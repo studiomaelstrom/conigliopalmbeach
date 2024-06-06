@@ -86,7 +86,11 @@
           >
             <span>
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                {{ 'products.product.sold_out' | t }}
+                {%- if card_product.type == 'Exclusive' -%}
+                          {{ settings.exclusive_button_text }}
+                        {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
@@ -108,7 +112,11 @@
           class="product-form__submit button button--full-width button--primary"
           disabled
         >
-          {{ 'products.product.sold_out' | t }}
+          {%- if card_product.type == 'Exclusive' -%}
+                          {{ settings.exclusive_button_text }}
+                        {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
         </button>
       </div>
     </div>
