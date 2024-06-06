@@ -121,16 +121,19 @@
           </div>
           <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
-              <span
-                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
-                class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
-              >
-                {%- if card_product.type == 'Exclusive' -%}
-                In-Store Exclusive
-                {%- else -%} 
+              {%- if card_product.type == 'Exclusive' -%}
+                <span
+                  id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge badge--bottom-left color-{{ settings.exclusive_badge_color_scheme }}"
+                >{{ settings.exclusive_badge_text }}</span>
+              {%- else -%}
+                <span
+                  id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+                >
                   {{- 'products.product.sold_out' | t -}}
-                {%- endif -%}
-              </span>
+                </span>
+              {%- endif -%}
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -292,7 +295,11 @@
                       {%- if card_product.selected_or_first_available_variant.available -%}
                         {{ 'products.product.add_to_cart' | t }}
                       {%- else -%}
-                        {{ 'products.product.sold_out' | t }}
+                        {%- if card_product.type == 'Exclusive' -%}
+                          {{ settings.exclusive_button_text }}
+                        {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
                       {%- endif -%}
                     </span>
                     <span class="sold-out-message hidden">
@@ -310,16 +317,19 @@
         {%- endif -%}
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
-            <span
-              id="Badge-{{ section_id }}-{{ card_product.id }}"
-              class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
-            >
-              {%- if card_product.type == 'Exclusive' -%}
-                In-Store Exclusive
-                {%- else -%} 
+            {%- if card_product.type == 'Exclusive' -%}
+                <span
+                  id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge badge--bottom-left color-{{ settings.exclusive_badge_color_scheme }}"
+                >{{ settings.exclusive_badge_text }}</span>
+              {%- else -%}
+                <span
+                  id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+                >
                   {{- 'products.product.sold_out' | t -}}
-                {%- endif -%}
-            </span>
+                </span>
+              {%- endif -%}
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"

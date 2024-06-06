@@ -3,17 +3,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "custom_liquid_fHqXdL": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% if  product.metafields.product.badge %}\n<style>#badge {\n  animation: 10s rotate infinite linear;\n}\n\n@keyframes rotate {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(-360deg);\n  }\n}\n\n\/* Style SVG Text *\/\n.badge-text {\n  font: normal 13px sans-serif;\n  fill: #FFF;\n  text-transform: uppercase;\n}<\/style>\n<svg id=\"badge\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\" fill=\"currentColor\">\n  <path id=\"svg-text-circle\" d=\"M 20 50 C 20 33.43 33.43 20 50 20 C 66.57 20 80 33.43 80 50 C 80 66.57 66.57 80 50 80 C 33.43 80 20 66.57 20 50 Z\" fill=\"none\"><\/path>\n  <circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#F47722\"><\/circle>\n    <text dy=\"-2\" textLength=\"100\">\n    <!-- textLength (essentially the circumference of the circle) is used as an alternative to letter-spacing for Firefox, which currently doesn't support letter-spacing for SVG -->\n\t\t<textPath class=\"badge-text\" xlink:href=\"#svg-text-circle\">{{ product.metafields.product.badge }}<\/textPath>\n\t<\/text>\n <\/svg>\n{% endif %}"
-          }
-        },
         "vendor": {
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "{{ product.metafields.product.style.value }}",
+            "text": "{{ product.vendor }}",
             "text_style": "uppercase"
           }
         },
@@ -66,7 +60,6 @@
         }
       },
       "block_order": [
-        "custom_liquid_fHqXdL",
         "vendor",
         "title",
         "caption",
@@ -76,9 +69,6 @@
         "quantity_selector",
         "buy_buttons",
         "share"
-      ],
-      "custom_css": [
-        ".product__description {font-size: 15px;}"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -102,18 +92,18 @@
         "collapsible_row_AUBKe7": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Material Content",
+            "heading": "Fabric Content",
             "icon": "leather",
-            "row_content": "<p>{{ product.metafields.product.material | metafield_tag }}<\/p>",
+            "row_content": "",
             "page": ""
           }
         },
         "collapsible_row_kH4kWX": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Fit",
+            "heading": "Measurements",
             "icon": "ruler",
-            "row_content": "<p>{{ product.metafields.product.measure | metafield_tag }}<\/p>",
+            "row_content": "",
             "page": ""
           }
         },
@@ -122,7 +112,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
-            "row_content": "<p>{{ product.metafields.product.care | metafield_tag }}<\/p>",
+            "row_content": "",
             "page": ""
           }
         }
@@ -147,14 +137,51 @@
         "padding_bottom": 36
       }
     },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "image-with-text-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Behind the Design...",
+            "heading_size": "h1"
+          }
+        },
+        "image-with-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Christina Coniglio is on a mission to authentically reference and storytell the original island energy from a local designer’s perspective.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "image-with-text-0",
+        "image-with-text-1"
+      ],
+      "settings": {
+        "height": "small",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
         "column-0": {
           "type": "column",
           "settings": {
-            "title": "Shipping",
-            "text": "<p>We ship orders out every Tuesday and Friday. Right now, we offer flat rate shipping on all orders. Please proceed to checkout to view rates.<\/p>",
+            "title": "Free Shipping",
+            "text": "<p>Spend your time finding a perfect design in our wide range collection of high-quality apparel and enjoy free shipping on all orders over $100. <\/p>",
             "link_label": "",
             "link": ""
           }
@@ -163,7 +190,7 @@
           "type": "column",
           "settings": {
             "title": "Returns & Exchanges",
-            "text": "<p>Returns are for in store credit or product exchange only and must be made within 14 days of delivery. We cannot provide a return label. To initiate a return or exchange, send an email to admin@conigliopalmbeach.com<\/p>",
+            "text": "<p>Shop with peace of mind knowing that our 30-day return policy allows you to easily return or exchange any item that doesn't meet your expectations.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -198,7 +225,7 @@
         "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
@@ -212,6 +239,7 @@
   "order": [
     "main",
     "collapsible_content_GYXi7g",
+    "image-with-text",
     "multicolumn",
     "related-products"
   ]
