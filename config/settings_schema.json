@@ -1275,7 +1275,7 @@
       {
         "type": "text",
         "id": "exclusive_badge_text",
-        "label": "t:settings_schema.badges.settings.sold_out_badge_color_scheme.label",
+        "label": "t:settings_schema.badges.settings.exclusive_badge_text.label",
         "default": "In Studio Exclusive"
       }
     ]
