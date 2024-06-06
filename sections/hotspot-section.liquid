@@ -365,7 +365,7 @@
                 height: 100%; /* Full height */
                 overflow: auto; /* Enable scroll if needed */
                 margin:auto;
-                background-color: {{section.settings.bg_color | color_modify: 'alpha', 0.5 }}; /* Black w/ opacity */
+                background-color: {{section.settings.bg_color | color_to_rgb | color_modify: 'alpha', 0.5 }}; /* Black w/ opacity */
                 backdrop-filter: blur(4px);
                 opacity: 0;
                 visibility: hidden;
