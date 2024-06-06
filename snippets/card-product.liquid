@@ -125,7 +125,7 @@
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                   class="badge badge--bottom-left color-{{ settings.exclusive_badge_color_scheme }}"
-                >In-Store Exclusive</span>
+                >In Studio Exclusive</span>
               {%- else -%}
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -295,7 +295,11 @@
                       {%- if card_product.selected_or_first_available_variant.available -%}
                         {{ 'products.product.add_to_cart' | t }}
                       {%- else -%}
-                        {{ 'products.product.sold_out' | t }}
+                        {%- if card_product.type == 'Exclusive' -%}
+                          In Studio Exclusive
+                        {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
                       {%- endif -%}
                     </span>
                     <span class="sold-out-message hidden">
@@ -317,7 +321,7 @@
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                   class="badge badge--bottom-left color-{{ settings.exclusive_badge_color_scheme }}"
-                >In-Store Exclusive</span>
+                >In Studio Exclusive</span>
               {%- else -%}
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
