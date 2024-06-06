@@ -122,8 +122,8 @@
     </span>
 
     {% if product.type == 'Exclusive' %}
-      <span class="badge price__badge-sold-out color-{{ settings.exclusive_badge_color_scheme_badge_color_scheme }}">
-      In Studio Exclusive
+      <span class="badge price__badge-sold-out color-{{ settings.exclusive_badge_color_scheme }}">
+      {{ settings.exclusive_badge_text | t }}
     </span>
     {% else %}
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
