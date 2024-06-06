@@ -115,15 +115,6 @@
       {%- endform -%}
     </product-form>
 {%- endif -%}
-    {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-      <div class="product-form__buttons" style="margin-top:none !important;">
-        <a
-          href="https://www.google.com/maps/dir//139%20N%20County%20Rd,%20Palm%20Beach,%20FL%2033480"
-          style="text-decoration:none;"
-          ><button class="button button--full-width button--primary">139 North County Road</button></a
-        >
-      </div>
-    {%- endif -%}
 
   {%- else -%}
     <div class="product-form">
