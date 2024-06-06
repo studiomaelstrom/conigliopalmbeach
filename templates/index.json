@@ -16,7 +16,6 @@
           "type": "hotspot",
           "settings": {
             "product": "ruffle-power-pareo-pre-order",
-            "variant_img": "shopify:\/\/shop_images\/CPB_S24_PetitPalmRed_Pareo_Gauze_049ce845-e65c-43fe-aff3-eced37d65d38.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 18,
@@ -27,7 +26,6 @@
           "type": "hotspot",
           "settings": {
             "product": "ruffle-power-pareo-in-cotton-gauze",
-            "variant_img": "shopify:\/\/shop_images\/CPB_S24_PoppyPurple_Pareo_Gauze.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 15,
@@ -38,7 +36,6 @@
           "type": "hotspot",
           "settings": {
             "product": "move-and-groove-pant",
-            "variant_img": "shopify:\/\/shop_images\/CPB_MoveAndGroove.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 47,
@@ -67,7 +64,8 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95
+        "width": 95,
+        "bg_color": "#ffeeee"
       }
     },
     "ticker_text_6frNjK": {
@@ -172,7 +170,6 @@
           "type": "hotspot",
           "settings": {
             "product": "beaded-party-top",
-            "variant_img": "shopify:\/\/shop_images\/240422_Shot_18_0079.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 21,
@@ -183,7 +180,6 @@
           "type": "hotspot",
           "settings": {
             "product": "handkerchief-dress",
-            "variant_img": "shopify:\/\/shop_images\/240422_Shot_7_0026.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 50,
@@ -194,7 +190,6 @@
           "type": "hotspot",
           "settings": {
             "product": "bandhani-maxi-dress",
-            "variant_img": "shopify:\/\/shop_images\/240422_Shot_1_0003.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 76,
@@ -212,7 +207,8 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95
+        "width": 95,
+        "bg_color": "#fff"
       }
     },
     "hotspot_section_VeBP8j": {
@@ -232,7 +228,6 @@
           "type": "hotspot",
           "settings": {
             "product": "embroidered-bunny-pullover",
-            "variant_img": "shopify:\/\/shop_images\/240422_Shot_16_0071.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 41,
@@ -243,7 +238,6 @@
           "type": "hotspot",
           "settings": {
             "product": "its-better-in-pb-classic-tee",
-            "variant_img": "shopify:\/\/shop_images\/240401_Shot_27_0084.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 41,
@@ -254,7 +248,6 @@
           "type": "hotspot",
           "settings": {
             "product": "high-side-slit-long-top",
-            "variant_img": "shopify:\/\/shop_images\/240422_Shot_15_0066.jpg",
             "hovertext": false,
             "tooltip_text": "Hover Text Here",
             "top": 66,
@@ -284,7 +277,8 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95
+        "width": 95,
+        "bg_color": "#fff"
       }
     }
   },
