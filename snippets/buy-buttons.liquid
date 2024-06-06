@@ -23,7 +23,15 @@
         assign show_dynamic_checkout = true
       endif
     -%}
-
+    {%- if product.type == 'Exclusive' -%}
+          <div class="product-form__buttons">
+            <a
+              href="https://www.google.com/maps/dir//139%20N%20County%20Rd,%20Palm%20Beach,%20FL%2033480"
+              style="text-decoration:none;"
+              ><button class="button button--full-width button--secondary">{{ settings.exclusive_button_text }}</button></a
+            >
+          </div>
+        {%- else -%}
     <product-form
       class="product-form"
       data-hide-errors="{{ gift_card_recipient_feature_active }}"
@@ -64,15 +72,7 @@
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
         {%- endif -%}
-        {%- if product.type == 'Exclusive' -%}
-          <div class="product-form__buttons" style="margin-top:none !important;">
-            <a
-              href="https://www.google.com/maps/dir//139%20N%20County%20Rd,%20Palm%20Beach,%20FL%2033480"
-              style="text-decoration:none;"
-              ><button class="button button--full-width button--secondary">{{ settings.exclusive_button_text }}</button></a
-            >
-          </div>
-        {%- else -%}
+        
           <div class="product-form__buttons">
             {%- liquid
               assign check_against_inventory = true
@@ -112,10 +112,9 @@
               {%- endif -%}
             {%- endif -%}
           </div>
-        {%- endif -%}
       {%- endform -%}
     </product-form>
-
+{%- endif -%}
     {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
       <div class="product-form__buttons" style="margin-top:none !important;">
         <a
