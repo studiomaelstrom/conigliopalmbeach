@@ -87,10 +87,10 @@
             <span>
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {%- if product.type == 'Exclusive' -%}
-                          {{ settings.exclusive_button_text }}
-                        {%- else -%}
-                          {{ 'products.product.sold_out' | t }}
-                        {%- endif -%}
+                  {{ settings.exclusive_button_text }}
+                {%- else -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- endif -%}
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
@@ -98,7 +98,7 @@
             {%- render 'loading-spinner' -%}
           </button>
           {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-            <a href="https://www.google.com/maps/dir//139%20N%20County%20Rd,%20Palm%20Beach,%20FL%2033480" style="text-decoration:none;"><button>139 North County Road</button></a>
+            
           {%- else -%}
             {%- if show_dynamic_checkout -%}
               {{ form | payment_button }}
@@ -107,6 +107,14 @@
         </div>
       {%- endform -%}
     </product-form>
+    {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+      <a
+        href="https://www.google.com/maps/dir//139%20N%20County%20Rd,%20Palm%20Beach,%20FL%2033480"
+        style="text-decoration:none;"
+        ><button class="button button--full-width button--primary">139 North County Road</button></a
+      >
+    {%- endif -%}
+
   {%- else -%}
     <div class="product-form">
       <div class="product-form__buttons form">
@@ -117,10 +125,10 @@
           disabled
         >
           {%- if product.type == 'Exclusive' -%}
-                          {{ settings.exclusive_button_text }}
-                        {%- else -%}
-                          {{ 'products.product.sold_out' | t }}
-                        {%- endif -%}
+            {{ settings.exclusive_button_text }}
+          {%- else -%}
+            {{ 'products.product.sold_out' | t }}
+          {%- endif -%}
         </button>
       </div>
     </div>
