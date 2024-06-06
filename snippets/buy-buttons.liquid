@@ -75,6 +75,13 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+          {%- if product.type == 'Exclusive' -%}
+            <a
+        href="https://www.google.com/maps/dir//139%20N%20County%20Rd,%20Palm%20Beach,%20FL%2033480"
+        style="text-decoration:none;"
+        ><button class="button button--full-width button--primary">139 North County Road</button></a
+      >
+          {%- else -%}
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
@@ -97,8 +104,8 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+          {%- endif -%}
           {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-            <div style="margin-bottom:-10px;"> </div>
           {%- else -%}
             {%- if show_dynamic_checkout -%}
               {{ form | payment_button }}
