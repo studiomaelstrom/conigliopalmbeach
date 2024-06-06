@@ -53,7 +53,9 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95
+        "width": 95,
+        "bg_color": "#ffeeee",
+        "blur": 2
       }
     },
     "ticker_text_6frNjK": {
@@ -195,7 +197,9 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95
+        "width": 95,
+        "bg_color": "#fff",
+        "blur": 4
       }
     },
     "hotspot_section_VeBP8j": {
@@ -264,7 +268,9 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95
+        "width": 95,
+        "bg_color": "#fff",
+        "blur": 4
       }
     },
     "insta_gallery_RQQbCR": {
