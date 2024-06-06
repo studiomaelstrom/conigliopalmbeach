@@ -121,7 +121,7 @@
       {{ 'products.product.on_sale' | t }}
     </span>
 
-    {% if products.product.type == 'Exclusive' %}
+    {% if product.type == 'Exclusive' %}
       <span class="badge price__badge-sold-out color-{{ settings.exclusive_badge_color_scheme_badge_color_scheme }}">
       In Studio Exclusive
     </span>
