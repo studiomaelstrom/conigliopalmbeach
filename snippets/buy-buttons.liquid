@@ -98,7 +98,7 @@
             {%- render 'loading-spinner' -%}
           </button>
           {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-            139 North County Road
+            <button class="product-form__submit button button--full-width button--secondary">139 North County Road</button>
           {%- else -%}
             {%- if show_dynamic_checkout -%}
               {{ form | payment_button }}
