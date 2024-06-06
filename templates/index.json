@@ -64,8 +64,7 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95,
-        "bg_color": "#cd8484"
+        "width": 95
       }
     },
     "ticker_text_6frNjK": {
@@ -207,8 +206,7 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95,
-        "bg_color": "#fff"
+        "width": 95
       }
     },
     "hotspot_section_VeBP8j": {
@@ -277,8 +275,7 @@
         "hotspot_color": "#f47722",
         "hotspot_inner": "#ffffff",
         "icon": "",
-        "width": 95,
-        "bg_color": "#fff"
+        "width": 95
       }
     }
   },
