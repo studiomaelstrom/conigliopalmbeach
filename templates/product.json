@@ -137,51 +137,14 @@
         "padding_bottom": 36
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Behind the Design...",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Christina Coniglio is on a mission to authentically reference and storytell the original island energy from a local designer’s perspective.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "large",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
         "column-0": {
           "type": "column",
           "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Spend your time finding a perfect design in our wide range collection of high-quality apparel and enjoy free shipping on all orders over $100. <\/p>",
+            "title": "Shipping",
+            "text": "<p>We ship <\/p>",
             "link_label": "",
             "link": ""
           }
@@ -239,7 +202,6 @@
   "order": [
     "main",
     "collapsible_content_GYXi7g",
-    "image-with-text",
     "multicolumn",
     "related-products"
   ]
