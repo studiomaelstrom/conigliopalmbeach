@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -144,7 +153,7 @@
           "type": "column",
           "settings": {
             "title": "Shipping",
-            "text": "<p>Please allow for 2-3 business days for order processing. We ship out of our studio in Palm Beach every Tuesday and Saturday.<\/p>",
+            "text": "<p>Due to demand and team capacity, please allow for up to 5 business days for order processing. Each order is packed with care by our team at our Palm Beach studio.<\/p>",
             "link_label": "",
             "link": ""
           }
